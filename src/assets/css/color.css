@@ -47,7 +47,8 @@ a,
 .feedback-block .inner-box .content-column .location,
 .main-header .outer-box .option-box li.cart .number,
 .window-tab-section .window-tabs .tab-btns .tab-btn.active-btn,
-.main-slider .owl-nav .owl-prev:hover, .main-slider .owl-nav .owl-next:hover,
+.main-slider .owl-nav .owl-prev:hover,
+.main-slider .owl-nav .owl-next:hover,
 .services-section-three .appointment-tabs .tab-btns .p-tab-btn:hover,
 .services-section-three .appointment-tabs .tab-btns .p-tab-btn.active-btn,
 .services-block-three .inner-box:hover .lower-content .icon-box,
@@ -91,8 +92,9 @@ a,
 .blog-single .inner-box blockquote .author-name,
 .office-block .inner-box .icon-box,
 .office-block .inner-box .link-btn,
-.window-block-two .inner-box .explore:hover, .window-block-two .inner-box h3 a:hover{
-	color:#39CCCC;
+.window-block-two .inner-box .explore:hover,
+.window-block-two .inner-box h3 a:hover {
+  color: #39cccc;
 }
 
 /*Background Color*/
@@ -120,10 +122,12 @@ a,
 .main-header .header-upper .logo-box:before,
 .window-tab-section .image-column .plus-box,
 .services-block-two .inner-box:hover .icon-box,
-.ui-state-active, .ui-widget-content .ui-state-active,
+.ui-state-active,
+.ui-widget-content .ui-state-active,
 .header-style-two .main-menu .navigation > li > a:after,
 .services-section-three .appointment-tabs .btns-outer .appointment,
-.newsletter-form .form-group input[type="submit"], .newsletter-form button,
+.newsletter-form .form-group input[type="submit"],
+.newsletter-form button,
 .services-section-three .owl-nav .owl-prev:hover,
 .services-section-three .owl-nav .owl-next:hover,
 .services-section-two .owl-dots .owl-dot:before,
@@ -142,7 +146,8 @@ a,
 .cart-table tbody .available-info .icon,
 .range-slider-one .ui-slider .ui-slider-range,
 .gallery-block-three .inner-box .overlay-inner .link,
-.styled-pagination li a:hover, .styled-pagination li a.active,
+.styled-pagination li a:hover,
+.styled-pagination li a.active,
 .gallery-section-four .filters .filter.active,
 .gallery-section-four .filters .filter:hover,
 .range-slider-one .ui-state-default,
@@ -153,8 +158,8 @@ a,
 .appointment-block .inner-box .content-box .icon-box,
 .sidebar .instagram-widget .image-box .overlay-box,
 .archive-form .form-inner .go-btn:hover,
-.main-menu .navbar-header .navbar-toggler{
-	background-color:#39CCCC;
+.main-menu .navbar-header .navbar-toggler {
+  background-color: #39cccc;
 }
 
 /*Border Color*/
@@ -170,7 +175,8 @@ a,
 .product-block .inner-box .image .options-box li a:hover,
 .services-section-three .owl-nav .owl-prev:hover,
 .services-section-three .owl-nav .owl-next:hover,
-.ui-state-active, .ui-widget-content .ui-state-active,
+.ui-state-active,
+.ui-widget-content .ui-state-active,
 .estimate-section .form-column .inner-column:hover,
 .key-block .inner-box:hover .icon-box,
 .cart-table tbody tr .remove-btn:hover,
@@ -238,54 +244,52 @@ a,
 .contact-form .form-group input:focus,
 .contact-form .form-group select:focus,
 .contact-form .form-group textarea:focus,
-.main-menu .navbar-header .navbar-toggler{
-	border-color:#39CCCC;
+.main-menu .navbar-header .navbar-toggler {
+  border-color: #39cccc;
 }
 
-.repair-block .inner-block:hover .number-box:before{
-	border-bottom-color:#39CCCC;
+.repair-block .inner-block:hover .number-box:before {
+  border-bottom-color: #39cccc;
 }
 
-.repair-block .inner-block:hover .number-box:after{
-	border-top-color:#39CCCC;
+.repair-block .inner-block:hover .number-box:after {
+  border-top-color: #39cccc;
 }
 
 /*RGBA Color Light*/
 
-.services-block .inner-box .image .overlay-box{
-	background-color:rgba(57,204,204,0.70);
+.services-block .inner-box .image .overlay-box {
+  background-color: rgba(57, 204, 204, 0.7);
 }
 
 /*RGBA Color Dark*/
 
 .buttons-widget .theme-btn:nth-child(2),
-.main-header .outer-box .buttons-box .theme-btn:nth-child(2){
-	background-color:rgba(57,204,204,0.90);
+.main-header .outer-box .buttons-box .theme-btn:nth-child(2) {
+  background-color: rgba(57, 204, 204, 0.9);
 }
 
-@media only screen and (max-width: 767px){
-	
-	.main-menu .navbar-header .navbar-toggle{
-		border-color:#ffffff;
-	}
-	
-	.main-menu .navbar-header .navbar-toggle,
-	.main-menu .navbar-collapse > .navigation,
-	.main-menu .navbar-collapse > .navigation > li > ul,
-	.main-menu .navbar-collapse > .navigation > li > ul > li > ul,
-	.main-menu .navbar-collapse > .navigation > li > a,
-	.main-menu .navbar-collapse > .navigation > li > ul > li > a,
-	.main-menu .navbar-collapse > .navigation > li > ul > li > ul > li > a,
-	.main-menu .navbar-collapse > .navigation > li > a:hover,
-	.main-menu .navbar-collapse > .navigation > li > a:active,
-	.main-menu .navbar-collapse > .navigation > li > a:focus,
-	.main-menu .navbar-collapse > .navigation > li:hover > a,
-	.main-menu .navbar-collapse > .navigation > li > ul > li:hover > a,
-	.main-menu .navbar-collapse > .navigation > li > ul > li > ul > li:hover > a,
-	.main-menu .navbar-collapse > .navigation > li.current > a,
-	.main-menu .navbar-collapse > .navigation > li.current-menu-item > a,
-	.header-style-two.inner-header .main-menu .navigation > li > a{
-		background-color:#39CCCC;
-	}
-	
+@media only screen and (max-width: 767px) {
+  .main-menu .navbar-header .navbar-toggle {
+    border-color: #ffffff;
+  }
+
+  .main-menu .navbar-header .navbar-toggle,
+  .main-menu .navbar-collapse > .navigation,
+  .main-menu .navbar-collapse > .navigation > li > ul,
+  .main-menu .navbar-collapse > .navigation > li > ul > li > ul,
+  .main-menu .navbar-collapse > .navigation > li > a,
+  .main-menu .navbar-collapse > .navigation > li > ul > li > a,
+  .main-menu .navbar-collapse > .navigation > li > ul > li > ul > li > a,
+  .main-menu .navbar-collapse > .navigation > li > a:hover,
+  .main-menu .navbar-collapse > .navigation > li > a:active,
+  .main-menu .navbar-collapse > .navigation > li > a:focus,
+  .main-menu .navbar-collapse > .navigation > li:hover > a,
+  .main-menu .navbar-collapse > .navigation > li > ul > li:hover > a,
+  .main-menu .navbar-collapse > .navigation > li > ul > li > ul > li:hover > a,
+  .main-menu .navbar-collapse > .navigation > li.current > a,
+  .main-menu .navbar-collapse > .navigation > li.current-menu-item > a,
+  .header-style-two.inner-header .main-menu .navigation > li > a {
+    background-color: #39cccc;
+  }
 }
