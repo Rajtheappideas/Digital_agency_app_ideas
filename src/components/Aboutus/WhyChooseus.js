@@ -32,7 +32,7 @@ const WhyChooseus = () => {
                             data-speed={2000}
                             data-stop={70}
                           >
-                            0
+                            70
                           </span>
                           %
                         </div>
@@ -40,7 +40,11 @@ const WhyChooseus = () => {
                     </div>
                     <div className="skill-bar">
                       <div className="bar-inner">
-                        <div className="bar progress-line" data-width={70} />
+                        <div
+                          className="bar progress-line"
+                          style={{ width: "70%" }}
+                          data-width={70}
+                        />
                       </div>
                     </div>
                   </div>
@@ -55,7 +59,7 @@ const WhyChooseus = () => {
                             data-speed={2000}
                             data-stop={80}
                           >
-                            0
+                            80
                           </span>
                           %
                         </div>
@@ -63,7 +67,11 @@ const WhyChooseus = () => {
                     </div>
                     <div className="skill-bar">
                       <div className="bar-inner">
-                        <div className="bar progress-line" data-width={80} />
+                        <div
+                          className="bar progress-line"
+                          style={{ width: "80%" }}
+                          data-width={80}
+                        />
                       </div>
                     </div>
                   </div>
@@ -78,7 +86,7 @@ const WhyChooseus = () => {
                             data-speed={2000}
                             data-stop={60}
                           >
-                            0
+                            60
                           </span>
                           %
                         </div>
@@ -86,7 +94,11 @@ const WhyChooseus = () => {
                     </div>
                     <div className="skill-bar">
                       <div className="bar-inner">
-                        <div className="bar progress-line" data-width={60} />
+                        <div
+                          className="bar progress-line"
+                          style={{ width: "60%" }}
+                          data-width={60}
+                        />
                       </div>
                     </div>
                   </div>

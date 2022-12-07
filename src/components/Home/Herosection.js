@@ -1,145 +1,413 @@
 import React from "react";
 import sliderimg from "../../assets/images/main-slider/image-2.jpg";
+import img from "../../assets/images/main-slider/dotted-layer-1.png";
+import "../../assets/css/owl.css";
+import { Navigation, Pagination } from "swiper";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Herosection = () => {
   return (
     <>
       {/* Banner Section Four */}
       <section className="banner-section-four">
-        <div className="main-slider-carousel owl-carousel owl-theme">
-          <div
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          // loop={true}
+        >
+          <SwiperSlide
             className="slide"
-            style={{ backgroundImage: `url(${sliderimg})` }}
+            style={{
+              backgroundImage: `url(${sliderimg})`,
+            }}
           >
-            <div
-              className="dotted-layer"
-              style={{
-                backgroundImage: "url(images/main-slider/dotted-layer-1.png)",
-              }}
-            />
-            <div className="auto-container">
-              <div className="row clearfix">
-                {/* Content Column */}
-                <div className="content-column col-lg-6 col-md-12 col-sm-12">
-                  <div className="inner-column">
-                    <div className="title">
-                      Do you have an idea of project ?
+            <>
+              <div
+                className="dotted-layer"
+                style={{
+                  backgroundImage: `url(${img})`,
+                }}
+              />
+              <div className="auto-container">
+                <div className="row clearfix">
+                  {/* Content Column */}
+                  <div className="content-column col-lg-6 col-md-12 col-sm-12">
+                    <div className="inner-column">
+                      <div className="title">With us</div>
+                      <h1>Make your dream ideas come true</h1>
+                      <div className="btns-box">
+                        <a
+                          href="/services"
+                          className="theme-btn btn-style-eight"
+                        >
+                          <span className="txt">Lets Start</span>
+                        </a>
+                        <a
+                          href="/contactus"
+                          className="theme-btn btn-style-nine"
+                        >
+                          <span className="txt">Contact Now</span>
+                        </a>
+                      </div>
                     </div>
-                    <h1>
-                      We Help Power Millions Of Businesses in 100+ Nations
-                    </h1>
-                    <div className="btns-box">
-                      <a href="/aboutus" className="theme-btn btn-style-ten">
-                        <span className="txt">Lets Start</span>
-                      </a>
-                      <a
-                        href="/contactus"
-                        className="theme-btn btn-style-nine"
-                      >
-                        <span className="txt">Contact Now</span>
-                      </a>
+                  </div>
+                  {/* Image Column */}
+                  <div className="image-column col-lg-6 col-md-12 col-sm-12">
+                    <div className="inner-column">
+                      <div className="image">
+                        <img
+                          src={require("../../assets/images/main-slider/slider2.png")}
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-                {/* Image Column */}
-                <div className="image-column col-lg-6 col-md-12 col-sm-12">
-                  <div className="inner-column">
-                    <div className="image">
-                      <img src={require("../../assets/images/main-slider/slider1.png")} alt="" />
+              </div>
+            </>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="slide"
+              style={{
+                backgroundImage: `url(${sliderimg})`,
+              }}
+            >
+              <div
+                className="dotted-layer"
+                style={{
+                  backgroundImage: `url(${img})`,
+                }}
+              />
+              <div className="auto-container">
+                <div className="row clearfix">
+                  {/* Content Column */}
+                  <div className="content-column col-lg-6 col-md-12 col-sm-12">
+                    <div className="inner-column">
+                      <div className="title">We have</div>
+                      <h1>
+                        Everything you need to build your awesome ideas in no
+                        time
+                      </h1>
+                      <div className="btns-box">
+                        <a
+                          href="/services"
+                          className="theme-btn btn-style-eight"
+                        >
+                          <span className="txt">Lets Start</span>
+                        </a>
+                        <a
+                          href="/contactus"
+                          className="theme-btn btn-style-nine"
+                        >
+                          <span className="txt">Contact Now</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Image Column */}
+                  <div className="image-column col-lg-6 col-md-12 col-sm-12">
+                    <div className="inner-column">
+                      <div className="image">
+                        <img
+                          src={require("../../assets/images/main-slider/slider3.png")}
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="slide"
-            style={{ backgroundImage: "url(images/main-slider/image-2.jpg)" }}
-          >
+          </SwiperSlide>
+          <SwiperSlide>
             <div
-              className="dotted-layer"
+              className="slide"
               style={{
-                backgroundImage: "url(images/main-slider/dotted-layer-1.png)",
+                backgroundImage: `url(${sliderimg})`,
               }}
-            />
-            <div className="auto-container">
-              <div className="row clearfix">
-                {/* Content Column */}
-                <div className="content-column col-lg-6 col-md-12 col-sm-12">
-                  <div className="inner-column">
-                    <div className="title">With us</div>
-                    <h1>Make your dream ideas come true</h1>
-                    <div className="btns-box">
-                      <a
-                        href="services.html"
-                        className="theme-btn btn-style-eight"
-                      >
-                        <span className="txt">Lets Start</span>
-                      </a>
-                      <a
-                        href="contact.html"
-                        className="theme-btn btn-style-nine"
-                      >
-                        <span className="txt">Contact Now</span>
-                      </a>
+            >
+              <div
+                className="dotted-layer"
+                style={{
+                  backgroundImage: `url(${img})`,
+                }}
+              />
+              <div className="auto-container">
+                <div className="row clearfix">
+                  {/* Content Column */}
+                  <div className="content-column col-lg-6 col-md-12 col-sm-12">
+                    <div className="inner-column">
+                      <div className="title">
+                        Do you have an idea of project ?
+                      </div>
+                      <h1>
+                        We Help Power Millions Of Businesses in 100+ Nations
+                      </h1>
+                      <div className="btns-box">
+                        <a href="/about" className="theme-btn btn-style-ten">
+                          <span className="txt">Lets Start</span>
+                        </a>
+                        <a
+                          href="/contactus"
+                          className="theme-btn btn-style-nine"
+                        >
+                          <span className="txt">Contact Now</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                {/* Image Column */}
-                <div className="image-column col-lg-6 col-md-12 col-sm-12">
-                  <div className="inner-column">
-                    <div className="image">
-                      <img src={require("../../assets/images/main-slider/slider2.png")} alt="" />
+                  {/* Image Column */}
+                  <div className="image-column col-lg-6 col-md-12 col-sm-12">
+                    <div className="inner-column">
+                      <div className="image">
+                        <img
+                          src={require("../../assets/images/main-slider/slider1.png")}
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="slide"
-            style={{ backgroundImage: "url(images/main-slider/image-2.jpg)" }}
-          >
+          </SwiperSlide>
+          <SwiperSlide>
             <div
-              className="dotted-layer"
+              className="slide"
               style={{
-                backgroundImage: "url(images/main-slider/dotted-layer-1.png)",
+                backgroundImage: `url(${sliderimg})`,
               }}
-            />
-            <div className="auto-container">
-              <div className="row clearfix">
-                {/* Content Column */}
-                <div className="content-column col-lg-6 col-md-12 col-sm-12">
-                  <div className="inner-column">
-                    <div className="title">We have</div>
-                    <h1>
-                      Everything you need to build your awesome ideas in no time
-                    </h1>
-                    <div className="btns-box">
-                      <a
-                        href="services.html"
-                        className="theme-btn btn-style-eight"
-                      >
-                        <span className="txt">Lets Start</span>
-                      </a>
-                      <a
-                        href="contact.html"
-                        className="theme-btn btn-style-nine"
-                      >
-                        <span className="txt">Contact Now</span>
-                      </a>
+            >
+              <div
+                className="dotted-layer"
+                style={{
+                  backgroundImage: `url(${img})`,
+                }}
+              />
+              <div className="auto-container">
+                <div className="row clearfix">
+                  {/* Content Column */}
+                  <div className="content-column col-lg-6 col-md-12 col-sm-12">
+                    <div className="inner-column">
+                      <div className="title">With us</div>
+                      <h1>Make your dream ideas come true</h1>
+                      <div className="btns-box">
+                        <a
+                          href="/services"
+                          className="theme-btn btn-style-eight"
+                        >
+                          <span className="txt">Lets Start</span>
+                        </a>
+                        <a
+                          href="/contactus"
+                          className="theme-btn btn-style-nine"
+                        >
+                          <span className="txt">Contact Now</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                {/* Image Column */}
-                <div className="image-column col-lg-6 col-md-12 col-sm-12">
-                  <div className="inner-column">
-                    <div className="image">
-                      <img src={require("../../assets/images/main-slider/slider3.png")} alt="" />
+                  {/* Image Column */}
+                  <div className="image-column col-lg-6 col-md-12 col-sm-12">
+                    <div className="inner-column">
+                      <div className="image">
+                        <img
+                          src={require("../../assets/images/main-slider/slider2.png")}
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="slide"
+              style={{
+                backgroundImage: `url(${sliderimg})`,
+              }}
+            >
+              <div
+                className="dotted-layer"
+                style={{
+                  backgroundImage: `url(${img})`,
+                }}
+              />
+              <div className="auto-container">
+                <div className="row clearfix">
+                  {/* Content Column */}
+                  <div className="content-column col-lg-6 col-md-12 col-sm-12">
+                    <div className="inner-column">
+                      <div className="title">We have</div>
+                      <h1>
+                        Everything you need to build your awesome ideas in no
+                        time
+                      </h1>
+                      <div className="btns-box">
+                        <a
+                          href="/services"
+                          className="theme-btn btn-style-eight"
+                        >
+                          <span className="txt">Lets Start</span>
+                        </a>
+                        <a
+                          href="/contactus"
+                          className="theme-btn btn-style-nine"
+                        >
+                          <span className="txt">Contact Now</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Image Column */}
+                  <div className="image-column col-lg-6 col-md-12 col-sm-12">
+                    <div className="inner-column">
+                      <div className="image">
+                        <img
+                          src={require("../../assets/images/main-slider/slider3.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="slide"
+              style={{
+                backgroundImage: `url(${sliderimg})`,
+              }}
+            >
+              <div
+                className="dotted-layer"
+                style={{
+                  backgroundImage: `url(${img})`,
+                }}
+              />
+              <div className="auto-container">
+                <div className="row clearfix">
+                  {/* Content Column */}
+                  <div className="content-column col-lg-6 col-md-12 col-sm-12">
+                    <div className="inner-column">
+                      <div className="title">
+                        Do you have an idea of project ?
+                      </div>
+                      <h1>
+                        We Help Power Millions Of Businesses in 100+ Nations
+                      </h1>
+                      <div className="btns-box">
+                        <a href="/about" className="theme-btn btn-style-ten">
+                          <span className="txt">Lets Start</span>
+                        </a>
+                        <a
+                          href="/contactus"
+                          className="theme-btn btn-style-nine"
+                        >
+                          <span className="txt">Contact Now</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Image Column */}
+                  <div className="image-column col-lg-6 col-md-12 col-sm-12">
+                    <div className="inner-column">
+                      <div className="image">
+                        <img
+                          src={require("../../assets/images/main-slider/slider1.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="slide"
+              style={{
+                backgroundImage: `url(${sliderimg})`,
+              }}
+            >
+              <div
+                className="dotted-layer"
+                style={{
+                  backgroundImage: `url(${img})`,
+                }}
+              />
+              <div className="auto-container">
+                <div className="row clearfix">
+                  {/* Content Column */}
+                  <div className="content-column col-lg-6 col-md-12 col-sm-12">
+                    <div className="inner-column">
+                      <div className="title">With us</div>
+                      <h1>Make your dream ideas come true</h1>
+                      <div className="btns-box">
+                        <a
+                          href="/services"
+                          className="theme-btn btn-style-eight"
+                        >
+                          <span className="txt">Lets Start</span>
+                        </a>
+                        <a
+                          href="/contactus"
+                          className="theme-btn btn-style-nine"
+                        >
+                          <span className="txt">Contact Now</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Image Column */}
+                  <div className="image-column col-lg-6 col-md-12 col-sm-12">
+                    <div className="inner-column">
+                      <div className="image">
+                        <img
+                          src={require("../../assets/images/main-slider/slider2.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+        <div className="main-slider-carousel owl-carousel owl-theme owl-loaded owl-drag">
+          <div className="owl-nav">
+            <div className="owl-prev">
+              <span className="flaticon-back" />
+            </div>
+            <div className="owl-next">
+              <span className="flaticon-arrow-pointing-to-right" />
+            </div>
+          </div>
+          <div className="owl-dots">
+            <div className="owl-dot">
+              <span />
+            </div>
+            <div className="owl-dot">
+              <span />
+            </div>
+            <div className="owl-dot active">
+              <span />
             </div>
           </div>
         </div>
@@ -184,6 +452,7 @@ const Herosection = () => {
         </div>
         {/* Waves End */}
       </section>
+
       {/* End Banner Section */}
     </>
   );

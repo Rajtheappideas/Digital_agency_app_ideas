@@ -32,12 +32,12 @@ const Faqs = () => {
                     </div>
                   </li>
                   {/*Block*/}
-                  <li className="accordion block">
-                    <div className="acc-btn">
+                  <li className="accordion block active-block">
+                    <div className="acc-btn active">
                       What services does Appideas offer ?
                       <div className="icon flaticon-right-arrow-1"></div>
                     </div>
-                    <div className="acc-content">
+                    <div className="acc-content current">
                       <div className="content">
                         <div className="text">
                           Our services include SEO Optimization, Advertising,
@@ -48,12 +48,12 @@ const Faqs = () => {
                     </div>
                   </li>
                   {/*Block*/}
-                  <li className="accordion block active-block">
-                    <div className="acc-btn active">
+                  <li className="accordion block ">
+                    <div className="acc-btn">
                       How long does it take to build a new project from scratch
                       ?<div className="icon flaticon-right-arrow-1"></div>
                     </div>
-                    <div className="acc-content current">
+                    <div className="acc-content">
                       <div className="content">
                         <div className="text">
                           We will first study your business needs and implement

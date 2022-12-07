@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/images/logo.png";
 import SearchPopup from "./SearchPopup";
+import SidebarOfPackages from "./SidebarOfPackages";
 
 const Header = () => {
   const [activeSearchbar, setActiveSearchbar] = useState(false);
   const [showMobileNav, setShowMobileNav] = useState(false);
   const [stickyHeader, setStickyHeader] = useState(false);
+  const [showSidebarForPackages, setShowSidebarForPackages] = useState(false);
+  const [activeTagForMobileMenu, setActiveTagForMobileMenu] = useState({
+    showAboutus: false,
+    showServices: false,
+    showProjects: false,
+    showEvents: false,
+    showShop: false,
+    showBlogs: false,
+  });
 
   // for sticky header
   useEffect(() => {
@@ -37,7 +47,7 @@ const Header = () => {
   return (
     <header
       className={`main-header header-style-one ${
-        stickyHeader && "fixed-header"
+        stickyHeader && !showSidebarForPackages && "fixed-header"
       } ${showMobileNav && "mobile-menu-visible"}  ${
         activeSearchbar && "search-active"
       }`}
@@ -107,6 +117,288 @@ const Header = () => {
                     <a>Services</a>
                     <ul>
                       <li>
+                        <a href="/content-marketing">Content Marketing</a>
+                      </li>
+                      <li>
+                        <a href="/social-marketing">Social Marketing</a>
+                      </li>
+                      <li>
+                        <a href="/app-development">App Development</a>
+                      </li>
+                      <li>
+                        <a href="/seo">SEO Optimization</a>
+                      </li>
+                      <li>
+                        <a href="/web-development">Web Development</a>
+                      </li>
+                      <li>
+                        <a href="/advertising">Advertising</a>
+                      </li>
+                      <li>
+                        <a href="/services">See All</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li className="dropdown">
+                    <a>Projects</a>
+                    <ul>
+                      <li>
+                        <a href="/projects">Investigobank</a>
+                      </li>
+                      <li>
+                        <a href="/projects">Pcspecialist</a>
+                      </li>
+                      <li>
+                        <a href="/projects">Car Service All</a>
+                      </li>
+                      <li>
+                        <a href="/projects">Bolt Usuario</a>
+                      </li>
+                      <li>
+                        <a href="/projects">OnSortCeSoir</a>
+                      </li>
+                      <li>
+                        <a href="/projects">See all</a>
+                      </li>
+                      <li>
+                        <a href="/projects">See All</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="dropdown">
+                    <a>Events</a>
+                    <ul>
+                      <li>
+                        <a href="/events">Our Events</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="dropdown">
+                    <a>Shop</a>
+                    <ul>
+                      <li>
+                        <a href="/shop">Presentation</a>
+                      </li>
+                      <li>
+                        <a href="/shop">Business Card</a>
+                      </li>
+                      <li>
+                        <a href="/shop">Web Design</a>
+                      </li>
+                      <li>
+                        <a href="/shop">Graphic Templates</a>
+                      </li>
+                      <li>
+                        <a href="/shop">See All</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="dropdown has-mega-menu">
+                    <a>More</a>
+                    <div className="mega-menu">
+                      <div className="mega-menu-bar row clearfix">
+                        <div className="column col-lg-3 col-md-4 col-sm-12">
+                          <h3>About</h3>
+                          <ul>
+                            <li>
+                              <a href="/about">About us</a>
+                            </li>
+                            <li>
+                              <a href="/faq">Faq</a>
+                            </li>
+                            <li>
+                              <a href="/terms">Terms &amp; Condition</a>
+                            </li>
+                            <li>
+                              <a href="/privacy">Privacy &amp; Policy</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div className="column col-lg-3 col-md-4 col-sm-12">
+                          <h3>Services</h3>
+                          <ul>
+                            <li>
+                              <a href="/content-marketing">Content Marketing</a>
+                            </li>
+                            <li>
+                              <a href="/social-marketing">Social Marketing</a>
+                            </li>
+                            <li>
+                              <a href="/app-development">App Development</a>
+                            </li>
+                            <li>
+                              <a href="/seo">SEO Optimization</a>
+                            </li>
+                            <li>
+                              <a href="/web-development">Web Development</a>
+                            </li>
+                            <li>
+                              <a href="/services">See all</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div className="column col-lg-3 col-md-4 col-sm-12">
+                          <h3>Projects</h3>
+                          <ul>
+                            <li>
+                              <a href="/projects">Investigobank</a>
+                            </li>
+                            <li>
+                              <a href="/projects">Pcspecialist</a>
+                            </li>
+                            <li>
+                              <a href="/projects">Car Service All</a>
+                            </li>
+                            <li>
+                              <a href="/projects">Bolt Usuario</a>
+                            </li>
+                            <li>
+                              <a href="/projects">OnSortCeSoir</a>
+                            </li>
+                            <li>
+                              <a href="/projects">See all</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div className="column col-lg-3 col-md-4 col-sm-12">
+                          <h3>Shop</h3>
+                          <ul>
+                            <li>
+                              <a href="/shop">Web design</a>
+                            </li>
+                            <li>
+                              <a href="/shop">Presentation</a>
+                            </li>
+                            <li>
+                              <a href="/shop">Business</a>
+                            </li>
+                            <li>
+                              <a href="/shop">Card</a>
+                            </li>
+                            <li>
+                              <a href="/shop">Adds-ons</a>
+                            </li>
+                            <li>
+                              <a href="/shop">Photos</a>
+                            </li>
+                            <li>
+                              <a href="/shop">Videos</a>
+                            </li>
+                            <li>
+                              <a href="/shop">Graphic Templates</a>
+                            </li>
+                            <li>
+                              <a href="/shop">See all</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="dropdown-btn">
+                      <span className="fa fa-angle-down" />
+                    </div>
+                  </li>
+                  <li className="dropdown">
+                    <a>Blogs</a>
+                    <ul>
+                      <li>
+                        <a href="/blogs">Our Blogs</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="/contactus">Contact us</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            {/* Main Menu End*/}
+            <div className="outer-box clearfix">
+              {/* Quote Btn */}
+              <div className="btn-box">
+                <a href="/signup" className="theme-btn btn-style-one">
+                  <span className="txt">Sign up</span>
+                </a>
+              </div>
+              {/* Search Btn */}
+              <div
+                onClick={() => setActiveSearchbar(true)}
+                className="search-box-btn search-box-outer"
+              >
+                <span className="icon fa fa-search" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*End Header Upper*/}
+      {/* Sticky Header  */}
+      <div className="sticky-header">
+        <div className="auto-container clearfix">
+          {/*Logo*/}
+          <div className="logo pull-left">
+            <a href="/" title="">
+              <img
+                src={require("../assets/images/logo-small.png")}
+                alt="small-logo"
+                title="logo"
+              />
+            </a>
+          </div>
+          {/*Right Col*/}
+          <div className="pull-right">
+            {/* Main Menu */}
+            <nav className="main-menu">
+              {/*Keep This Empty / Menu will come through Javascript*/}
+              <div className="navbar-header">
+                {/* Toggle Button */}
+                <button
+                  className="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span className="icon-bar" />
+                  <span className="icon-bar" />
+                  <span className="icon-bar" />
+                </button>
+              </div>
+              <div
+                className="navbar-collapse collapse clearfix"
+                id="navbarSupportedContent"
+              >
+                <ul className="navigation clearfix">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <li className="dropdown">
+                    <a>About</a>
+                    <ul>
+                      <li>
+                        <a href="/aboutus">About us</a>
+                      </li>
+                      <li>
+                        <a href="/faq">Faq</a>
+                      </li>
+                      <li>
+                        <a href="/terms">Terms &amp; Condition</a>
+                      </li>
+                      <li>
+                        <a href="/privacy">Privacy &amp; Policy</a>
+                      </li>
+                    </ul>
+                    <div className="dropdown-btn">
+                      <span className="fa fa-angle-down" />
+                    </div>
+                  </li>
+                  <li className="dropdown">
+                    <a>Services</a>
+                    <ul>
+                      <li>
                         <a href="/services">Our Services</a>
                       </li>
                       <li>
@@ -128,20 +420,59 @@ const Header = () => {
                         <a href="/advertising">Advertising</a>
                       </li>
                     </ul>
-                  </li>
-                  <li className="dropdown">
-                    <a>Packages</a>
-                    <ul>
-                      <li>
-                        <a href="/packages">Our Packages</a>
-                      </li>
-                    </ul>
+                    <div className="dropdown-btn">
+                      <span className="fa fa-angle-down" />
+                    </div>
                   </li>
                   <li className="dropdown">
                     <a>Projects</a>
                     <ul>
                       <li>
-                        <a href="/projects">Our Projects</a>
+                        <a href="/projects">Investigobank</a>
+                      </li>
+                      <li>
+                        <a href="/projects">Pcspecialist</a>
+                      </li>
+                      <li>
+                        <a href="/projects">Car Service All</a>
+                      </li>
+                      <li>
+                        <a href="/projects">Bolt Usuario</a>
+                      </li>
+                      <li>
+                        <a href="/projects">OnSortCeSoir</a>
+                      </li>
+
+                      <li>
+                        <a href="/projects">See All</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="dropdown">
+                    <a>Events</a>
+                    <ul>
+                      <li>
+                        <a href="/events">Our Events</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="dropdown">
+                    <a>Shop</a>
+                    <ul>
+                      <li>
+                        <a href="/shop">Presentation</a>
+                      </li>
+                      <li>
+                        <a href="/shop">Business Card</a>
+                      </li>
+                      <li>
+                        <a href="/shop">Web Design</a>
+                      </li>
+                      <li>
+                        <a href="/shop">Graphic Templates</a>
+                      </li>
+                      <li>
+                        <a href="/shop">See All</a>
                       </li>
                     </ul>
                   </li>
@@ -152,16 +483,19 @@ const Header = () => {
                         <a href="/blogs">Our Blogs</a>
                       </li>
                     </ul>
+                    <div className="dropdown-btn">
+                      <span className="fa fa-angle-down" />
+                    </div>
                   </li>
                   <li className="dropdown has-mega-menu">
-                    <a>Sitemap</a>
+                    <a>More</a>
                     <div className="mega-menu">
                       <div className="mega-menu-bar row clearfix">
                         <div className="column col-lg-3 col-md-4 col-sm-12">
                           <h3>About</h3>
                           <ul>
                             <li>
-                              <a href="/aboutus">About us</a>
+                              <a href="/about">About us</a>
                             </li>
                             <li>
                               <a href="/faq">Faq</a>
@@ -198,25 +532,61 @@ const Header = () => {
                           </ul>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-sm-12">
-                          <h3>Blogs</h3>
+                          <h3>Projects</h3>
                           <ul>
                             <li>
-                              <a href="/blogs">Our Blogs</a>
+                              <a href="/projects">Investigobank</a>
+                            </li>
+                            <li>
+                              <a href="/projects">Pcspecialist</a>
+                            </li>
+                            <li>
+                              <a href="/projects">Car Service All</a>
+                            </li>
+                            <li>
+                              <a href="/projects">Bolt Usuario</a>
+                            </li>
+                            <li>
+                              <a href="/projects">OnSortCeSoir</a>
+                            </li>
+                            <li>
+                              <a href="/projects">See all</a>
                             </li>
                           </ul>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-sm-12">
-                          <h3>Packages &amp; Projects</h3>
+                          <h3>Shop</h3>
                           <ul>
                             <li>
-                              <a href="/packages">Our Packages</a>
+                              <a href="/shop">Web design</a>
                             </li>
                             <li>
-                              <a href="/projects">Our Projects</a>
+                              <a href="/shop">Presentation</a>
+                            </li>
+                            <li>
+                              <a href="/shop">Business Card</a>
+                            </li>
+                            <li>
+                              <a href="/shop">Adds-ons</a>
+                            </li>
+                            <li>
+                              <a href="/shop">Photos</a>
+                            </li>
+                            <li>
+                              <a href="/shop">Videos</a>
+                            </li>
+                            <li>
+                              <a href="/shop">Graphic Templates</a>
+                            </li>
+                            <li>
+                              <a href="/shop">See all</a>
                             </li>
                           </ul>
                         </div>
                       </div>
+                    </div>
+                    <div className="dropdown-btn">
+                      <span className="fa fa-angle-down" />
                     </div>
                   </li>
                   <li>
@@ -225,12 +595,14 @@ const Header = () => {
                 </ul>
               </div>
             </nav>
+
+            {/* Main Menu End*/}
             {/* Main Menu End*/}
             <div className="outer-box clearfix">
               {/* Quote Btn */}
               <div className="btn-box">
-                <a href="/contactus" className="theme-btn btn-style-one">
-                  <span className="txt">Get in touch</span>
+                <a href="/signup" className="theme-btn btn-style-two">
+                  <span className="txt">Sign up</span>
                 </a>
               </div>
               {/* Search Btn */}
@@ -240,46 +612,20 @@ const Header = () => {
               >
                 <span className="icon fa fa-search" />
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/*End Header Upper*/}
-      {/* Sticky Header  */}
-      <div className="sticky-header">
-        <div className="auto-container clearfix">
-          {/*Logo*/}
-          <div className="logo pull-left">
-            <a href="/" title="">
-              <img
-                src={require("../assets/images/logo-small.png")}
-                alt="small-logo"
-                title="logo"
-              />
-            </a>
-          </div>
-          {/*Right Col*/}
-          <div className="pull-right">
-            {/* Main Menu */}
-            <nav className="main-menu">
-              {/*Keep This Empty / Menu will come through Javascript*/}
-            </nav>
-            {/* Main Menu End*/}
-            {/* Main Menu End*/}
-            <div className="outer-box clearfix">
-              {/* Quote Btn */}
-              <div className="btn-box">
-                <a href="/contactus" className="theme-btn btn-style-two">
-                  <span className="txt">Get in touch</span>
-                </a>
-              </div>
-              {/* Search Btn */}
-              <div
-                onClick={() => setActiveSearchbar(true)}
-                className="search-box-btn search-box-outer"
-              >
-                <span className="icon fa fa-search" />
-              </div>
+              {/* Nav Btn */}
+              {(window.location.pathname == "/package-hosting" ||
+                window.location.pathname == "/package-video-editing" ||
+                window.location.pathname == "/package-digital-marketing") && (
+                <div
+                  className="nav-btn navSidebar-button"
+                  onClick={() => setShowSidebarForPackages(true)}
+                >
+                  <span
+                    className="icon flaticon-menu"
+                    onClick={() => setShowSidebarForPackages(true)}
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -299,11 +645,247 @@ const Header = () => {
           </div>
           <div className="menu-outer">
             {/*Here Menu Will Come Automatically Via Javascript / Same Menu as in Header*/}
+            <div className="navbar-header">
+              {/* Toggle Button */}
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="icon-bar" />
+                <span className="icon-bar" />
+                <span className="icon-bar" />
+              </button>
+            </div>
+            <div
+              className="navbar-collapse collapse clearfix"
+              id="navbarSupportedContent"
+            >
+              <ul className="navigation clearfix">
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li
+                  className="dropdown"
+                  onClick={() =>
+                    setActiveTagForMobileMenu({
+                      ...activeTagForMobileMenu,
+                      showAboutus: !activeTagForMobileMenu.showAboutus,
+                    })
+                  }
+                >
+                  <a>About</a>
+                  <ul
+                    style={{
+                      display: activeTagForMobileMenu.showAboutus
+                        ? "block"
+                        : "none",
+                    }}
+                  >
+                    <li>
+                      <a href="/about">About us</a>
+                    </li>
+                    <li>
+                      <a href="/faq">Faq</a>
+                    </li>
+                    <li>
+                      <a href="/terms">Terms &amp; Condition</a>
+                    </li>
+                    <li>
+                      <a href="/privacy">Privacy &amp; Policy</a>
+                    </li>
+                  </ul>
+                  <div className="dropdown-btn">
+                    <span className="fa fa-angle-down" />
+                  </div>
+                </li>
+                <li
+                  className="dropdown"
+                  onClick={() =>
+                    setActiveTagForMobileMenu({
+                      ...activeTagForMobileMenu,
+                      showServices: !activeTagForMobileMenu.showServices,
+                    })
+                  }
+                >
+                  <a>Services</a>
+                  <ul
+                    style={{
+                      display: activeTagForMobileMenu.showServices
+                        ? "block"
+                        : "none",
+                    }}
+                  >
+                    <li>
+                      <a href="/services">Our Services</a>
+                    </li>
+                    <li>
+                      <a href="/content-marketing">Content Marketing</a>
+                    </li>
+                    <li>
+                      <a href="/social-marketing">Social Marketing</a>
+                    </li>
+                    <li>
+                      <a href="/app-development">App Development</a>
+                    </li>
+                    <li>
+                      <a href="/seo">SEO Optimization</a>
+                    </li>
+                    <li>
+                      <a href="/web-development">Web Development</a>
+                    </li>
+                    <li>
+                      <a href="/advertising">Advertising</a>
+                    </li>
+                  </ul>
+                  <div className="dropdown-btn">
+                    <span className="fa fa-angle-down" />
+                  </div>
+                </li>
+                <li
+                  className="dropdown"
+                  onClick={() =>
+                    setActiveTagForMobileMenu({
+                      ...activeTagForMobileMenu,
+                      showProjects: !activeTagForMobileMenu.showProjects,
+                    })
+                  }
+                >
+                  <a>Projects</a>
+                  <ul
+                    style={{
+                      display: activeTagForMobileMenu.showProjects
+                        ? "block"
+                        : "none",
+                    }}
+                  >
+                    <li>
+                      <a href="/projects">Investigobank</a>
+                    </li>
+                    <li>
+                      <a href="/projects">Pcspecialist</a>
+                    </li>
+                    <li>
+                      <a href="/projects">Car Service All</a>
+                    </li>
+                    <li>
+                      <a href="/projects">Bolt Usuario</a>
+                    </li>
+                    <li>
+                      <a href="/projects">OnSortCeSoir</a>
+                    </li>
+                    <li>
+                      <a href="/projects">See all</a>
+                    </li>
+                    <li>
+                      <a href="/projects">See all</a>
+                    </li>
+                  </ul>
+                  <div className="dropdown-btn">
+                    <span className="fa fa-angle-down" />
+                  </div>
+                </li>
+                <li
+                  className="dropdown"
+                  onClick={() =>
+                    setActiveTagForMobileMenu({
+                      ...activeTagForMobileMenu,
+                      showEvents: !activeTagForMobileMenu.showEvents,
+                    })
+                  }
+                >
+                  <a>Events</a>
+                  <ul
+                    style={{
+                      display: activeTagForMobileMenu.showEvents
+                        ? "block"
+                        : "none",
+                    }}
+                  >
+                    {" "}
+                    <li>
+                      <a href="/events">Our Events</a>
+                    </li>
+                  </ul>
+                  <div className="dropdown-btn">
+                    <span className="fa fa-angle-down" />
+                  </div>
+                </li>
+                <li
+                  className="dropdown"
+                  onClick={() =>
+                    setActiveTagForMobileMenu({
+                      ...activeTagForMobileMenu,
+                      showShop: !activeTagForMobileMenu.showShop,
+                    })
+                  }
+                >
+                  <a>Shop</a>
+                  <ul
+                    style={{
+                      display: activeTagForMobileMenu.showShop
+                        ? "block"
+                        : "none",
+                    }}
+                  >
+                    {" "}
+                    <li>
+                      <a href="/shop">See all</a>
+                    </li>
+                  </ul>
+                  <div className="dropdown-btn">
+                    <span className="fa fa-angle-down" />
+                  </div>
+                </li>
+                <li
+                  className="dropdown"
+                  onClick={() =>
+                    setActiveTagForMobileMenu({
+                      ...activeTagForMobileMenu,
+                      showBlogs: !activeTagForMobileMenu.showBlogs,
+                    })
+                  }
+                >
+                  <a>Blogs</a>
+                  <ul
+                    style={{
+                      display: activeTagForMobileMenu.showBlogs
+                        ? "block"
+                        : "none",
+                    }}
+                  >
+                    {" "}
+                    <li>
+                      <a href="/blogs">Our Blogs</a>
+                    </li>
+                  </ul>
+                  <div className="dropdown-btn">
+                    <span className="fa fa-angle-down" />
+                  </div>
+                </li>
+                <li>
+                  <a href="/signup">Sign up</a>
+                </li>
+                <li>
+                  <a href="/contactus">Contact us</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </div>
       {/* End Mobile Menu */}
       <SearchPopup setActiveSearchbar={setActiveSearchbar} />
+      {/* sidebar for packages */}
+      {/* sidebar */}
+      <SidebarOfPackages
+        showSidebarForPackages={showSidebarForPackages}
+        setShowSidebarForPackages={setShowSidebarForPackages}
+      />
     </header>
   );
 };

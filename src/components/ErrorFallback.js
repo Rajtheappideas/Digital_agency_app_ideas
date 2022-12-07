@@ -5,7 +5,7 @@ function ErrorFallback({ error, resetErrorBoundary }) {
       <pre>{error.message}</pre>
       <button
         onClick={resetErrorBoundary}
-        className="button button--effect d-none d-sm-block"
+        className="button button--effect d-none d-sm-block theme-btn btn-style-three"
       >
         Reload
       </button>

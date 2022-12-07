@@ -1,4 +1,4 @@
-// import "./App.css";
+import "./assets/css/style.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import { lazy, Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./components/ErrorFallback";
+import ColorPalate from "./components/ColorPalate";
 
 const Home = lazy(() => import("./pages/Home"));
 const Aboutus = lazy(() => import("./pages/Aboutus"));
@@ -17,7 +18,7 @@ const Services = lazy(() => import("./pages/Services"));
 const Signin = lazy(() => import("./pages/Signin"));
 const Signup = lazy(() => import("./pages/Signup"));
 const Privacy = lazy(() => import("./pages/Privacy"));
-const Faq = lazy(() => import("./pages/Faq"));
+const Faq = lazy(() => import("./pages/Faqs"));
 const TermsAndCondition = lazy(() => import("./pages/TermsAndCondition"));
 const Seo = lazy(() => import("./pages/Seo"));
 const ContentMarketing = lazy(() => import("./pages/ContentMarketing"));
@@ -28,6 +29,13 @@ const Advertising = lazy(() => import("./pages/Advertising"));
 const CommingSoon = lazy(() => import("./pages/CommingSoon"));
 const Events = lazy(() => import("./pages/Events"));
 const NewsDetails = lazy(() => import("./pages/NewsDetails"));
+const PackageDigitalMarketing = lazy(() =>
+  import("./pages/PackageDigitalMarketing")
+);
+const PackageHosting = lazy(() => import("./pages/PackageHosting"));
+const PackageVideoEditing = lazy(() => import("./pages/PackageVideoEditing"));
+const Shop = lazy(() => import("./pages/Shop"));
+const SingleProduct = lazy(() => import("./pages/SingleProduct"));
 const Error404 = lazy(() => import("./pages/Error404"));
 
 function App() {
@@ -47,7 +55,12 @@ function App() {
             </div>
           }
         >
-          <Header />
+          {/* <Header /> */}
+          {window.location.pathname === "/shop" ||
+          window.location.pathname === "/single-product" ? null : (
+            <Header />
+          )}
+          {!window.location.pathname == "/" && <ColorPalate />}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/aboutus" element={<Aboutus />} />
@@ -70,8 +83,26 @@ function App() {
             <Route path="/comming-soon" element={<CommingSoon />} />
             <Route path="/events" element={<Events />} />
             <Route path="/news-detail" element={<NewsDetails />} />
+            <Route
+              path="/package-digital-marketing"
+              element={<PackageDigitalMarketing />}
+            />
+            <Route path="/package-hosting" element={<PackageHosting />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/single-product" element={<SingleProduct />} />
+            <Route
+              path="/package-video-editing"
+              element={<PackageVideoEditing />}
+            />
             <Route path="/*" element={<Error404 />} />
           </Routes>
+          {/* <!-- Scroll To Top --> */}
+          <div
+            className="back-to-top scroll-to-target show-back-to-top"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            TOP
+          </div>
           <Footer />
         </Suspense>
       </ErrorBoundary>

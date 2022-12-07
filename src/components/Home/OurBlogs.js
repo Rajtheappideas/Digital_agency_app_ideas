@@ -72,19 +72,15 @@ const OurBlogs = () => {
                     <div className="social-inner">
                       <span className="share-now fa fa-share-alt" />
                       <a href="#">
-                        /
                         <span className="fab fa-facebook-f" />
                       </a>
                       <a href="#">
-                        /
                         <span className="fab fa-twitter" />
                       </a>
                       <a href="#">
-                        /
                         <span className="fab fa-dribbble-square" />
                       </a>
                       <a href="#">
-                        /
                         <span className="fab fa-behance" />
                       </a>
                     </div>
@@ -141,19 +137,15 @@ const OurBlogs = () => {
                     <div className="social-inner">
                       <span className="share-now fa fa-share-alt" />
                       <a href="#">
-                        /
                         <span className="fab fa-facebook-f" />
                       </a>
                       <a href="#">
-                        /
                         <span className="fab fa-twitter" />
                       </a>
                       <a href="#">
-                        /
                         <span className="fab fa-dribbble-square" />
                       </a>
                       <a href="#">
-                        /
                         <span className="fab fa-behance" />
                       </a>
                     </div>
@@ -210,19 +202,15 @@ const OurBlogs = () => {
                     <div className="social-inner">
                       <span className="share-now fa fa-share-alt" />
                       <a href="#">
-                        /
                         <span className="fab fa-facebook-f" />
                       </a>
                       <a href="#">
-                        /
                         <span className="fab fa-twitter" />
                       </a>
                       <a href="#">
-                        /
                         <span className="fab fa-dribbble-square" />
                       </a>
                       <a href="#">
-                        /
                         <span className="fab fa-behance" />
                       </a>
                     </div>

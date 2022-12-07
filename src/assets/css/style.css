@@ -8094,14 +8094,14 @@ img {
   color: #fe4c1c;
 }
 
-.list-link-two li a:before {
+/* .list-link-two li a:before {
   position: absolute;
-  content: "\f101";
+  content: "->";
   left: 0px;
   top: 0px;
   line-height: 1em;
   font-family: "FontAwesome";
-}
+} */
 
 .footer-style-two .footer-bottom {
   position: relative;
@@ -10421,9 +10421,9 @@ img {
   height: 101%;
 }
 
-.sidebar .service-list li a:before {
+/* .sidebar .service-list li a:before {
   font-family: "FontAwesome";
-  content: "\f101";
+  content: "->";
   position: absolute;
   right: 20px;
   top: 16px;
@@ -10433,7 +10433,7 @@ img {
   font-weight: normal;
   text-align: center;
   z-index: 5;
-}
+} */
 
 .sidebar .service-list li a:hover,
 .sidebar .service-list li.current a {
@@ -11365,6 +11365,8 @@ img {
 .news-block-three .inner-box .lower-content .post-meta li a .icon {
   position: absolute;
   left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
   color: #c945dc;
 }
 
@@ -16302,6 +16304,7 @@ img {
     -webkit-transform: rotate(359deg);
   }
 }
+
 
 /* ----------------Raj's design----------------------- */
 /* ----------------Raj's design----------------------- */

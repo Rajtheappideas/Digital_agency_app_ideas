@@ -1,4 +1,12 @@
 import React from "react";
+import { Navigation, Pagination } from "swiper";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const ReleatedProjects = () => {
   return (
@@ -14,248 +22,279 @@ const ReleatedProjects = () => {
               <span className="txt">Become our partner</span>
             </a>
           </div>
-          <div className="three-item-carousel owl-carousel owl-theme">
-            {/* Gallery Block */}
-            <div className="gallery-block">
-              <div className="inner-box">
-                <figure className="image-box">
-                  <img
-                    src={require("../../assets/images/gallery/1.jpg")}
-                    alt="github-image"
-                  />
-                  {/* Overlay Box */}
-                  <div className="overlay-box">
-                    <div className="overlay-inner">
-                      <div className="content">
-                        <a
-                          href={`../../assets/images/gallery/1.jpg`}
-                          data-fancybox="gallery"
-                          data-caption=""
-                          className="icon flaticon-plus"
-                        />
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={50}
+            slidesPerView={3}
+            navigation
+            pagination={{ clickable: true }}
+            // onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log("slide change")}
+            breakpoints={{
+              250: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <div className="gallery-block">
+                <div className="inner-box">
+                  <figure className="image-box">
+                    <img
+                      src={require("../../assets/images/gallery/1.jpg")}
+                      alt="github-image"
+                    />
+                    {/* Overlay Box */}
+                    <div className="overlay-box">
+                      <div className="overlay-inner">
+                        <div className="content">
+                          <a
+                            href={`../../assets/images/gallery/1.jpg`}
+                            data-fancybox="gallery"
+                            data-caption=""
+                            className="icon flaticon-plus"
+                          />
+                        </div>
                       </div>
                     </div>
+                  </figure>
+                  <div className="lower-content">
+                    <div className="title">Programming</div>
+                    <h5>
+                      <a href="/projects-detail">Github</a>
+                    </h5>
                   </div>
-                </figure>
-                <div className="lower-content">
-                  <div className="title">Programming</div>
-                  <h5>
-                    <a href="/projects-detail">Github</a>
-                  </h5>
                 </div>
               </div>
-            </div>
-            {/* Gallery Block */}
-            <div className="gallery-block">
-              <div className="inner-box">
-                <figure className="image-box">
-                  <img
-                    src={require("../../assets/images/gallery/2.jpg")}
-                    alt="Investigo"
-                  />
-                  {/* Overlay Box */}
-                  <div className="overlay-box">
-                    <div className="overlay-inner">
-                      <div className="content">
-                        <a
-                          href="/images/gallery/2.jpg"
-                          data-fancybox="gallery"
-                          data-caption=""
-                          className="icon flaticon-plus"
-                        />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="gallery-block">
+                <div className="inner-box">
+                  <figure className="image-box">
+                    <img
+                      src={require("../../assets/images/gallery/2.jpg")}
+                      alt="Investigo"
+                    />
+                    {/* Overlay Box */}
+                    <div className="overlay-box">
+                      <div className="overlay-inner">
+                        <div className="content">
+                          <a
+                            href="/images/gallery/2.jpg"
+                            data-fancybox="gallery"
+                            data-caption=""
+                            className="icon flaticon-plus"
+                          />
+                        </div>
                       </div>
                     </div>
+                  </figure>
+                  <div className="lower-content">
+                    <div className="title">Investment Bank</div>
+                    <h5>
+                      <a href="/projects-detail">Investigo</a>
+                    </h5>
                   </div>
-                </figure>
-                <div className="lower-content">
-                  <div className="title">Investment Bank</div>
-                  <h5>
-                    <a href="/projects-detail">Investigo</a>
-                  </h5>
                 </div>
               </div>
-            </div>
-            {/* Gallery Block */}
-            <div className="gallery-block">
-              <div className="inner-box">
-                <figure className="image-box">
-                  <img
-                    src={require("../../assets/images/gallery/3.jpg")}
-                    alt="Stripe"
-                  />
-                  {/* Overlay Box */}
-                  <div className="overlay-box">
-                    <div className="overlay-inner">
-                      <div className="content">
-                        <a
-                          href="/images/gallery/3.jpg"
-                          data-fancybox="gallery"
-                          data-caption=""
-                          className="icon flaticon-plus"
-                        />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="gallery-block">
+                <div className="inner-box">
+                  <figure className="image-box">
+                    <img
+                      src={require("../../assets/images/gallery/3.jpg")}
+                      alt="Stripe"
+                    />
+                    {/* Overlay Box */}
+                    <div className="overlay-box">
+                      <div className="overlay-inner">
+                        <div className="content">
+                          <a
+                            href="/images/gallery/3.jpg"
+                            data-fancybox="gallery"
+                            data-caption=""
+                            className="icon flaticon-plus"
+                          />
+                        </div>
                       </div>
                     </div>
+                  </figure>
+                  <div className="lower-content">
+                    <div className="title">Online Payements Gateway</div>
+                    <h5>
+                      <a href="/projects-detail">Stripe</a>
+                    </h5>
                   </div>
-                </figure>
-                <div className="lower-content">
-                  <div className="title">Online Payements Gateway</div>
-                  <h5>
-                    <a href="/projects-detail">Stripe</a>
-                  </h5>
                 </div>
               </div>
-            </div>
-            {/* Gallery Block */}
-            <div className="gallery-block">
-              <div className="inner-box">
-                <figure className="image-box">
-                  <img
-                    src={require("../../assets/images/gallery/4.jpg")}
-                    alt="Binance"
-                  />
-                  {/* Overlay Box */}
-                  <div className="overlay-box">
-                    <div className="overlay-inner">
-                      <div className="content">
-                        <a
-                          href="/images/gallery/4.jpg"
-                          data-fancybox="gallery"
-                          data-caption=""
-                          className="icon flaticon-plus"
-                        />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="gallery-block">
+                <div className="inner-box">
+                  <figure className="image-box">
+                    <img
+                      src={require("../../assets/images/gallery/4.jpg")}
+                      alt="Binance"
+                    />
+                    {/* Overlay Box */}
+                    <div className="overlay-box">
+                      <div className="overlay-inner">
+                        <div className="content">
+                          <a
+                            href="/images/gallery/4.jpg"
+                            data-fancybox="gallery"
+                            data-caption=""
+                            className="icon flaticon-plus"
+                          />
+                        </div>
                       </div>
                     </div>
+                  </figure>
+                  <div className="lower-content">
+                    <div className="title">Crypto Exchange Platform</div>
+                    <h5>
+                      <a href="/projects-detail">Binance</a>
+                    </h5>
                   </div>
-                </figure>
-                <div className="lower-content">
-                  <div className="title">Crypto Exchange Platform</div>
-                  <h5>
-                    <a href="/projects-detail">Binance</a>
-                  </h5>
                 </div>
               </div>
-            </div>
-            {/* Gallery Block */}
-            <div className="gallery-block">
-              <div className="inner-box">
-                <figure className="image-box">
-                  <img
-                    src={require("../../assets/images/gallery/5.jpg")}
-                    alt="Meta"
-                  />
-                  {/* Overlay Box */}
-                  <div className="overlay-box">
-                    <div className="overlay-inner">
-                      <div className="content">
-                        <a
-                          href="/images/gallery/5.jpg"
-                          data-fancybox="gallery"
-                          data-caption=""
-                          className="icon flaticon-plus"
-                        />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="gallery-block">
+                <div className="inner-box">
+                  <figure className="image-box">
+                    <img
+                      src={require("../../assets/images/gallery/5.jpg")}
+                      alt="Meta"
+                    />
+                    {/* Overlay Box */}
+                    <div className="overlay-box">
+                      <div className="overlay-inner">
+                        <div className="content">
+                          <a
+                            href="/images/gallery/5.jpg"
+                            data-fancybox="gallery"
+                            data-caption=""
+                            className="icon flaticon-plus"
+                          />
+                        </div>
                       </div>
                     </div>
+                  </figure>
+                  <div className="lower-content">
+                    <div className="title">Virtual World</div>
+                    <h5>
+                      <a href="/projects-detail">Meta</a>
+                    </h5>
                   </div>
-                </figure>
-                <div className="lower-content">
-                  <div className="title">Virtual World</div>
-                  <h5>
-                    <a href="/projects-detail">Meta</a>
-                  </h5>
                 </div>
               </div>
-            </div>
-            {/* Gallery Block */}
-            <div className="gallery-block">
-              <div className="inner-box">
-                <figure className="image-box">
-                  <img
-                    src={require("../../assets/images/gallery/6.jpg")}
-                    alt="Lunc"
-                  />
-                  {/* Overlay Box */}
-                  <div className="overlay-box">
-                    <div className="overlay-inner">
-                      <div className="content">
-                        <a
-                          href="/images/gallery/6.jpg"
-                          data-fancybox="gallery"
-                          data-caption=""
-                          className="icon flaticon-plus"
-                        />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="gallery-block">
+                <div className="inner-box">
+                  <figure className="image-box">
+                    <img
+                      src={require("../../assets/images/gallery/6.jpg")}
+                      alt="Lunc"
+                    />
+                    {/* Overlay Box */}
+                    <div className="overlay-box">
+                      <div className="overlay-inner">
+                        <div className="content">
+                          <a
+                            href="/images/gallery/6.jpg"
+                            data-fancybox="gallery"
+                            data-caption=""
+                            className="icon flaticon-plus"
+                          />
+                        </div>
                       </div>
                     </div>
+                  </figure>
+                  <div className="lower-content">
+                    <div className="title">Blockchain Project</div>
+                    <h5>
+                      <a href="/projects-detail">Lunc - Terrra Classic</a>
+                    </h5>
                   </div>
-                </figure>
-                <div className="lower-content">
-                  <div className="title">Blockchain Project</div>
-                  <h5>
-                    <a href="/projects-detail">Lunc - Terrra Classic</a>
-                  </h5>
                 </div>
               </div>
-            </div>
-            {/* Gallery Block */}
-            <div className="gallery-block">
-              <div className="inner-box">
-                <figure className="image-box">
-                  <img
-                    src={require("../../assets/images/gallery/7.jpg")}
-                    alt="Coinbase"
-                  />
-                  {/* Overlay Box */}
-                  <div className="overlay-box">
-                    <div className="overlay-inner">
-                      <div className="content">
-                        <a
-                          href="/images/gallery/7.jpg"
-                          data-fancybox="gallery"
-                          data-caption=""
-                          className="icon flaticon-plus"
-                        />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="gallery-block">
+                <div className="inner-box">
+                  <figure className="image-box">
+                    <img
+                      src={require("../../assets/images/gallery/7.jpg")}
+                      alt="Coinbase"
+                    />
+                    {/* Overlay Box */}
+                    <div className="overlay-box">
+                      <div className="overlay-inner">
+                        <div className="content">
+                          <a
+                            href="/images/gallery/7.jpg"
+                            data-fancybox="gallery"
+                            data-caption=""
+                            className="icon flaticon-plus"
+                          />
+                        </div>
                       </div>
                     </div>
+                  </figure>
+                  <div className="lower-content">
+                    <div className="title">Crypto Exchange</div>
+                    <h5>
+                      <a href="/projects-detail">Coinbase</a>
+                    </h5>
                   </div>
-                </figure>
-                <div className="lower-content">
-                  <div className="title">Crypto Exchange</div>
-                  <h5>
-                    <a href="/projects-detail">Coinbase</a>
-                  </h5>
                 </div>
               </div>
-            </div>
-            {/* Gallery Block */}
-            <div className="gallery-block">
-              <div className="inner-box">
-                <figure className="image-box">
-                  <img
-                    src={require("../../assets/images/gallery/8.jpg")}
-                    alt="Google"
-                  />
-                  {/* Overlay Box */}
-                  <div className="overlay-box">
-                    <div className="overlay-inner">
-                      <div className="content">
-                        <a
-                          href="/images/gallery/8.jpg"
-                          data-fancybox="gallery"
-                          data-caption=""
-                          className="icon flaticon-plus"
-                        />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="gallery-block">
+                <div className="inner-box">
+                  <figure className="image-box">
+                    <img
+                      src={require("../../assets/images/gallery/8.jpg")}
+                      alt="Google"
+                    />
+                    {/* Overlay Box */}
+                    <div className="overlay-box">
+                      <div className="overlay-inner">
+                        <div className="content">
+                          <a
+                            href="/images/gallery/8.jpg"
+                            data-fancybox="gallery"
+                            data-caption=""
+                            className="icon flaticon-plus"
+                          />
+                        </div>
                       </div>
                     </div>
+                  </figure>
+                  <div className="lower-content">
+                    <div className="title">Api</div>
+                    <h5>
+                      <a href="/projects-detail">Google</a>
+                    </h5>
                   </div>
-                </figure>
-                <div className="lower-content">
-                  <div className="title">Api</div>
-                  <h5>
-                    <a href="/projects-detail">Google</a>
-                  </h5>
                 </div>
               </div>
-            </div>
-          </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
       {/* End Related Projects Section */}

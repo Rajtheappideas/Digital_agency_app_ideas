@@ -25,7 +25,7 @@ const Counts = () => {
                           data-speed={2500}
                           data-stop={230}
                         >
-                          0
+                          230
                         </span>
                         +
                       </div>
@@ -48,7 +48,7 @@ const Counts = () => {
                           data-speed={2000}
                           data-stop={95}
                         >
-                          0
+                          95
                         </span>
                         +
                       </div>
@@ -71,7 +71,7 @@ const Counts = () => {
                           data-speed={4000}
                           data-stop={820}
                         >
-                          0
+                          820
                         </span>
                         +
                       </div>
@@ -94,7 +94,7 @@ const Counts = () => {
                           data-speed={2000}
                           data-stop={25}
                         >
-                          0
+                          25
                         </span>
                         +
                       </div>

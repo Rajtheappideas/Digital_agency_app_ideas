@@ -1,7 +1,16 @@
 import React from "react";
 import bgbrochures from "../../assets/images/background/pattern-19.jpg";
-import brochures from '../../assets/document/Appideas-Brochure.pdf'
-import admin from '../../assets/images/resource/admin.png'
+import brochures from "../../assets/document/Appideas-Brochure.pdf";
+import admin from "../../assets/images/resource/admin.png";
+import { Navigation, Pagination } from "swiper";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import SidebarLeft from "../SidebarLeft";
 
 const SidebarSection = () => {
   return (
@@ -55,56 +64,77 @@ const SidebarSection = () => {
               {/* News Block Two */}
               <div className="news-block-three">
                 <div className="inner-box">
-                  <div className="single-item-carousel owl-carousel owl-theme">
-                    <div className="image">
-                      <a href="/projects">
-                        <img
-                          src={require("../../assets/images/resource/project-1.png")}
-                          alt="project-1"
-                        />
-                      </a>
-                    </div>
-                    <div className="image">
-                      <a href="/projects">
-                        <img
-                          src={require("../../assets/images/resource/project-2.png")}
-                          alt="project-2"
-                        />
-                      </a>
-                    </div>
-                    <div className="image">
-                      <a href="/projects">
-                        <img
-                          src={require("../../assets/images/resource/project-3.png")}
-                          alt="project-3"
-                        />
-                      </a>
-                    </div>
-                    <div className="image">
-                      <a href="/projects">
-                        <img
-                          src={require("../../assets/images/resource/project-4.png")}
-                          alt="project-4"
-                        />
-                      </a>
-                    </div>
-                    <div className="image">
-                      <a href="/projects">
-                        <img
-                          src={require("../../assets/images/resource/project-5.png")}
-                          alt="project-5"
-                        />
-                      </a>
-                    </div>
-                    <div className="image">
-                      <a href="/projects">
-                        <img
-                          src={require("../../assets/images/resource/project-6.png")}
-                          alt="project-6"
-                        />
-                      </a>
-                    </div>
-                  </div>
+                  <Swiper
+                    modules={[Navigation, Pagination]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    navigation
+                    loop={true}
+                    pagination={{ clickable: true }}
+                  >
+                    <SwiperSlide>
+                      <div className="image">
+                        <a href="/projects">
+                          <img
+                            src={require("../../assets/images/resource/project-1.png")}
+                            alt="project-1"
+                          />
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="image">
+                        <a href="/projects">
+                          <img
+                            src={require("../../assets/images/resource/project-2.png")}
+                            alt="project-2"
+                          />
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="image">
+                        <a href="/projects">
+                          <img
+                            src={require("../../assets/images/resource/project-3.png")}
+                            alt="project-3"
+                          />
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="image">
+                        <a href="/projects">
+                          <img
+                            src={require("../../assets/images/resource/project-4.png")}
+                            alt="project-4"
+                          />
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      {" "}
+                      <div className="image">
+                        <a href="/projects">
+                          <img
+                            src={require("../../assets/images/resource/project-5.png")}
+                            alt="project-5"
+                          />
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="image">
+                        <a href="/projects">
+                          <img
+                            src={require("../../assets/images/resource/project-6.png")}
+                            alt="project-6"
+                          />
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                  </Swiper>
+
                   <div className="lower-content">
                     <ul className="post-meta">
                       <li>
@@ -197,104 +227,7 @@ const SidebarSection = () => {
             </div>
           </div>
           {/* Sidebar Side */}
-          <div className="sidebar-side left-sidebar col-lg-4 col-md-12 col-sm-12">
-            <aside className="sidebar sticky-top">
-              {/* Services */}
-              <div className="sidebar-widget">
-                <ul className="service-list">
-                  <li>
-                    <a href="/services">
-                      <span className="color-layer" />
-                      All Services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/content-marketing">
-                      <span className="color-layer" />
-                      Content Marketing
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/social-marketing">
-                      <span className="color-layer" />
-                      Social Marketing
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/app-development">
-                      <span className="color-layer" />
-                      App Development
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/seo">
-                      <span className="color-layer" />
-                      SEO Optimization
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/web-development">
-                      <span className="color-layer" />
-                      Web Development
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/advertising">
-                      <span className="color-layer" />
-                      Advertising
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              {/* Brochures Widget */}
-              <div className="broucher-widget">
-                <div
-                  className="widget-content"
-                  style={{
-                    backgroundImage: `url(${bgbrochures})`,
-                  }}
-                >
-                  <h3>Our Brochures</h3>
-                  <div className="icon flaticon-pdf-1" />
-                  <div className="text">
-                    Business is a marketing discipline focused on growing
-                    visibility in organic (non-paid) technic required.
-                  </div>
-                  <a
-                    href={brochures}
-                    download
-                    className="download"
-                  >
-                    Download Our Brochure
-                  </a>
-                </div>
-              </div>
-              {/* Help Widget */}
-              <div className="help-widget">
-                <div className="widget-content">
-                  <h4>Need Help ?</h4>
-                  <div className="text">
-                    Please feel free to contact us. We will get back to you with
-                    1-2 business days. Or just call us now
-                  </div>
-                  <ul className="help-list">
-                    <li>
-                      <a href="/tel:0032493986537">
-                        <span className="icon fas fa-phone-alt" />
-                        (+32) 493 98 65 37
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/mailto:info@appideas.tech">
-                        <span className="icon fa fa-envelope" />
-                        info@appideas.tech
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </aside>
-          </div>
+          <SidebarLeft />
         </div>
       </div>
     </div>

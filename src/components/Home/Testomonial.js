@@ -1,5 +1,13 @@
 import React from "react";
 import img from "../../assets/images/background/pattern-10.png";
+import { Navigation, Pagination } from "swiper";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Testomonial = () => {
   return (
@@ -24,168 +32,198 @@ const Testomonial = () => {
               we trive to make your company excel in this.
             </div>
           </div>
-          <div className="two-item-carousel owl-carousel owl-theme">
-            {/* Testimonial Block Two */}
-            <div className="testimonial-block-two">
-              <div className="inner-box">
-                <div className="author-image-outer">
-                  <div className="author-image">
-                    <img
-                      src={require("../../assets/images/resource/author-1.jpg")}
-                      alt=""
-                    />
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={50}
+            slidesPerView={3}
+            navigation
+            pagination={{ clickable: true }}
+            // onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log("slide change")}
+            breakpoints={{
+              250: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <div className="testimonial-block-two">
+                <div className="inner-box">
+                  <div className="author-image-outer">
+                    <div className="author-image">
+                      <img
+                        src={require("../../assets/images/resource/author-1.jpg")}
+                        alt=""
+                      />
+                    </div>
+                    <h6>Margaret Sunsan</h6>
+                    <div className="designation">Client</div>
+                    <div className="quote-icon fa fa-quote-right" />
                   </div>
-                  <h6>Margaret Sunsan</h6>
-                  <div className="designation">Client</div>
-                  <div className="quote-icon fa fa-quote-right" />
-                </div>
-                <div className="text">
-                  I had so much fun working with your specialists on my business
-                  project we’re producing exceptional SEO for business.
-                </div>
-                <div className="rating">
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
+                  <div className="text">
+                    I had so much fun working with your specialists on my
+                    business project we’re producing exceptional SEO for
+                    business.
+                  </div>
+                  <div className="rating">
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* Testimonial Block Two */}
-            <div className="testimonial-block-two">
-              <div className="inner-box">
-                <div className="author-image-outer">
-                  <div className="author-image">
-                    <img
-                      src={require("../../assets/images/resource/author-2.jpg")}
-                      alt=""
-                    />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="testimonial-block-two">
+                <div className="inner-box">
+                  <div className="author-image-outer">
+                    <div className="author-image">
+                      <img
+                        src={require("../../assets/images/resource/author-2.jpg")}
+                        alt=""
+                      />
+                    </div>
+                    <h6>Eizabeth Blackwell</h6>
+                    <div className="designation">Client</div>
+                    <div className="quote-icon fa fa-quote-right" />
                   </div>
-                  <h6>Eizabeth Blackwell</h6>
-                  <div className="designation">Client</div>
-                  <div className="quote-icon fa fa-quote-right" />
-                </div>
-                <div className="text">
-                  I highly recommend Appideas digital agency due to their
-                  expertise, knowledge, passion, professionalism, and leadership
-                  skills in the world of project management.
-                </div>
-                <div className="rating">
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
+                  <div className="text">
+                    I highly recommend Appideas digital agency due to their
+                    expertise, knowledge, passion, professionalism, and
+                    leadership skills in the world of project management.
+                  </div>
+                  <div className="rating">
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* Testimonial Block Two */}
-            <div className="testimonial-block-two">
-              <div className="inner-box">
-                <div className="author-image-outer">
-                  <div className="author-image">
-                    <img
-                      src={require("../../assets/images/resource/author-3.jpg")}
-                      alt=""
-                    />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="testimonial-block-two">
+                <div className="inner-box">
+                  <div className="author-image-outer">
+                    <div className="author-image">
+                      <img
+                        src={require("../../assets/images/resource/author-3.jpg")}
+                        alt=""
+                      />
+                    </div>
+                    <h6>Margaret Sunsan</h6>
+                    <div className="designation">Client</div>
+                    <div className="quote-icon fa fa-quote-right" />
                   </div>
-                  <h6>Margaret Sunsan</h6>
-                  <div className="designation">Client</div>
-                  <div className="quote-icon fa fa-quote-right" />
-                </div>
-                <div className="text">
-                  Love it! I couldn’t manage my projects without it.
-                </div>
-                <div className="rating">
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
+                  <div className="text">
+                    Love it! I couldn’t manage my projects without it.
+                  </div>
+                  <div className="rating">
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* Testimonial Block Two */}
-            <div className="testimonial-block-two">
-              <div className="inner-box">
-                <div className="author-image-outer">
-                  <div className="author-image">
-                    <img
-                      src={require("../../assets/images/resource/author-4.jpg")}
-                      alt=""
-                    />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="testimonial-block-two">
+                <div className="inner-box">
+                  <div className="author-image-outer">
+                    <div className="author-image">
+                      <img
+                        src={require("../../assets/images/resource/author-4.jpg")}
+                        alt=""
+                      />
+                    </div>
+                    <h6>Margot Clems</h6>
+                    <div className="designation">Client</div>
+                    <div className="quote-icon fa fa-quote-right" />
                   </div>
-                  <h6>Margot Clems</h6>
-                  <div className="designation">Client</div>
-                  <div className="quote-icon fa fa-quote-right" />
-                </div>
-                <div className="text">
-                  Je vous remercie pour la réussite de mon projet
-                </div>
-                <div className="rating">
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
+                  <div className="text">
+                    Je vous remercie pour la réussite de mon projet
+                  </div>
+                  <div className="rating">
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* Testimonial Block Two */}
-            <div className="testimonial-block-two">
-              <div className="inner-box">
-                <div className="author-image-outer">
-                  <div className="author-image">
-                    <img
-                      src={require("../../assets/images/resource/author-5.jpg")}
-                      alt=""
-                    />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="testimonial-block-two">
+                <div className="inner-box">
+                  <div className="author-image-outer">
+                    <div className="author-image">
+                      <img
+                        src={require("../../assets/images/resource/author-5.jpg")}
+                        alt=""
+                      />
+                    </div>
+                    <h6>Margaret Sunsan</h6>
+                    <div className="designation">Client</div>
+                    <div className="quote-icon fa fa-quote-right" />
                   </div>
-                  <h6>Margaret Sunsan</h6>
-                  <div className="designation">Client</div>
-                  <div className="quote-icon fa fa-quote-right" />
-                </div>
-                <div className="text">
-                  You are producing exceptional SEO for business.
-                </div>
-                <div className="rating">
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
+                  <div className="text">
+                    You are producing exceptional SEO for business.
+                  </div>
+                  <div className="rating">
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* Testimonial Block Two */}
-            <div className="testimonial-block-two">
-              <div className="inner-box">
-                <div className="author-image-outer">
-                  <div className="author-image">
-                    <img
-                      src={require("../../assets/images/resource/author-6.jpg")}
-                      alt=""
-                    />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="testimonial-block-two">
+                <div className="inner-box">
+                  <div className="author-image-outer">
+                    <div className="author-image">
+                      <img
+                        src={require("../../assets/images/resource/author-6.jpg")}
+                        alt=""
+                      />
+                    </div>
+                    <h6>Eizabeth Blackwell</h6>
+                    <div className="designation">Client</div>
+                    <div className="quote-icon fa fa-quote-right" />
                   </div>
-                  <h6>Eizabeth Blackwell</h6>
-                  <div className="designation">Client</div>
-                  <div className="quote-icon fa fa-quote-right" />
-                </div>
-                <div className="text">
-                  exceptional packages that include all services Businesses
-                  require it.
-                </div>
-                <div className="rating">
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
-                  <span className="fa fa-star" />
+                  <div className="text">
+                    exceptional packages that include all services Businesses
+                    require it.
+                  </div>
+                  <div className="rating">
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                    <span className="fa fa-star" />
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
       {/* End Testimonial Section Two */}

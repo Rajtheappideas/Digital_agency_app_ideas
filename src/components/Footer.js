@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../assets/images/background/map-pattern-2.png";
+import { BsArrowRightShort } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -43,32 +44,56 @@ const Footer = () => {
                       <div className="column col-lg-6 col-md-6 col-sm-12">
                         <ul className="list-link-two">
                           <li>
-                            <a href="/aboutus">About</a>
+                            <BsArrowRightShort size={25} />
+                            <a style={{ paddingLeft: "0" }} href="/aboutus">
+                              About
+                            </a>
                           </li>
                           <li>
-                            <a href="/services">Services</a>
+                            <BsArrowRightShort size={25} />
+                            <a style={{ paddingLeft: "0" }} href="/services">
+                              Services
+                            </a>
                           </li>
                           <li>
-                            <a href="/packages">Packages</a>
+                            <BsArrowRightShort size={25} />
+                            <a style={{ paddingLeft: "0" }} href="/packages">
+                              Packages
+                            </a>
                           </li>
                           <li>
-                            <a href="/projects">Projects</a>
+                            <BsArrowRightShort size={25} />
+                            <a style={{ paddingLeft: "0" }} href="/projects">
+                              Projects
+                            </a>
                           </li>
                         </ul>
                       </div>
                       <div className="column col-lg-6 col-md-6 col-sm-12">
                         <ul className="list-link-two">
                           <li>
-                            <a href="/blogs">Blog</a>
+                            <BsArrowRightShort size={25} />
+                            <a style={{ paddingLeft: "0" }} href="/blogs">
+                              Blog
+                            </a>
                           </li>
                           <li>
-                            <a href="/contactus">Contact</a>
+                            <BsArrowRightShort size={25} />
+                            <a style={{ paddingLeft: "0" }} href="/contactus">
+                              Contact
+                            </a>
                           </li>
                           <li>
-                            <a href="/faq">Faq's</a>
+                            <BsArrowRightShort size={25} />
+                            <a style={{ paddingLeft: "0" }} href="/faq">
+                              Faq's
+                            </a>
                           </li>
                           <li>
-                            <a href="/privacy">Privacy</a>
+                            <BsArrowRightShort size={25} />
+                            <a style={{ paddingLeft: "0" }} href="/privacy">
+                              Privacy
+                            </a>
                           </li>
                         </ul>
                       </div>
