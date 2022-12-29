@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-// import "./assets/css/style.css";
+
+import "./assets/css/style.css";
 import "./assets/css/responsive.css";
-import "./assets/css/owl.css";
 import "./assets/css/animate.css";
 import "./assets/css/animation.css";
 import "./assets/css/bootstrap.css";

@@ -1,10 +1,4 @@
-/*** 
 
-====================================================================
-	Color Palate Style / Color Switcher Style
-====================================================================
-
-***/
 
 .color-palate {
     background: #fff none repeat scroll 0 0;
@@ -165,10 +159,7 @@
 	border-radius:0px 50px 50px 0px;
 	background: #eb3867 none repeat scroll 0 0;
 }
-.color-trigger .fa{
-	/*-webkit-animation: rotating 2s linear infinite;
-   	animation: rotating 2s linear infinite;*/
-}
+
 .color-trigger:before{
 	content:'';
 	position:absolute;

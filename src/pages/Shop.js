@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import "../assets/css/bootstrap-custom.css";
-import "../assets/css/custom.css";
-import "../assets/css/main.css";
-import "../assets/css/main.min.css";
+// import "../assets/css/custom.css";
+// import "../assets/css/main.css";
+// import "../assets/css/main.min.css";
 import "../assets/css/rtl.css";
 import "../assets/css/theme.css";
 import Header from "../components/Shop/Header";

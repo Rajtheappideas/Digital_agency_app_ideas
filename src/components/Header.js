@@ -882,10 +882,10 @@ const Header = () => {
       <SearchPopup setActiveSearchbar={setActiveSearchbar} />
       {/* sidebar for packages */}
       {/* sidebar */}
-      <SidebarOfPackages
+      {/* <SidebarOfPackages
         showSidebarForPackages={showSidebarForPackages}
         setShowSidebarForPackages={setShowSidebarForPackages}
-      />
+      /> */}
     </header>
   );
 };

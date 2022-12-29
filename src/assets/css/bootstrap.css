@@ -1,9 +1,4 @@
-@charset "UTF-8"; /*!
- * Bootstrap v5.0.0-alpha3 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+@charset "UTF-8";
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -325,7 +320,7 @@ select {
 [type="reset"],
 [type="submit"],
 button {
-  -webkit-appearance: button;
+  appearance: button;
 }
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -376,10 +371,10 @@ legend + * {
 }
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: textfield;
+  appearance: textfield;
 }
 ::-webkit-search-decoration {
-  -webkit-appearance: none;
+  appearance: none;
 }
 ::-webkit-color-swatch-wrapper {
   padding: 0;
@@ -389,7 +384,7 @@ legend + * {
 }
 ::-webkit-file-upload-button {
   font: inherit;
-  -webkit-appearance: button;
+  appearance: button;
 }
 output {
   display: inline-block;
@@ -2072,8 +2067,8 @@ textarea.form-control-lg {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-print-color-adjust: exact;
-  color-adjust: exact;
+  print-color-adjust: exact;
+  print-color-adjust: exact;
   transition: background-color 0.15s ease-in-out,
     background-position 0.15s ease-in-out, border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
@@ -9300,4 +9295,3 @@ fieldset:disabled .btn {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.min.css.map */

@@ -32,6 +32,10 @@ const Clients = () => {
                   slidesPerView: 3,
                   spaceBetween: 40,
                 },
+                1199: {
+                  slidesPerView: 5,
+                  spaceBetween: 40,
+                },
               }}
             >
               <SwiperSlide>

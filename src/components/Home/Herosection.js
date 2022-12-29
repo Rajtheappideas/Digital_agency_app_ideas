@@ -1,7 +1,6 @@
 import React from "react";
 import sliderimg from "../../assets/images/main-slider/image-2.jpg";
 import img from "../../assets/images/main-slider/dotted-layer-1.png";
-import "../../assets/css/owl.css";
 import { Navigation, Pagination } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -390,7 +389,7 @@ const Herosection = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-        <div className="main-slider-carousel owl-carousel owl-theme owl-loaded owl-drag">
+        {/* <div className="main-slider-carousel owl-carousel owl-theme owl-loaded owl-drag">
           <div className="owl-nav">
             <div className="owl-prev">
               <span className="flaticon-back" />
@@ -410,7 +409,7 @@ const Herosection = () => {
               <span />
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Waves Container */}
         <div>
           <svg

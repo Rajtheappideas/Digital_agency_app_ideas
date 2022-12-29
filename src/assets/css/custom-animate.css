@@ -253,7 +253,6 @@
     -o-animation-timing-function: linear;
 }
 
-/* Bob Up Down*/
 @-webkit-keyframes float_up_down {
   0% {
     -webkit-transform: translateY(0px);
@@ -330,7 +329,6 @@
     -o-animation-timing-function: linear;
 }
 
-/* Bob */
 @-webkit-keyframes float_left_right {
   0% {
     -webkit-transform: translateX(-100px);

@@ -1,92 +1,9 @@
-/* Merix Creative Digital Agency HTML-5 Template HTML Template */
-
-/************ TABLE OF CONTENTS ***************
-1. Fonts
-2. Reset
-3. Global
-4. Main Header / Style Two / Style Three
-5. Banner Section / Two / Three
-6. Services Section / Two / Three
-7. About Section
-8. Services Section Two
-9. Clients Section
-10. CTA Section / Two
-11. Counter Section
-12. Testimonial Section
-13. Team Section
-14. Pricing Section
-15. News Section
-16. Main Footer Section
-17. Gallery Section
-18. Faq Section
-19. Seo Section
-20. Mission Section
-21. Analysic Section
-22. Counter Section
-23. Steps Section
-24. Skill Section
-25. Demo Section
-26. Newsletter Section
-27. Page Title
-28. Team Detail Section
-29. Coming Soon Section
-30. Privacy Section
-31. Terms Section
-32. Project Widgets
-33. Project Detail Section
-34. Our Shops
-35. Shop Detail Section
-36. Cart Section
-37. Checkout Section
-38. Account Section
-39. Blog Widgets Section
-40. Error Section
-41. Contact Info Section
-42. Map Section
-43. Contact Form Section
-
-**********************************************/
-
-/* 
-	
-	font-family: 'Archivo', sans-serif;
-	font-family: 'Poppins', sans-serif;
-	
-*/
-
-@import url("font-awesome.css");
-@import url("flaticon.css");
-@import url("animate.css");
-@import url("owl.css");
-@import url("animation.css");
-@import url("jquery-ui.css");
-@import url("custom-animate.css");
-@import url("jquery.fancybox.min.css");
-@import url("jquery.bootstrap-touchspin.css");
-@import url("jquery.mCustomScrollbar.min.css");
-
-/*** 
-
-====================================================================
-	Reset
-====================================================================
-
- ***/
-
-* {
+ * {
   margin: 0px;
   padding: 0px;
   border: none;
   outline: none;
 }
-
-/*** 
-
-====================================================================
-	Global Settings
-====================================================================
-
-***/
 
 body {
   font-family: "Archivo", sans-serif;
@@ -139,12 +56,6 @@ h6 {
   font-family: "Poppins", sans-serif;
 }
 
-input,
-button,
-select,
-textarea {
-}
-
 textarea {
   overflow: hidden;
 }
@@ -153,8 +64,6 @@ p {
   position: relative;
   line-height: 1.8em;
 }
-
-/* Typography */
 
 h1 {
   font-size: 48px;
@@ -224,14 +133,6 @@ img {
   text-align: center;
 }
 
-/*** 
-
-====================================================================
-	Scroll To Top style
-====================================================================
-
-***/
-
 .back-to-top {
   position: fixed;
   right: 1.5%;
@@ -288,6 +189,7 @@ img {
   bottom: 1.25%;
   visibility: visible;
 }
+
 
 /* List Style One */
 
@@ -397,7 +299,7 @@ img {
   margin-bottom: 0px;
 }
 
-/*Btn Style One*/
+/* Btn Style One */
 
 .btn-style-one {
   position: relative;
@@ -1186,14 +1088,6 @@ img {
   height: auto;
 }
 
-/*** 
-
-====================================================================
-	Section Title
-====================================================================
-
-***/
-
 .sec-title {
   position: relative;
   margin-bottom: 55px;
@@ -1260,14 +1154,6 @@ img {
   height: 15px;
   background: url(../images/icons/title-icon.png) no-repeat;
 }
-
-/*** 
-
-====================================================================
-	Main Header style
-====================================================================
-
-***/
 
 .main-header {
   position: absolute;
@@ -1455,9 +1341,6 @@ img {
   line-height: 18px;
   background-color: #222222;
 }
-
-/* .main-header .cart-box .cart-box-btn:hover {
-} */
 
 .main-header .cart-product {
   position: relative;
@@ -1750,7 +1633,7 @@ img {
   margin-top: 45px;
 }
 
-/*Sticky Header*/
+/* Sticky Header */
 
 .sticky-header {
   position: fixed;
@@ -1826,10 +1709,6 @@ img {
   margin-right: 0px;
 }
 
-.sticky-header .main-menu .navigation > li:before,
-.sticky-header .main-menu .navigation > li:after {
-}
-
 .main-menu .navigation > li:hover > a,
 .main-menu .navigation > li.current > a {
   opacity: 1;
@@ -1894,7 +1773,7 @@ img {
 
 .main-menu .navigation > li > ul > li > a:before {
   position: absolute;
-  content: "//";
+  content: "";
   left: 10px;
   top: 10px;
   opacity: 0;
@@ -2003,7 +1882,7 @@ img {
 
 .main-menu .navigation > li > ul > li > ul > li > a:before {
   position: absolute;
-  content: "//";
+  content: "";
   left: 10px;
   top: 8px;
   opacity: 0;
@@ -2169,8 +2048,6 @@ img {
   color: #ffffff;
 }
 
-/************************ Mega Menu ***************************/
-
 .main-menu .navigation > li.has-mega-menu {
   position: static;
 }
@@ -2282,7 +2159,7 @@ img {
 
 .main-menu .navigation > li .mega-menu-bar .column > ul > li > a:before {
   position: absolute;
-  content: "//";
+  content: "";
   left: 0px;
   top: 0px;
   opacity: 0;
@@ -2486,14 +2363,6 @@ img {
   opacity: 1;
 }
 
-/*** 
-
-====================================================================
-	Hidden Sidebar style
-====================================================================
-
-***/
-
 .hidden-bar {
   position: fixed;
   top: 0;
@@ -2660,14 +2529,6 @@ img {
   outline: none;
 }
 
-/*** 
-
-====================================================================
-	Login / Register Section
-====================================================================
-
-***/
-
 .register-section {
   position: relative;
   z-index: 9;
@@ -2682,9 +2543,6 @@ img {
   position: relative;
   margin-bottom: 30px;
 }
-
-/* .register-section .form-column .sec-title h2 {
-} */
 
 .styled-form {
   position: relative;
@@ -2857,14 +2715,6 @@ img {
 .social-links-two .google-plus {
   background: #dd4b39;
 }
-
-/*** 
-
-====================================================================
-			Mobile Menu
-====================================================================
-
-***/
 
 .nav-outer .mobile-nav-toggler {
   position: relative;
@@ -3066,14 +2916,6 @@ img {
   display: none;
 }
 
-/*** 
-
-====================================================================
-	Search Popup
-====================================================================
-
-***/
-
 .search-popup {
   position: fixed;
   left: 0;
@@ -3091,12 +2933,7 @@ img {
   -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   -moz-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   -o-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-  transition-timing-function: cubic-bezier(
-    0.86,
-    0,
-    0.07,
-    1
-  ); /* easeInOutQuint */
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .sidenav-bar-visible .search-popup {
@@ -3309,14 +3146,6 @@ img {
   text-transform: capitalize;
 }
 
-/*** 
-
-====================================================================
-	Hidden Sidebar style
-====================================================================
-
-***/
-
 .sidebar-info-contents {
   position: relative;
 }
@@ -3433,14 +3262,6 @@ img {
   margin-left: 30px;
 }
 
-/*** 
-
-====================================================================
-	Scroll To Top style
-====================================================================
-
-***/
-
 .scroll-to-toped {
   position: fixed;
   bottom: 15px;
@@ -3486,14 +3307,6 @@ img {
   text-align: center;
   background-color: white;
 }
-
-/*** 
-
-====================================================================
-	Banner Section
-====================================================================
-
-***/
 
 .banner-section {
   position: relative;
@@ -3849,14 +3662,6 @@ img {
   background-color: #ffffff;
 }
 
-/*** 
-
-====================================================================
-	Services Section
-====================================================================
-
-***/
-
 .services-section {
   position: relative;
   padding: 400px 0px 120px;
@@ -4120,14 +3925,6 @@ img {
   background: linear-gradient(to bottom, #ff2800 0%, #ff2800 100%);
 }
 
-/*** 
-
-====================================================================
-	About Section
-====================================================================
-
-***/
-
 .about-section {
   position: relative;
   padding: 80px 0px 60px;
@@ -4220,14 +4017,6 @@ img {
 .about-section .image-column .inner-column {
   position: relative;
 }
-
-/*** 
-
-====================================================================
-	Services Section Two
-====================================================================
-
-***/
 
 .services-section-two {
   position: relative;
@@ -4597,18 +4386,9 @@ img {
   background: linear-gradient(to bottom, #ff8c00 0%, #ff0200 100%);
 }
 
-/*** 
-
-====================================================================
-	Clients Section
-====================================================================
-
-***/
-
 .clients-section {
   position: relative;
   padding: 30px 0px 30px;
-  /* background-color:#f3f4ff; */
 }
 
 .clients-section .sponsors-outer .owl-dots,
@@ -4648,14 +4428,6 @@ img {
 .clients-section.style-three {
   padding-top: 110px;
 }
-
-/*** 
-
-====================================================================
-	Call To Action Section
-====================================================================
-
-***/
 
 .call-to-action-section {
   position: relative;
@@ -4721,14 +4493,6 @@ img {
   position: relative;
   z-index: 1;
 }
-
-/*** 
-
-====================================================================
-	Counter Section
-====================================================================
-
-***/
 
 .counter-section {
   position: relative;
@@ -4851,458 +4615,6 @@ img {
   margin-top: 10px;
   color: #ffffff;
 }
-
-/*** 
-
-====================================================================
-	Testimonial Section
-====================================================================
-
-***/
-
-/* .testimonial-section{
-	position:relative;
-	padding:120px 0px 120px;
-}
-
-.testimonial-section .icon-layer-one{
-	position:absolute;
-	left:150px;
-	top:130px;
-	width:34px;
-	height:29px;
-	background-repeat:no-repeat;
-}
-
-.testimonial-section .icon-layer-two{
-	position:absolute;
-	left:100px;
-	bottom:280px;
-	width:51px;
-	height:65px;
-	background-repeat:no-repeat;
-}
-
-.testimonial-section .icon-layer-three{
-	position:absolute;
-	right:100px;
-	top:80px;
-	width:56px;
-	height:53px;
-	background-repeat:no-repeat;
-}
-
-.testimonial-section .icon-layer-four{
-	position:absolute;
-	right:180px;
-	top:50%;
-	width:57px;
-	height:50px;
-	background-repeat:no-repeat;
-}
-
-.testimonial-section .icon-layer-five{
-	position:absolute;
-	right:100px;
-	bottom:80px;
-	width:63px;
-	height:63px;
-	background-repeat:no-repeat;
-}
-
-.testimonial-section .owl-carousel .owl-stage-outer{
-	position:static;
-	padding:20px 0px;
-}
-
-.testimonial-section .owl-theme .testimonial-block{
-	margin:0px 30px;
-}
-
-.testimonial-section .owl-carousel{
-	margin:0px -30px;
-	width:auto;
-}
-
-.testimonial-section .owl-nav{
-	display:none;
-}
-
-.testimonial-section .owl-dots{
-	position:relative;
-	text-align:center;
-	margin-top:40px;
-}
-
-.testimonial-section .owl-dots .owl-dot{
-	position:relative;
-	width:15px;
-	height:4px;
-	margin:0px 4px;
-	display:inline-block;
-	background-color:#cccccc;
-	transition:all 0.3s ease;
-	-moz-transition:all 0.3s ease;
-	-webkit-transition:all 0.3s ease;
-	-ms-transition:all 0.3s ease;
-	-o-transition:all 0.3s ease;
-}
-
-.testimonial-section .owl-dots .owl-dot.active,
-.testimonial-section .owl-dots .owl-dot:hover{
-	width:25px;
-	background-color:#ba0913;
-}
-
-.testimonial-block{
-	position:relative;
-}
-
-.testimonial-block .inner-box{
-	position:relative;
-	padding-top:30px;
-	padding-left:45px;
-	padding-right:45px;
-	text-align:center;
-	padding-bottom:45px;
-}
-
-.testimonial-block .inner-box:before{
-	position:absolute;
-	content:'';
-	left:0px;
-	top:85px;
-	right:0px;
-	bottom:0px;
-	border-radius:8px;
-	background-color:#ffffff;
-	box-shadow:0px 0px 20px rgba(0,0,0,0.10);
-}
-
-.testimonial-block .inner-box .pattern-layer{
-	position:absolute;
-	left:50%;
-	top:0px;
-	width:139px;
-	height:161px;
-	z-index:-1;
-	margin-left:-70px;
-	background:url(../images/icons/testimonial-pattern.png) no-repeat;
-}
-
-.testimonial-block .inner-box .author-image-outer{
-	position:relative;
-}
-
-.testimonial-block .inner-box .author-image-outer .author-image{
-	position:relative;
-	width:112px;
-	height:112px;
-	margin:0 auto;
-	border-radius:50%;
-	overflow:hidden;
-}
-
-.testimonial-block .inner-box .rating{
-	position:relative;
-	color:#ff5301;
-	margin:0px 2px;
-	margin-top:30px;
-	font-size:16px;
-}
-
-.testimonial-block .inner-box .rating .fa.dark{
-	color:#777777;
-}
-
-.testimonial-block .inner-box .text{
-	position:relative;
-	color:#555555;
-	margin-top:15px;
-	font-size:16px;
-	line-height:1.8em;
-	max-width:350px;
-	margin:0 auto;
-	margin-top:15px;
-}
-
-.testimonial-block .inner-box .lower-box{
-	position:relative;
-	padding-top:15px;
-	margin-top:25px;
-	border-top:2px solid #dddddd;
-}
-
-.testimonial-block .inner-box .lower-box .quote-icon{
-	position:absolute;
-	left:0px;
-	top:-2px;
-	width:40px;
-	height:40px;
-	color:#ffffff;
-	font-size:20px;
-	line-height:40px;
-	display:inline-block;
-	background-color:#222222;
-}
-
-.testimonial-block .inner-box .lower-box h6{
-	position:relative;
-	color:#222222;
-	font-weight:600;
-}
-
-.testimonial-block .inner-box .lower-box .designation{
-	position:relative;
-	color:#555555;
-	font-weight:400;
-	font-size:16px;
-	margin-top:8px;
-} */
-
-/*** 
-
-====================================================================
-	Team Section
-====================================================================
-
-***/
-
-/* .team-section{
-	position:relative;
-	overflow:hidden;
-	padding:0px 0px 80px;
-}
-
-.team-section:before{
-	position:absolute;
-	content:'';
-	left:-200px;
-	right:-200px;
-	bottom:-150px;
-	height:560px;
-	background-color:#f3f4ff;
-	transform:rotate(10deg);
-}
-
-.team-section .outer-container{
-	position:relative;
-	overflow:hidden;
-	padding-bottom:15px;
-}
-
-.team-section .outer-container .team-block{
-	width:20%;
-	float:left;
-	padding:0px 15px;
-}
-
-.team-section .outer-container .team-block:nth-child(2){
-	margin-top:50px;
-}
-
-.team-section .outer-container .team-block:nth-child(3){
-	margin-top:100px;
-}
-
-.team-section .outer-container .team-block:nth-child(4){
-	margin-top:150px;
-}
-
-.team-section .outer-container .team-block:nth-child(5){
-	margin-top:200px;
-}
-
-.team-block{
-	position:relative;
-}
-
-.team-block .inner-box{
-	position:relative;
-}
-
-.team-block .inner-box .image{
-	position:relative;
-	overflow:hidden;
-	border-radius:0px 10px 0px 10px;
-}
-
-.team-block .inner-box .image img{
-	position:relative;
-	width:100%;
-	display:block;
-}
-
-.team-block .inner-box .image .social-box{
-	position:absolute;
-	top:10px;
-	left:0px;
-	transition:all 600ms ease;
-	-moz-transition:all 600ms ease;
-	-webkit-transition:all 600ms ease;
-	-ms-transition:all 600ms ease;
-	-o-transition:all 600ms ease;
-}
-
-.team-block .inner-box:hover .image .social-box{
-	left:0px;
-}
-
-.team-block .inner-box .image .social-box li{
-	position:relative;
-	left:-80px;
-	margin-bottom:8px;
-	transition:all 600ms ease;
-	-moz-transition:all 600ms ease;
-	-webkit-transition:all 600ms ease;
-	-ms-transition:all 600ms ease;
-	-o-transition:all 600ms ease;
-}
-
-.team-block .inner-box .image .social-box li a{
-	position:relative;
-	color:#ffffff;
-	width:55px;
-	height:40px;
-	font-size:18px;
-	line-height:40px;
-	text-align:center;
-	display:inline-block;
-	background-color:#000000;
-	border-radius:0px 50px 50px 0px;
-	transition:all 0.3s ease;
-	-moz-transition:all 0.3s ease;
-	-webkit-transition:all 0.3s ease;
-	-ms-transition:all 0.3s ease;
-	-o-transition:all 0.3s ease;
-}
-
-.team-block .inner-box .image .social-box li a:hover{
-	background-color:#1e00ff;
-}
-
-.team-block .inner-box:hover .image .social-box li:nth-child(1){
-	left:0px;
-}
-
-.team-block .inner-box:hover .image .social-box li:nth-child(2){
-	left:0px;
-	-webkit-transition-delay: 200ms;
-	-moz-transition-delay: 200ms;
-	-ms-transition-delay: 200ms;
-	-o-transition-delay: 200ms;
-	transition-delay: 200ms;
-}
-
-.team-block .inner-box:hover .image .social-box li:nth-child(3){
-	left:0px;
-	-webkit-transition-delay: 400ms;
-	-moz-transition-delay: 400ms;
-	-ms-transition-delay: 400ms;
-	-o-transition-delay: 400ms;
-	transition-delay: 400ms;
-}
-
-.team-block .inner-box:hover .image .social-box li:nth-child(4){
-	left:0px;
-	-webkit-transition-delay: 600ms;
-	-moz-transition-delay: 600ms;
-	-ms-transition-delay: 600ms;
-	-o-transition-delay: 600ms;
-	transition-delay: 600ms;
-}
-
-.team-block .inner-box:hover .image .social-box li:nth-child(5){
-	left:0px;
-	-webkit-transition-delay: 800ms;
-	-moz-transition-delay: 800ms;
-	-ms-transition-delay: 800ms;
-	-o-transition-delay: 800ms;
-	transition-delay: 800ms;
-}
-
-.team-block .inner-box .lower-content{
-	position:relative;
-	padding:30px 12px;
-	text-align:center;
-	margin-left:30px;
-	margin-right:30px;
-	border-radius:10px;
-	margin-top:-60px;
-	background-color:#ffffff;
-	box-shadow:0px 0px 15px rgba(0,0,0,0.10);
-}
-
-.team-block .inner-box .lower-content:before{
-	position:absolute;
-	content:'';
-	left:0px;
-	top:0px;
-	bottom:0px;
-	width:50%;
-	opacity:0;
-	border-radius:10px;
-	background: #EA3368;
-	transition:all 600ms ease;
-	-moz-transition:all 600ms ease;
-	-webkit-transition:all 600ms ease;
-	-ms-transition:all 600ms ease;
-	-o-transition:all 600ms ease;
-	background: -webkit-linear-gradient(to right, #EA3368 0%, #fd8b56 100%);
-	background: -moz-linear-gradient(to right, #EA3368 0%, #fd8b56 100%);
-	background: linear-gradient(to right, #EA3368 0%, #fd8b56 100%);
-}
-
-.team-block .inner-box:hover .lower-content:before{
-	width:100%;
-	opacity:1;
-}
-
-.team-block .inner-box .lower-content .content h4{
-	position:relative;
-	font-weight:600;
-	line-height:1.3em;
-	font-size:20px;
-}
-
-.team-block .inner-box .lower-content .content h4 a{
-	position:relative;
-	color:#222222;
-	transition:all 600ms ease;
-	-moz-transition:all 600ms ease;
-	-webkit-transition:all 600ms ease;
-	-ms-transition:all 600ms ease;
-	-o-transition:all 600ms ease;
-}
-
-.team-block .inner-box .lower-content .content .designation{
-	position:relative;
-	color:#555555;
-	font-size:16px;
-	margin-top:6px;
-	transition:all 600ms ease;
-	-moz-transition:all 600ms ease;
-	-webkit-transition:all 600ms ease;
-	-ms-transition:all 600ms ease;
-	-o-transition:all 600ms ease;
-}
-
-.team-block .inner-box:hover .lower-content .content .designation,
-.team-block .inner-box:hover .lower-content .content h4 a{
-	color:#ffffff;
-}
-
-.team-block.style-two .inner-box .lower-content .content h4{
-	font-size:24px;
-} */
-
-/*** 
-
-====================================================================
-	Pricing Section
-====================================================================
-
-***/
 
 .pricing-section {
   position: relative;
@@ -5522,14 +4834,6 @@ img {
   color: #ffffff;
 }
 
-/*** 
-
-====================================================================
-	News Section
-====================================================================
-
-***/
-
 .news-section {
   position: relative;
   overflow: hidden;
@@ -5710,14 +5014,6 @@ img {
   color: #ffffff;
   background-color: #ff8d00;
 }
-
-/*** 
-
-====================================================================
-	Main Footer
-====================================================================
-
-***/
 
 .main-footer {
   position: relative;
@@ -5940,14 +5236,6 @@ img {
 .main-footer .footer-bottom a {
   color: #ffffff;
 }
-
-/*** 
-
-====================================================================
-	Banner Section Two
-====================================================================
-
-***/
 
 .banner-section-two {
   position: relative;
@@ -6190,14 +5478,6 @@ img {
   background-color: #f64a1b;
 }
 
-/*** 
-
-====================================================================
-	Services Section Three
-====================================================================
-
-***/
-
 .services-section-three {
   position: relative;
   padding: 60px 0px 60px;
@@ -6378,14 +5658,6 @@ img {
   margin-bottom: 40px;
 }
 
-/*** 
-
-====================================================================
-	Counter Section Two
-====================================================================
-
-***/
-
 .counter-section-two {
   position: relative;
 }
@@ -6487,14 +5759,6 @@ img {
   margin-top: 10px;
   color: #222222;
 }
-
-/*** 
-
-====================================================================
-	Services Section Four
-====================================================================
-
-***/
 
 .services-section-four {
   position: relative;
@@ -6988,14 +6252,6 @@ img {
   color: #2346c0;
 }
 
-/*** 
-
-====================================================================
-	Call To Action Section Two
-====================================================================
-
-***/
-
 .call-to-action-section-two {
   position: relative;
   padding: 160px 0px 240px;
@@ -7065,14 +6321,6 @@ img {
   z-index: 1;
 }
 
-/*** 
-
-====================================================================
-	Clients Section Two
-====================================================================
-
-***/
-
 .clients-section-two {
   position: relative;
 }
@@ -7118,14 +6366,6 @@ img {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
 }
-
-/*** 
-
-====================================================================
-	Gallery Section
-====================================================================
-
- ***/
 
 .gallery-section {
   position: relative;
@@ -7306,14 +6546,6 @@ img {
   color: #0028a2;
 }
 
-/*** 
-
-====================================================================
-	Testimonial Section Two
-====================================================================
-
- ***/
-
 .testimonial-section-two {
   position: relative;
   overflow: hidden;
@@ -7458,14 +6690,6 @@ img {
   margin-top: 18px;
 }
 
-/*** 
-
-====================================================================
-	Faq's Section Two
-====================================================================
-
- ***/
-
 .faq-section {
   position: relative;
   padding: 80px 0px 60px;
@@ -7572,14 +6796,6 @@ img {
 .faq-section .image-column .inner-column {
   position: relative;
 }
-
-/*** 
-
-====================================================================
-	News Section Two
-====================================================================
-
- ***/
 
 .news-section-two {
   position: relative;
@@ -7837,14 +7053,6 @@ img {
   background: linear-gradient(to right, #ff0300 0%, #ff8f00 100%);
 }
 
-/*** 
-
-====================================================================
-	SEO Section
-====================================================================
-
- ***/
-
 .seo-section {
   position: relative;
   padding: 0px 0px 60px;
@@ -7973,14 +7181,6 @@ img {
   cursor: pointer;
   margin-top: 15px;
 }
-
-/*** 
-
-====================================================================
-	Main Footer
-====================================================================
-
-***/
 
 .footer-style-two {
   position: relative;
@@ -8161,14 +7361,6 @@ img {
 .contact-info-widget ul li a:hover {
   color: #0a15a9;
 }
-
-/*** 
-
-====================================================================
-	Banner Section Three
-====================================================================
-
-***/
 
 .banner-section-three {
   position: relative;
@@ -8383,14 +7575,6 @@ img {
   position: absolute;
 }
 
-/*** 
-
-====================================================================
-	Mission Section
-====================================================================
-
-***/
-
 .mission-section {
   position: relative;
   margin-top: -80px;
@@ -8471,14 +7655,6 @@ img {
   -o-transform: scale(-1) rotate(180deg);
   transform: scale(-1) rotate(180deg);
 }
-
-/*** 
-
-====================================================================
-	Services Section Five
-====================================================================
-
-***/
 
 .services-section-five {
   position: relative;
@@ -8682,14 +7858,6 @@ img {
   transition: all 300ms ease;
 }
 
-/*** 
-
-====================================================================
-	Analysis Section
-====================================================================
-
-***/
-
 .analysis-section {
   position: relative;
   overflow: hidden;
@@ -8743,14 +7911,6 @@ img {
   line-height: 1.8em;
   margin-bottom: 40px;
 }
-
-/*** 
-
-====================================================================
-	Counter Section Three
-====================================================================
-
-***/
 
 .counter-section-three {
   position: relative;
@@ -8856,14 +8016,6 @@ img {
   text-transform: capitalize;
 }
 
-/*** 
-
-====================================================================
-	Steps Section
-====================================================================
-
-***/
-
 .steps-section {
   position: relative;
   padding: 100px 0px 80px;
@@ -8957,14 +8109,6 @@ img {
   margin-top: 35px;
   text-transform: uppercase;
 }
-
-/*** 
-
-====================================================================
-	Skill Section
-====================================================================
-
-***/
 
 .skill-section {
   position: relative;
@@ -9076,14 +8220,6 @@ img {
   font-size: 16px;
   text-transform: uppercase;
 }
-
-/*** 
-
-====================================================================
-	Demo Section
-====================================================================
-
-***/
 
 .demo-section {
   position: relative;
@@ -9237,14 +8373,6 @@ img {
   max-width: 500px;
 }
 
-/*** 
-
-====================================================================
-	Testimonial Section Three
-====================================================================
-
- ***/
-
 .testimonial-section-three {
   position: relative;
   padding: 90px 0px 80px;
@@ -9369,14 +8497,6 @@ img {
   margin-top: 15px;
 }
 
-/*** 
-
-====================================================================
-	Newsletter Section
-====================================================================
-
-***/
-
 .newsletter-section {
   position: relative;
   padding: 30px 0px 60px;
@@ -9455,14 +8575,6 @@ img {
 .newsletter-section .image-column .inner-column {
   position: relative;
 }
-
-/*** 
-
-====================================================================
-	Page Title
-====================================================================
-
-***/
 
 .page-title {
   position: relative;
@@ -9582,14 +8694,6 @@ img {
   color: #fde20b;
 }
 
-/*** 
-
-====================================================================
-	Faq Page Section
-====================================================================
-
-***/
-
 .faq-page-section {
   position: relative;
   padding: 100px 0px 80px;
@@ -9679,14 +8783,6 @@ img {
   margin-bottom: 20px;
 }
 
-/*** 
-
-====================================================================
-	Team Page Section
-====================================================================
-
-***/
-
 .team-page-section {
   position: relative;
   padding: 110px 0px 70px;
@@ -9695,14 +8791,6 @@ img {
 .team-page-section .team-block {
   margin-bottom: 40px;
 }
-
-/*** 
-
-====================================================================
-	Team Single Section
-====================================================================
-
-***/
 
 .team-single-section {
   position: relative;
@@ -9818,14 +8906,6 @@ img {
   margin-top: 18px;
 }
 
-/*** 
-
-====================================================================
-	Testimonial Page Section
-====================================================================
-
-***/
-
 .testimonial-page-section {
   position: relative;
   padding: 100px 0px 40px;
@@ -9834,14 +8914,6 @@ img {
 .testimonial-page-section .testimonial-block {
   margin-bottom: 40px;
 }
-
-/*** 
-
-====================================================================
-	Coming Soon
-====================================================================
-
-***/
 
 .coming-soon {
   position: fixed;
@@ -10223,14 +9295,6 @@ img {
   border-radius: 50%;
 }
 
-/*** 
-
-====================================================================
-	Privacy Section
-====================================================================
-
-***/
-
 .privacy-section {
   position: relative;
   padding: 110px 0px 80px;
@@ -10319,14 +9383,6 @@ img {
   background-color: #eb3867;
 }
 
-/*** 
-
-====================================================================
-	Services Page Section
-====================================================================
-
-***/
-
 .services-page-section {
   position: relative;
   padding: 100px 0px 80px;
@@ -10335,14 +9391,6 @@ img {
 .services-page-section .service-block-four {
   margin-bottom: 50px;
 }
-
-/*** 
-
-====================================================================
-	Sidebar Page Container
-====================================================================
-
-***/
 
 .sidebar-page-container {
   position: relative;
@@ -10608,14 +9656,6 @@ img {
   margin-bottom: 30px;
 }
 
-/*** 
-
-====================================================================
-	Gallery Detail Section
-====================================================================
-
-***/
-
 .gallery-detail-section {
   position: relative;
   padding: 90px 0px 110px;
@@ -10772,14 +9812,6 @@ img {
   position: relative;
   font-weight: 400;
 }
-
-/*** 
-
-====================================================================
-	Related Project Section
-====================================================================
-
-***/
 
 .related-projects-section {
   position: relative;
@@ -11529,14 +10561,6 @@ img {
   color: #fb8358;
 }
 
-/*** 
-
-====================================================================
-	Styled Pagination
-====================================================================
-
-***/
-
 .styled-pagination {
   position: relative;
 }
@@ -11868,14 +10892,6 @@ img {
   color: #1c17a0;
 }
 
-/*** 
-
-====================================================================
-	Comments Area
-====================================================================
-
- ***/
-
 .sidebar-page-container .comments-area {
   position: relative;
   margin-top: 0px;
@@ -12137,14 +11153,6 @@ img {
   line-height: 1.5em;
   margin-bottom: 30px;
 }
-
-/*** 
-
-====================================================================
-	Contact Info Section
-====================================================================
-
-***/
 
 .contact-info-section {
   position: relative;
@@ -12613,13 +11621,6 @@ img {
   color: #e82a6a;
 }
 
-/*** 
-
-====================================================================
-	Cart Section style
-====================================================================
-
-***/
 /* 
 .cart-section{
 	position:relative;
@@ -13004,15 +12005,8 @@ img {
 .shipping-form .form-group textarea:focus {
   border-color: #eb3867;
 }
-*/
 
-/*** 
 
-====================================================================
-	CheckOut Sectioon
-====================================================================
-
-***/
 
 /* .checkout-page{
 	position:relative;
@@ -13161,7 +12155,7 @@ img {
   height: 2px;
   background-color: #e82a6a;
 }
-*/
+
 
 /*cart outer*/
 
@@ -13585,14 +12579,6 @@ img {
   text-transform: uppercase;
 }
 
-/*** 
-
-====================================================================
-	Product Tabs Style
-====================================================================
-
-***/
-
 /* .shop-single .product-details .prod-tabs{
 	position:relative;
 	margin-bottom:60px;
@@ -13843,14 +12829,6 @@ img {
   font-style: normal;
   font-family: "FontAwesome";
 }
-
-/*** 
-
-====================================================================
-	Login / Register Section
-====================================================================
-
-***/
 
 /* .register-section{
 	position:relative;
@@ -15024,7 +14002,7 @@ img {
   background-color: #363a5a;
 }
 
-/*Boxed Layout Style*/
+/* Boxed Layout Style */
 
 .box-layout {
   position: relative;
@@ -15061,14 +14039,6 @@ img {
 .box-layout .call-to-action-section.style-two .circle-layer {
   display: none;
 }
-
-/*** 
-
-====================================================================
-	Banner Section Four
-====================================================================
-
-***/
 
 .banner-section-four {
   position: relative;
@@ -15338,6 +14308,916 @@ img {
   border-color: #ffffff;
   background-color: #ffffff;
 }
+
+.seo-section-two {
+  position: relative;
+  padding: 40px 0px 60px;
+}
+
+.seo-section-two .form-column {
+  position: relative;
+}
+
+.seo-section-two .form-column .inner-column {
+  position: relative;
+}
+
+.seo-section-two .image-layer {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 1543px;
+  z-index: -1;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.seo-section-two .image-column {
+  position: relative;
+}
+
+.seo-section-two .image-column .inner-column {
+  position: relative;
+}
+
+.business-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0px 0px;
+  background: #151ab2;
+  background: -webkit-linear-gradient(to right, #151ab2 0%, #4c68e2 100%);
+  background: -moz-linear-gradient(to right, #151ab2 0%, #4c68e2 100%);
+  background: linear-gradient(to right, #151ab2 0%, #4c68e2 100%);
+}
+
+.business-section .pattern-layer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.business-section .sec-title {
+  margin-bottom: 30px;
+}
+
+.business-section .inner-container {
+  position: relative;
+  padding-top: 40px;
+}
+
+.business-section .image-column {
+  position: relative;
+}
+
+.business-section .image-column .inner-column {
+  position: relative;
+}
+
+.business-section .image-column .image {
+  position: relative;
+  padding-top: 80px;
+  display: inline-block;
+}
+
+.business-section .image-column .arrow-image {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.business-section .content-column {
+  position: relative;
+}
+
+.business-section .content-column .inner-column {
+  position: relative;
+}
+
+.business-block {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.business-block .inner-box {
+  position: relative;
+  padding-left: 225px;
+}
+
+.business-block .inner-box .box-number {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 90px;
+  height: 90px;
+  color: #222222;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 50px;
+  border: 10px solid #162d76;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.business-block:nth-child(2) .inner-box .box-number {
+  border-color: #0c8afa;
+}
+
+.business-block:nth-child(3) .inner-box .box-number {
+  border-color: #0acdcd;
+}
+
+.business-block:nth-child(4) .inner-box .box-number {
+  border-color: #ff9006;
+}
+
+.business-block:nth-child(5) .inner-box .box-number {
+  border-color: #f32e2e;
+}
+
+.business-block .inner-box .icon-box {
+  position: absolute;
+  left: 130px;
+  top: 15px;
+  color: #ffffff;
+  font-size: 52px;
+  line-height: 1em;
+}
+
+.business-block .inner-box .icon-box::before {
+  position: absolute;
+  content: "";
+  left: 10px;
+  top: 0px;
+  width: 64px;
+  height: 61px;
+  background: url(../images/icons/business-icon-1.png) no-repeat;
+}
+
+.business-block:nth-child(2) .inner-box .icon-box::before {
+  width: 59px;
+  height: 42px;
+  background: url(../images/icons/business-icon-2.png) no-repeat;
+}
+
+.business-block:nth-child(3) .inner-box .icon-box::before {
+  width: 55px;
+  height: 56px;
+  background: url(../images/icons/business-icon-3.png) no-repeat;
+}
+
+.business-block:nth-child(4) .inner-box .icon-box::before {
+  width: 55px;
+  height: 49px;
+  background: url(../images/icons/business-icon-4.png) no-repeat;
+}
+
+.business-block:nth-child(5) .inner-box .icon-box::before {
+  width: 49px;
+  height: 49px;
+  background: url(../images/icons/business-icon-5.png) no-repeat;
+}
+
+.business-block .inner-box h4 {
+  position: relative;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3em;
+  text-transform: capitalize;
+}
+
+.business-block .inner-box .text {
+  position: relative;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8em;
+  margin-top: 10px;
+}
+
+.banner-section-six {
+  position: relative;
+  overflow: hidden;
+  padding: 280px 0px 280px;
+}
+
+.banner-section-six .patern-layer-one {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 1178px;
+  height: 861px;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+.banner-section-six .patern-layer-two {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-repeat: no-repeat;
+}
+
+.banner-section-six .content-column {
+  position: relative;
+}
+
+.banner-section-six .content-column .inner-column {
+  position: relative;
+}
+
+.banner-section-six .content-column .title {
+  position: relative;
+  color: #555555;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.banner-section-six .content-column h1 {
+  position: relative;
+  color: #222222;
+  font-weight: 700;
+  line-height: 1.2em;
+  margin-top: 22px;
+}
+
+.banner-section-six .content-column .text {
+  position: relative;
+  color: #5a5a5a;
+  font-size: 16px;
+  line-height: 1.9em;
+  margin-top: 22px;
+}
+
+.banner-section-six .content-column .btn-box {
+  position: relative;
+  margin-top: 35px;
+}
+
+.banner-section-six .content-column .btn-box .theme-btn {
+  margin-right: 18px;
+}
+
+.banner-section-six .image-column {
+  position: relative;
+}
+
+.banner-section-six .image-column .inner-column {
+  position: relative;
+}
+
+.banner-section-six .image-column .image {
+  position: relative;
+  margin-left: -100px;
+  margin-right: -100px;
+}
+
+.color-palate {
+  background: #fff none repeat scroll 0 0;
+  -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: -285px;
+  text-align: center;
+  top: 10%;
+  transition: all 0.5s ease 0s;
+  width: 285px;
+  z-index: 999;
+}
+
+.color-palate h5 {
+  position: relative;
+  color: #222222;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.color-palate-head {
+  background: #eb3867 none repeat scroll 0 0;
+  padding: 12px 0;
+  margin-bottom: 12px;
+}
+
+.color-palate-head h6,
+.secondary-head h6 {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0px;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.palate {
+  background: red none repeat scroll 0 0;
+  display: block;
+  float: left;
+  height: 45px;
+  margin: 0 2.5% 12px;
+  width: 20%;
+  cursor: pointer;
+  position: relative;
+}
+
+.colors-list .active::after {
+  background: url(../images/icons/tick.png) center center no-repeat !important;
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.various-color {
+  overflow: hidden;
+  padding: 25px 0 15px;
+}
+
+.colors-list {
+  margin: 0 20px;
+}
+
+.secondary-head {
+  background: #222222 none repeat scroll 0 0;
+  padding: 14px 0;
+}
+
+.secondary-color {
+  padding: 23px 0;
+}
+
+.secondary-colors-list {
+  margin: 0 80px;
+}
+
+.palate-foo {
+  color: #777777;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0px 30px 20px;
+  line-height: 1.8em;
+  margin-top: 16px;
+}
+
+.palate-foo span {
+  display: block;
+  padding-top: 20px;
+  margin-top: 5px;
+  border-top: 1px dotted #b2b2b2;
+}
+
+.palate.default-color {
+  background: #0060ff none repeat scroll 0 0;
+}
+
+.palate.green-color {
+  background: #2ecc40 none repeat scroll 0 0;
+}
+
+.palate.blue-color {
+  background: #0074d9 none repeat scroll 0 0;
+}
+
+.palate.brown-color {
+  background: #96053e none repeat scroll 0 0;
+}
+
+.palate.purple-color {
+  background: #bb54e1 none repeat scroll 0 0;
+}
+
+.palate.teal-color {
+  background: #14c599 none repeat scroll 0 0;
+}
+
+.palate.orange-color {
+  background: #ff7e00 none repeat scroll 0 0;
+}
+
+.palate.redd-color {
+  background: #ff4136 none repeat scroll 0 0;
+}
+
+.palate.olive-color {
+  background: #3d9970 none repeat scroll 0 0;
+}
+
+.palate.lightblue-color {
+  background: #13b5ea none repeat scroll 0 0;
+}
+
+.palate.pink-color {
+  background: #ff017e none repeat scroll 0 0;
+}
+
+.palate.hotpink-color {
+  background: #96053e none repeat scroll 0 0;
+}
+
+.color-trigger {
+  position: absolute;
+  cursor: pointer;
+  height: 50px;
+  right: -46px;
+  width: 46px;
+  top: 0px;
+  padding-top: 6px;
+  padding-right: 6px;
+  border-radius: 0px 50px 50px 0px;
+  background: #eb3867 none repeat scroll 0 0;
+}
+.color-trigger .fa {
+  animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+.color-trigger:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.color-trigger i {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.color-palate.visible-palate {
+  left: 0px;
+}
+
+.color-trigger .fas {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+/*** 
+
+====================================================================
+	Testimonial Section
+====================================================================
+
+***/
+
+/* .testimonial-section{
+	position:relative;
+	padding:120px 0px 120px;
+}
+
+.testimonial-section .icon-layer-one{
+	position:absolute;
+	left:150px;
+	top:130px;
+	width:34px;
+	height:29px;
+	background-repeat:no-repeat;
+}
+
+.testimonial-section .icon-layer-two{
+	position:absolute;
+	left:100px;
+	bottom:280px;
+	width:51px;
+	height:65px;
+	background-repeat:no-repeat;
+}
+
+.testimonial-section .icon-layer-three{
+	position:absolute;
+	right:100px;
+	top:80px;
+	width:56px;
+	height:53px;
+	background-repeat:no-repeat;
+}
+
+.testimonial-section .icon-layer-four{
+	position:absolute;
+	right:180px;
+	top:50%;
+	width:57px;
+	height:50px;
+	background-repeat:no-repeat;
+}
+
+.testimonial-section .icon-layer-five{
+	position:absolute;
+	right:100px;
+	bottom:80px;
+	width:63px;
+	height:63px;
+	background-repeat:no-repeat;
+}
+
+.testimonial-section .owl-carousel .owl-stage-outer{
+	position:static;
+	padding:20px 0px;
+}
+
+.testimonial-section .owl-theme .testimonial-block{
+	margin:0px 30px;
+}
+
+.testimonial-section .owl-carousel{
+	margin:0px -30px;
+	width:auto;
+}
+
+.testimonial-section .owl-nav{
+	display:none;
+}
+
+.testimonial-section .owl-dots{
+	position:relative;
+	text-align:center;
+	margin-top:40px;
+}
+
+.testimonial-section .owl-dots .owl-dot{
+	position:relative;
+	width:15px;
+	height:4px;
+	margin:0px 4px;
+	display:inline-block;
+	background-color:#cccccc;
+	transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-webkit-transition:all 0.3s ease;
+	-ms-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+}
+
+.testimonial-section .owl-dots .owl-dot.active,
+.testimonial-section .owl-dots .owl-dot:hover{
+	width:25px;
+	background-color:#ba0913;
+}
+
+.testimonial-block{
+	position:relative;
+}
+
+.testimonial-block .inner-box{
+	position:relative;
+	padding-top:30px;
+	padding-left:45px;
+	padding-right:45px;
+	text-align:center;
+	padding-bottom:45px;
+}
+
+.testimonial-block .inner-box:before{
+	position:absolute;
+	content:'';
+	left:0px;
+	top:85px;
+	right:0px;
+	bottom:0px;
+	border-radius:8px;
+	background-color:#ffffff;
+	box-shadow:0px 0px 20px rgba(0,0,0,0.10);
+}
+
+.testimonial-block .inner-box .pattern-layer{
+	position:absolute;
+	left:50%;
+	top:0px;
+	width:139px;
+	height:161px;
+	z-index:-1;
+	margin-left:-70px;
+	background:url(../images/icons/testimonial-pattern.png) no-repeat;
+}
+
+.testimonial-block .inner-box .author-image-outer{
+	position:relative;
+}
+
+.testimonial-block .inner-box .author-image-outer .author-image{
+	position:relative;
+	width:112px;
+	height:112px;
+	margin:0 auto;
+	border-radius:50%;
+	overflow:hidden;
+}
+
+.testimonial-block .inner-box .rating{
+	position:relative;
+	color:#ff5301;
+	margin:0px 2px;
+	margin-top:30px;
+	font-size:16px;
+}
+
+.testimonial-block .inner-box .rating .fa.dark{
+	color:#777777;
+}
+
+.testimonial-block .inner-box .text{
+	position:relative;
+	color:#555555;
+	margin-top:15px;
+	font-size:16px;
+	line-height:1.8em;
+	max-width:350px;
+	margin:0 auto;
+	margin-top:15px;
+}
+
+.testimonial-block .inner-box .lower-box{
+	position:relative;
+	padding-top:15px;
+	margin-top:25px;
+	border-top:2px solid #dddddd;
+}
+
+.testimonial-block .inner-box .lower-box .quote-icon{
+	position:absolute;
+	left:0px;
+	top:-2px;
+	width:40px;
+	height:40px;
+	color:#ffffff;
+	font-size:20px;
+	line-height:40px;
+	display:inline-block;
+	background-color:#222222;
+}
+
+.testimonial-block .inner-box .lower-box h6{
+	position:relative;
+	color:#222222;
+	font-weight:600;
+}
+
+.testimonial-block .inner-box .lower-box .designation{
+	position:relative;
+	color:#555555;
+	font-weight:400;
+	font-size:16px;
+	margin-top:8px;
+} */
+
+/*** 
+
+====================================================================
+	Team Section
+====================================================================
+
+***/
+
+/* .team-section{
+	position:relative;
+	overflow:hidden;
+	padding:0px 0px 80px;
+}
+
+.team-section:before{
+	position:absolute;
+	content:'';
+	left:-200px;
+	right:-200px;
+	bottom:-150px;
+	height:560px;
+	background-color:#f3f4ff;
+	transform:rotate(10deg);
+}
+
+.team-section .outer-container{
+	position:relative;
+	overflow:hidden;
+	padding-bottom:15px;
+}
+
+.team-section .outer-container .team-block{
+	width:20%;
+	float:left;
+	padding:0px 15px;
+}
+
+.team-section .outer-container .team-block:nth-child(2){
+	margin-top:50px;
+}
+
+.team-section .outer-container .team-block:nth-child(3){
+	margin-top:100px;
+}
+
+.team-section .outer-container .team-block:nth-child(4){
+	margin-top:150px;
+}
+
+.team-section .outer-container .team-block:nth-child(5){
+	margin-top:200px;
+}
+
+.team-block{
+	position:relative;
+}
+
+.team-block .inner-box{
+	position:relative;
+}
+
+.team-block .inner-box .image{
+	position:relative;
+	overflow:hidden;
+	border-radius:0px 10px 0px 10px;
+}
+
+.team-block .inner-box .image img{
+	position:relative;
+	width:100%;
+	display:block;
+}
+
+.team-block .inner-box .image .social-box{
+	position:absolute;
+	top:10px;
+	left:0px;
+	transition:all 600ms ease;
+	-moz-transition:all 600ms ease;
+	-webkit-transition:all 600ms ease;
+	-ms-transition:all 600ms ease;
+	-o-transition:all 600ms ease;
+}
+
+.team-block .inner-box:hover .image .social-box{
+	left:0px;
+}
+
+.team-block .inner-box .image .social-box li{
+	position:relative;
+	left:-80px;
+	margin-bottom:8px;
+	transition:all 600ms ease;
+	-moz-transition:all 600ms ease;
+	-webkit-transition:all 600ms ease;
+	-ms-transition:all 600ms ease;
+	-o-transition:all 600ms ease;
+}
+
+.team-block .inner-box .image .social-box li a{
+	position:relative;
+	color:#ffffff;
+	width:55px;
+	height:40px;
+	font-size:18px;
+	line-height:40px;
+	text-align:center;
+	display:inline-block;
+	background-color:#000000;
+	border-radius:0px 50px 50px 0px;
+	transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-webkit-transition:all 0.3s ease;
+	-ms-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+}
+
+.team-block .inner-box .image .social-box li a:hover{
+	background-color:#1e00ff;
+}
+
+.team-block .inner-box:hover .image .social-box li:nth-child(1){
+	left:0px;
+}
+
+.team-block .inner-box:hover .image .social-box li:nth-child(2){
+	left:0px;
+	-webkit-transition-delay: 200ms;
+	-moz-transition-delay: 200ms;
+	-ms-transition-delay: 200ms;
+	-o-transition-delay: 200ms;
+	transition-delay: 200ms;
+}
+
+.team-block .inner-box:hover .image .social-box li:nth-child(3){
+	left:0px;
+	-webkit-transition-delay: 400ms;
+	-moz-transition-delay: 400ms;
+	-ms-transition-delay: 400ms;
+	-o-transition-delay: 400ms;
+	transition-delay: 400ms;
+}
+
+.team-block .inner-box:hover .image .social-box li:nth-child(4){
+	left:0px;
+	-webkit-transition-delay: 600ms;
+	-moz-transition-delay: 600ms;
+	-ms-transition-delay: 600ms;
+	-o-transition-delay: 600ms;
+	transition-delay: 600ms;
+}
+
+.team-block .inner-box:hover .image .social-box li:nth-child(5){
+	left:0px;
+	-webkit-transition-delay: 800ms;
+	-moz-transition-delay: 800ms;
+	-ms-transition-delay: 800ms;
+	-o-transition-delay: 800ms;
+	transition-delay: 800ms;
+}
+
+.team-block .inner-box .lower-content{
+	position:relative;
+	padding:30px 12px;
+	text-align:center;
+	margin-left:30px;
+	margin-right:30px;
+	border-radius:10px;
+	margin-top:-60px;
+	background-color:#ffffff;
+	box-shadow:0px 0px 15px rgba(0,0,0,0.10);
+}
+
+.team-block .inner-box .lower-content:before{
+	position:absolute;
+	content:'';
+	left:0px;
+	top:0px;
+	bottom:0px;
+	width:50%;
+	opacity:0;
+	border-radius:10px;
+	background: #EA3368;
+	transition:all 600ms ease;
+	-moz-transition:all 600ms ease;
+	-webkit-transition:all 600ms ease;
+	-ms-transition:all 600ms ease;
+	-o-transition:all 600ms ease;
+	background: -webkit-linear-gradient(to right, #EA3368 0%, #fd8b56 100%);
+	background: -moz-linear-gradient(to right, #EA3368 0%, #fd8b56 100%);
+	background: linear-gradient(to right, #EA3368 0%, #fd8b56 100%);
+}
+
+.team-block .inner-box:hover .lower-content:before{
+	width:100%;
+	opacity:1;
+}
+
+.team-block .inner-box .lower-content .content h4{
+	position:relative;
+	font-weight:600;
+	line-height:1.3em;
+	font-size:20px;
+}
+
+.team-block .inner-box .lower-content .content h4 a{
+	position:relative;
+	color:#222222;
+	transition:all 600ms ease;
+	-moz-transition:all 600ms ease;
+	-webkit-transition:all 600ms ease;
+	-ms-transition:all 600ms ease;
+	-o-transition:all 600ms ease;
+}
+
+.team-block .inner-box .lower-content .content .designation{
+	position:relative;
+	color:#555555;
+	font-size:16px;
+	margin-top:6px;
+	transition:all 600ms ease;
+	-moz-transition:all 600ms ease;
+	-webkit-transition:all 600ms ease;
+	-ms-transition:all 600ms ease;
+	-o-transition:all 600ms ease;
+}
+
+.team-block .inner-box:hover .lower-content .content .designation,
+.team-block .inner-box:hover .lower-content .content h4 a{
+	color:#ffffff;
+}
+
+.team-block.style-two .inner-box .lower-content .content h4{
+	font-size:24px;
+} */
 
 /*** 
 
@@ -15807,508 +15687,8 @@ img {
 	background-color:#f64a1b;
 } */
 
-/*** 
 
-====================================================================
-	SEO Section Two
-====================================================================
 
-***/
-
-.seo-section-two {
-  position: relative;
-  padding: 40px 0px 60px;
-}
-
-.seo-section-two .form-column {
-  position: relative;
-}
-
-.seo-section-two .form-column .inner-column {
-  position: relative;
-}
-
-.seo-section-two .image-layer {
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  width: 100%;
-  height: 1543px;
-  z-index: -1;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-}
-
-.seo-section-two .image-column {
-  position: relative;
-}
-
-.seo-section-two .image-column .inner-column {
-  position: relative;
-}
-
-/*** 
-
-====================================================================
-	Business Section
-====================================================================
-
-***/
-
-.business-section {
-  position: relative;
-  overflow: hidden;
-  padding: 100px 0px 0px;
-  background: #151ab2;
-  background: -webkit-linear-gradient(to right, #151ab2 0%, #4c68e2 100%);
-  background: -moz-linear-gradient(to right, #151ab2 0%, #4c68e2 100%);
-  background: linear-gradient(to right, #151ab2 0%, #4c68e2 100%);
-}
-
-.business-section .pattern-layer {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-}
-
-.business-section .sec-title {
-  margin-bottom: 30px;
-}
-
-.business-section .inner-container {
-  position: relative;
-  padding-top: 40px;
-}
-
-.business-section .image-column {
-  position: relative;
-}
-
-.business-section .image-column .inner-column {
-  position: relative;
-}
-
-.business-section .image-column .image {
-  position: relative;
-  padding-top: 80px;
-  display: inline-block;
-}
-
-.business-section .image-column .arrow-image {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-}
-
-.business-section .content-column {
-  position: relative;
-}
-
-.business-section .content-column .inner-column {
-  position: relative;
-}
-
-.business-block {
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.business-block .inner-box {
-  position: relative;
-  padding-left: 225px;
-}
-
-.business-block .inner-box .box-number {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 90px;
-  height: 90px;
-  color: #222222;
-  font-size: 26px;
-  font-weight: 600;
-  line-height: 70px;
-  text-align: center;
-  border-radius: 50px;
-  border: 10px solid #162d76;
-  background-color: #ffffff;
-  font-family: "Poppins", sans-serif;
-}
-
-.business-block:nth-child(2) .inner-box .box-number {
-  border-color: #0c8afa;
-}
-
-.business-block:nth-child(3) .inner-box .box-number {
-  border-color: #0acdcd;
-}
-
-.business-block:nth-child(4) .inner-box .box-number {
-  border-color: #ff9006;
-}
-
-.business-block:nth-child(5) .inner-box .box-number {
-  border-color: #f32e2e;
-}
-
-.business-block .inner-box .icon-box {
-  position: absolute;
-  left: 130px;
-  top: 15px;
-  color: #ffffff;
-  font-size: 52px;
-  line-height: 1em;
-}
-
-.business-block .inner-box .icon-box::before {
-  position: absolute;
-  content: "";
-  left: 10px;
-  top: 0px;
-  width: 64px;
-  height: 61px;
-  background: url(../images/icons/business-icon-1.png) no-repeat;
-}
-
-.business-block:nth-child(2) .inner-box .icon-box::before {
-  width: 59px;
-  height: 42px;
-  background: url(../images/icons/business-icon-2.png) no-repeat;
-}
-
-.business-block:nth-child(3) .inner-box .icon-box::before {
-  width: 55px;
-  height: 56px;
-  background: url(../images/icons/business-icon-3.png) no-repeat;
-}
-
-.business-block:nth-child(4) .inner-box .icon-box::before {
-  width: 55px;
-  height: 49px;
-  background: url(../images/icons/business-icon-4.png) no-repeat;
-}
-
-.business-block:nth-child(5) .inner-box .icon-box::before {
-  width: 49px;
-  height: 49px;
-  background: url(../images/icons/business-icon-5.png) no-repeat;
-}
-
-.business-block .inner-box h4 {
-  position: relative;
-  color: #ffffff;
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 1.3em;
-  text-transform: capitalize;
-}
-
-.business-block .inner-box .text {
-  position: relative;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.8em;
-  margin-top: 10px;
-}
-
-/*** 
-
-====================================================================
-	Banner Section Six
-====================================================================
-
-***/
-/* 
-.banner-section-six{
-	position:relative;
-	overflow:hidden;
-	padding:280px 0px 280px;
-}
-
-.banner-section-six .patern-layer-one{
-	position:absolute;
-	right:0px;
-	top:0px;
-	width:1178px;
-	height:861px;
-	background-position:right top;
-	background-repeat:no-repeat;
-}
-
-.banner-section-six .patern-layer-two{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:100%;
-	height:100%;
-	opacity:0.2;
-	background-repeat:no-repeat;
-}
-
-.banner-section-six .content-column{
-	position:relative;
-}
-
-.banner-section-six .content-column .inner-column{
-	position:relative;
-}
-
-.banner-section-six .content-column .title{
-	position:relative;
-	color:#555555;
-	font-size:18px;
-	font-weight:500;
-}
-
-.banner-section-six .content-column h1{
-	position:relative;
-	color:#222222;
-	font-weight:700;
-	line-height:1.2em;
-	margin-top:22px;
-}
-
-.banner-section-six .content-column .text{
-	position:relative;
-	color:#5a5a5a;
-	font-size:16px;
-	line-height:1.9em;
-	margin-top:22px;
-}
-
-.banner-section-six .content-column .btn-box{
-	position:relative;
-	margin-top:35px;
-}
-
-.banner-section-six .content-column .btn-box .theme-btn{
-	margin-right:18px;
-}
-
-.banner-section-six .image-column{
-	position:relative;
-}
-
-.banner-section-six .image-column .inner-column{
-	position:relative;
-}
-
-.banner-section-six .image-column .image{
-	position:relative;
-	margin-left:-100px;
-	margin-right:-100px;
-} */
-
-/*** 
-
-====================================================================
-	Color Palate Style / Color Switcher Style
-====================================================================
-
-***/
-
-.color-palate {
-  background: #fff none repeat scroll 0 0;
-  -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-  -ms-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-  -o-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  left: -285px;
-  text-align: center;
-  top: 10%;
-  transition: all 0.5s ease 0s;
-  width: 285px;
-  z-index: 999;
-}
-
-.color-palate h5 {
-  position: relative;
-  color: #222222;
-  font-size: 16px;
-  margin-bottom: 12px;
-}
-
-.color-palate-head {
-  background: #eb3867 none repeat scroll 0 0;
-  padding: 12px 0;
-  margin-bottom: 12px;
-}
-
-.color-palate-head h6,
-.secondary-head h6 {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 400;
-  margin: 0px;
-  margin-top: 4px;
-  text-transform: uppercase;
-}
-
-.palate {
-  background: red none repeat scroll 0 0;
-  display: block;
-  float: left;
-  height: 45px;
-  margin: 0 2.5% 12px;
-  width: 20%;
-  cursor: pointer;
-  position: relative;
-}
-
-.colors-list .active::after {
-  background: url(../images/icons/tick.png) center center no-repeat !important;
-  background-repeat: no-repeat;
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-}
-
-.various-color {
-  overflow: hidden;
-  padding: 25px 0 15px;
-}
-
-.colors-list {
-  margin: 0 20px;
-}
-
-.secondary-head {
-  background: #222222 none repeat scroll 0 0;
-  padding: 14px 0;
-}
-
-.secondary-color {
-  padding: 23px 0;
-}
-
-.secondary-colors-list {
-  margin: 0 80px;
-}
-
-.palate-foo {
-  color: #777777;
-  font-size: 13px;
-  font-weight: 400;
-  padding: 0px 30px 20px;
-  line-height: 1.8em;
-  margin-top: 16px;
-}
-
-.palate-foo span {
-  display: block;
-  padding-top: 20px;
-  margin-top: 5px;
-  border-top: 1px dotted #b2b2b2;
-}
-
-.palate.default-color {
-  background: #0060ff none repeat scroll 0 0;
-}
-
-.palate.green-color {
-  background: #2ecc40 none repeat scroll 0 0;
-}
-
-.palate.blue-color {
-  background: #0074d9 none repeat scroll 0 0;
-}
-
-.palate.brown-color {
-  background: #96053e none repeat scroll 0 0;
-}
-
-.palate.purple-color {
-  background: #bb54e1 none repeat scroll 0 0;
-}
-
-.palate.teal-color {
-  background: #14c599 none repeat scroll 0 0;
-}
-
-.palate.orange-color {
-  background: #ff7e00 none repeat scroll 0 0;
-}
-
-.palate.redd-color {
-  background: #ff4136 none repeat scroll 0 0;
-}
-
-.palate.olive-color {
-  background: #3d9970 none repeat scroll 0 0;
-}
-
-.palate.lightblue-color {
-  background: #13b5ea none repeat scroll 0 0;
-}
-
-.palate.pink-color {
-  background: #ff017e none repeat scroll 0 0;
-}
-
-.palate.hotpink-color {
-  background: #96053e none repeat scroll 0 0;
-}
-
-.color-trigger {
-  position: absolute;
-  cursor: pointer;
-  height: 50px;
-  right: -46px;
-  width: 46px;
-  top: 0px;
-  padding-top: 6px;
-  padding-right: 6px;
-  border-radius: 0px 50px 50px 0px;
-  background: #eb3867 none repeat scroll 0 0;
-}
-.color-trigger .fa {
-  animation: rotating 2s linear infinite;
-	       animation: rotating 2s linear infinite;
-}
-.color-trigger:before {
-  content: "";
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-}
-
-.color-trigger i {
-  color: #ffffff;
-  font-size: 18px;
-  line-height: 40px;
-}
-
-.color-palate.visible-palate {
-  left: 0px;
-}
-
-.color-trigger .fas {
-  animation: rotation 2s infinite linear;
-}
-
-@keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-  }
-}
-
-
-/* ----------------Raj's design----------------------- */
-/* ----------------Raj's design----------------------- */
-/* ----------------Raj's design----------------------- */
 .loader {
   position: absolute;
   top: 30%;

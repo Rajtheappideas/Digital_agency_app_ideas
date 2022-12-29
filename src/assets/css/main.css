@@ -1,9 +1,4 @@
-/*!
- * Bootstrap v4.4.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -13207,9 +13202,6 @@ a.bg-brand-github:focus {
   background-color: rgba(240, 252, 250, 0.13);
 }
 
-/**
- * Basic typography style for copy text
- **/
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -13430,9 +13422,7 @@ figure {
   text-align: center;
 }
 
-/**
- * Clear inner floats
- */
+
 p::-moz-selection {
   background: #319795;
   color: white;
@@ -14677,7 +14667,6 @@ img.flex-fill {
   height: 26px;
 }
 
-/* Badge fix */
 .badge {
   vertical-align: middle;
 }
@@ -15864,16 +15853,10 @@ h1.blog-title {
   left: 1.25rem;
 }
 
-/* -----------------------------------
-:: Warp and add bottom spacing
--------------------------------------- */
 .wrapper {
   padding-bottom: 4rem;
 }
 
-/* -----------------------------------
-::  Navigation links style class
------------------------------------- */
 .nav-link-style {
   color: #319795;
 }
@@ -15905,9 +15888,6 @@ h1.blog-title {
   color: #319795;
 }
 
-/* ------------------------------------
-:: Jumbotron - Home page
-------------------------------------- */
 .intro-2 {
   padding: 75px 45px;
   margin: 2rem auto 2rem;
@@ -15967,9 +15947,6 @@ h1.blog-title {
   margin-right: 5px;
 }
 
-/* -----------------------------------
-:: Slider - Single item page
------------------------------------- */
 .swiper-container {
   width: 100%;
   height: 500px;
@@ -15986,7 +15963,6 @@ h1.blog-title {
   text-align: center;
   font-size: 18px;
   background: #fff;
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16005,9 +15981,6 @@ h1.blog-title {
   border-radius: 0.3125rem;
 }
 
-/* -----------------------------------
-:: Demo bar - single item page
------------------------------------- */
 @media (max-width: 991.98px) {
   .demo-bar p {
     text-align: center;
@@ -16026,18 +15999,12 @@ h1.blog-title {
   color: #2b8482;
 }
 
-/* -----------------------------------
-:: Refine search -- Home page
------------------------------------- */
 .refine-search-wrap .card {
   margin-bottom: 1.5rem;
   -webkit-transition: height 0.35s ease;
   transition: height 0.35s ease;
 }
 
-/* -----------------------------------
-:: Clients logos -- Home page
------------------------------------- */
 .client-logos-1 img {
   max-width: 120px;
 }
@@ -16054,9 +16021,6 @@ h1.blog-title {
   }
 }
 
-/* -----------------------------------
-:: Dashboard nav -- Dash
------------------------------------- */
 .dash-nav li {
   padding: 9px 0;
 }
@@ -16080,9 +16044,6 @@ h1.blog-title {
   color: #2b8482;
 }
 
-/* -----------------------------------
-::  Dashboard - add item form
------------------------------------- */
 .add-item-remove-img {
   top: 10px;
   right: 20px;
@@ -16101,9 +16062,6 @@ h1.blog-title {
   font-size: 1.25rem;
 }
 
-/* -----------------------------------
-::  Faq nav
------------------------------------- */
 .section-nav {
   padding-left: 0;
   border-right: 1px solid #EAEDF2;
@@ -16137,9 +16095,6 @@ h1.blog-title {
   list-style-type: none;
 }
 
-/* -----------------------------------
-::  Card Testimonial - Home page
------------------------------------- */
 .customer-review-section {
   position: relative;
   background: #f0fcfa;
@@ -16193,9 +16148,6 @@ h1.blog-title {
   fill: #fff;
 }
 
-/*------------------------------------
-  Callout
-------------------------------------*/
 .callout {
   border-left-width: 4px;
   border-left-style: solid;
@@ -16213,5 +16165,3 @@ h1.blog-title {
   font-weight: bold;
   margin-bottom: .5rem;
 }
-
-/*# sourceMappingURL=../../../scss */

@@ -1,21 +1,5 @@
 @charset "UTF-8";
-/*------------------------------------------------------------------
- * This is main css file for Marketspot. It divided into following sections:
- * 1.  Global styles and reset
- * 2.  Navigation
- * 3.  Pricing
- * 4.  Testimonial
- * 5.  Footer
- * 6.  Buttons
- * 7.  Helpers
- * 8.  Dashboard nav
- * 9.  Cards
- * 10. Forms
--------------------------------------------------------------------*/
 
-/**
- * Basic typography style for copy text
- **/
  html {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -236,9 +220,7 @@
     text-align: center;
   }
   
-  /**
-   * Clear inner floats
-   */
+ 
   p::-moz-selection {
     background: #319795;
     color: white;
@@ -270,9 +252,6 @@
   .pricing-v1, .pricing-v2 {
     overflow: hidden;
   }
-/*------------------------------------------------------------------
-* 2.Navigation 
-*-------------------------------------------------------------------*/
   .navbar {
     position: relative;
     display: -webkit-box;
@@ -920,9 +899,6 @@
     color: rgba(46, 66, 87, 0.6);
   }
 
-/*------------------------------------------------------------------
-* 3.Pricings 
-*-------------------------------------------------------------------*/
   
   .pricing-v1::before {
     content: "";
@@ -952,9 +928,6 @@
     z-index: 9999;
   }
   
-/* -----------------------------------
-  ::  Card Testimonial - Home page
-  ------------------------------------ */
   .customer-review-section {
     position: relative;
     background: #f0fcfa;
@@ -1008,9 +981,6 @@
     fill: #fff;
   }
   
-  /*------------------------------------
-    Callout
-  ------------------------------------*/
   .callout {
     border-left-width: 4px;
     border-left-style: solid;
@@ -1029,9 +999,6 @@
     margin-bottom: .5rem;
   }
 
-  /* -----------------------------------
-  :: 4. Card Testimonial - Home page
-  ------------------------------------ */
   .customer-review-section {
     position: relative;
     background: #f0fcfa;
@@ -1085,9 +1052,6 @@
     fill: #fff;
   }
   
-  /*------------------------------------
-    Callout
-  ------------------------------------*/
   .callout {
     border-left-width: 4px;
     border-left-style: solid;
@@ -1106,9 +1070,6 @@
     margin-bottom: .5rem;
   }
   
-/*------------------------------------------------------------------
-/* 5. Footer
-/*-------------------------------------------------------------------*/
   .section-footer {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -1156,9 +1117,6 @@
     background-size: contain;
   }
   
-/*------------------------------------------------------------------
-/* 6. Buttons
-/*-------------------------------------------------------------------*/
   .btn {
     -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
@@ -1944,9 +1902,6 @@
   }
   
 
-  /* ------------------------------*/
-  /* 7.Helpers
-  /*-----------------------------*/
   .rounded-lg {
     border-radius: 0.9375rem;
   }
@@ -2300,7 +2255,6 @@
     height: 26px;
   }
   
-  /* Badge fix */
   .badge {
     vertical-align: middle;
   }
@@ -2386,9 +2340,6 @@
     background: radial-gradient(ellipse at center, #EAEDF2 0, rgba(255, 255, 255, 0) 75%);
   }
 
-  /* -----------------------------------
-  :: 8. Dashboard nav
-  ------------------------------------ */
   .dash-nav li {
     padding: 9px 0;
   }
@@ -2408,9 +2359,6 @@
     color: #2e4257;
   }
 
-    /* -----------------------------------
-  :: 9. Cards
-  ------------------------------------ */
   
   .dash-nav li:hover a {
     color: #2b8482;
@@ -2635,9 +2583,6 @@
     border: #319795 solid 1px;
   }
 
-    /* -----------------------------------
-  :: 10. Forms
-  ------------------------------------ */
   
   .form-control {
     border: 1px solid #EAEDF2;
@@ -2876,16 +2821,10 @@
     left: 1.25rem;
   }
   
-  /* -----------------------------------
-  :: Warp and add bottom spacing
-  -------------------------------------- */
   .wrapper {
     padding-bottom: 4rem;
   }
   
-  /* -----------------------------------
-  ::  Navigation links style class
-  ------------------------------------ */
   .nav-link-style {
     color: #319795;
   }
@@ -2917,9 +2856,6 @@
     color: #319795;
   }
   
-  /* ------------------------------------
-  :: Jumbotron - Home page
-  ------------------------------------- */
   .intro-2 {
     padding: 75px 45px;
     margin: 2rem auto 2rem;
@@ -2979,9 +2915,6 @@
     margin-right: 5px;
   }
   
-  /* -----------------------------------
-  :: Slider - Single item page
-  ------------------------------------ */
   .swiper-container {
     width: 100%;
     height: 500px;
@@ -2998,7 +2931,6 @@
     text-align: center;
     font-size: 18px;
     background: #fff;
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3017,9 +2949,6 @@
     border-radius: 0.3125rem;
   }
   
-  /* -----------------------------------
-  :: Demo bar - single item page
-  ------------------------------------ */
   @media (max-width: 991.98px) {
     .demo-bar p {
       text-align: center;
@@ -3038,18 +2967,12 @@
     color: #2b8482;
   }
   
-  /* -----------------------------------
-  :: Refine search -- Home page
-  ------------------------------------ */
   .refine-search-wrap .card {
     margin-bottom: 1.5rem;
     -webkit-transition: height 0.35s ease;
     transition: height 0.35s ease;
   }
   
-  /* -----------------------------------
-  :: Clients logos -- Home page
-  ------------------------------------ */
   .client-logos-1 img {
     max-width: 120px;
   }
@@ -3068,9 +2991,6 @@
   
   
   
-  /* -----------------------------------
-  ::  Dashboard - add item form
-  ------------------------------------ */
   .add-item-remove-img {
     top: 10px;
     right: 20px;
@@ -3089,9 +3009,6 @@
     font-size: 1.25rem;
   }
   
-  /* -----------------------------------
-  ::  Faq nav
-  ------------------------------------ */
   .section-nav {
     padding-left: 0;
     border-right: 1px solid #EAEDF2;
