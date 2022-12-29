@@ -15,7 +15,7 @@ const Packages = lazy(() => import("./pages/Packages"));
 const Projects = lazy(() => import("./pages/Projects"));
 const Services = lazy(() => import("./pages/Services"));
 const Signin = lazy(() => import("./pages/Signin"));
-const Signup = lazy(() => import("./pages/Signup"));
+const Signup = lazy(() => import("./pages/Register"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Faq = lazy(() => import("./pages/Faqs"));
 const TermsAndCondition = lazy(() => import("./pages/TermsAndCondition"));
