@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import TitleSection from "../components/TitleSection";
 import bgbrochures from "../assets/images/background/pattern-19.jpg";
 import brochures from "../assets/document/Appideas-Brochure.pdf";
 import SidebarLeft from "../components/SidebarLeft";
+import { useDispatch, useSelector } from "react-redux";
+import { getProjects, getProjectsById } from "../redux/ContentSlice";
 
 const Projects = () => {
+  const { projects, loading } = useSelector((state) => state.content);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getProjects());
+    dispatch(getProjectsById());
+  }, []);
   return (
     <>
       <Helmet title="Projects" />

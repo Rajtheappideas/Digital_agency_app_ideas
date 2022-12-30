@@ -1,8 +1,77 @@
 import React from "react";
 import TitleSection from "../components/TitleSection";
 import { Helmet } from "react-helmet";
+import { useDispatch, useSelector } from "react-redux";
+import { ErrorMessage, Form, FormikProvider, useFormik } from "formik";
+import { handleContactUsSubmit } from "../redux/BasicFeaturesSlice";
+import * as yup from "yup";
+import styled from "styled-components";
+import { toast } from "react-hot-toast";
 
 const Contact = () => {
+  const { success } = useSelector((state) => state.basicFeatures);
+  
+  const dispatch = useDispatch();
+
+  const contactUsSchema = yup.object().shape({
+    name: yup
+      .string()
+      .required("Name is required")
+      .trim()
+      .matches(/^[aA-zZ\s]+$/, "Only alphabets are allowed for this field ")
+      .min(2, "too short")
+      .max(30, "too long"),
+    email: yup.string().email().required("Email is required").trim(),
+    phone: yup
+      .number()
+      .typeError("That doesn't look like a phone number")
+      .positive("A phone number can't start with a minus")
+      .required("Phone is required"),
+    subject: yup
+      .string()
+      .required("Subejct is required")
+      .trim()
+      .matches(/^[aA-zZ\s]+$/, "Only alphabets are allowed for this field ")
+      .min(2, "too short")
+      .max(50, "too long"),
+    message: yup
+      .string()
+      .required("Message is required")
+      .trim()
+      .matches(/^[aA-zZ\s]+$/, "Only alphabets are allowed for this field ")
+      .min(3, "too short")
+      .max(150, "too long"),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    },
+    validationSchema: contactUsSchema,
+    onSubmit: (values) => {
+      dispatch(
+        handleContactUsSubmit({
+          name: values.name,
+          phone: values.phone,
+          email: values.email,
+          subject: values.subject,
+          message: values.message,
+        })
+      );
+      setTimeout(() => {
+        if (success) {
+          toast.success("Message sent successfully.");
+          resetForm();
+        }
+      }, 1000);
+    },
+  });
+
+  const { getFieldProps, handleSubmit, resetForm, isSubmitting } = formik;
   return (
     <>
       <Helmet title="Contactus" />
@@ -110,87 +179,97 @@ const Contact = () => {
               {/* Contact Form */}
               <div className="contact-form">
                 {/*Contact Form*/}
-                <form action="https://formspree.io/f/meqnnvqo" method="POST">
-                  <div className="row clearfix">
-                    <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                      <label
-                        htmlFor="username"
-                        className="icon flaticon-user-2"
-                      />
-                      <input
-                        type="text"
-                        name="username"
-                        placeholder="Your Name"
-                        id="name"
-                        autoComplete="off"
-                        required=""
-                      />
+                <FormikProvider value={formik}>
+                  <Form autoComplete="off" onSubmit={handleSubmit}>
+                    <div className="row clearfix">
+                      <div className="col-lg-6 col-md-6 col-sm-12 form-group">
+                        <label
+                          htmlFor="username"
+                          className="icon flaticon-user-2"
+                        />
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Your Name"
+                          id="name"
+                          autoComplete="off"
+                          {...getFieldProps("name")}
+                        />
+                        <ErrorMessage name="name" component={TextError} />
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-12 form-group">
+                        <label
+                          htmlFor="phone"
+                          className="icon flaticon-phone-call"
+                        />
+                        <input
+                          type="tel"
+                          maxLength={10}
+                          name="phone"
+                          placeholder="Your Phone"
+                          id="phone"
+                          autoComplete="off"
+                          {...getFieldProps("phone")}
+                        />
+                        <ErrorMessage name="phone" component={TextError} />
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-12 form-group">
+                        <label
+                          htmlFor="email"
+                          className="icon flaticon-big-envelope"
+                        />
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Email"
+                          id="email"
+                          autoComplete="off"
+                          {...getFieldProps("email")}
+                        />
+                        <ErrorMessage name="email" component={TextError} />
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-12 form-group">
+                        <label
+                          htmlFor="subject"
+                          className="icon flaticon-notepad"
+                        />
+                        <input
+                          type="text"
+                          name="subject"
+                          placeholder="Subject"
+                          id="subject"
+                          autoComplete="off"
+                          {...getFieldProps("subject")}
+                        />
+                        <ErrorMessage name="subject" component={TextError} />
+                      </div>
+                      <div className="col-lg-12 col-md-12 col-sm-12 form-group">
+                        <label
+                          htmlFor="message"
+                          className="icon flaticon-message"
+                        />
+                        <textarea
+                          name="message"
+                          placeholder="Message"
+                          id="message"
+                          {...getFieldProps("message")}
+                        />
+                        <ErrorMessage name="message" component={TextError} />
+                      </div>
+                      <div className="col-lg-12 col-md-12 col-sm-12 text-center form-group">
+                        <button
+                          className="theme-btn btn-style-three"
+                          type="submit"
+                          disabled={isSubmitting}
+                        >
+                          <span className="txt">
+                            {isSubmitting ? "Submitting..." : "Submit Now"}
+                          </span>
+                        </button>
+                      </div>
                     </div>
-                    <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                      <label
-                        htmlFor="phone"
-                        className="icon flaticon-phone-call"
-                      />
-                      <input
-                        type="text"
-                        name="phone"
-                        placeholder="Your Phone"
-                        id="phone"
-                        autoComplete="off"
-                        required=""
-                      />
-                    </div>
-                    <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                      <label
-                        htmlFor="email"
-                        className="icon flaticon-big-envelope"
-                      />
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        id="email"
-                        autoComplete="off"
-                        required=""
-                      />
-                    </div>
-                    <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                      <label
-                        htmlFor="subject"
-                        className="icon flaticon-notepad"
-                      />
-                      <input
-                        type="text"
-                        name="subject"
-                        placeholder="Subject"
-                        id="subject"
-                        autoComplete="off"
-                        required=""
-                      />
-                    </div>
-                    <div className="col-lg-12 col-md-12 col-sm-12 form-group">
-                      <label
-                        htmlFor="message"
-                        className="icon flaticon-message"
-                      />
-                      <textarea
-                        name="message"
-                        placeholder="Message"
-                        id="message"
-                        required=""
-                        defaultValue={""}
-                      />
-                    </div>
-                    <div className="col-lg-12 col-md-12 col-sm-12 text-center form-group">
-                      <button
-                        className="theme-btn btn-style-three"
-                        type="submit"
-                      >
-                        <span className="txt">Submit Now</span>
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                  </Form>
+                </FormikProvider>
                 {/*End Contact Form */}
               </div>
             </div>
@@ -202,3 +281,10 @@ const Contact = () => {
 };
 
 export default Contact;
+
+const TextError = styled.span`
+  color: red !important;
+  font-weight: 600;
+  padding-top: 10px;
+  font-size: 1rem;
+`;

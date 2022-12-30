@@ -1,54 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { useDispatch, useSelector } from "react-redux";
 import Faq from "../components/Faq";
 import TitleSection from "../components/TitleSection";
+import { getFaqs } from "../redux/ContentSlice";
 
 const Faqs = () => {
-  const faqs = [
-    {
-      question: "How long has Appideas been in business ?",
-      answer:
-        " Since 2018, we've been providing our experienced digital service.",
-      id: 1,
-    },
-    {
-      question: "What services does Appideas offer ?",
-      answer:
-        "Our services include SEO Optimization, PPC Advertising, Content Marketing, Social Marketing, Web Developement,and App Developement.",
-      id: 2,
-    },
-    {
-      question: "How long does it take to build a new project from scratch ?",
-      answer:
-        " We will first study your business needs and implement a strategy that will start to generate the results you want. Depending on the project we always ask minimum of 3 months for big projects and 1 month for small projects.",
-      id: 3,
-    },
-    {
-      question: "Who will be working on my project ?",
-      answer:
-        " You’ll have a dedicated team member to manage your account, who’ll be your main, day-to-day point of contact. Also depending on the project, various other specialists will feed into your account, working on specific areas of the project such as PPC, Social Media, or Content Marketing.",
-      id: 4,
-    },
-    {
-      question:
-        "My business is based in UK, Appideas is based in Belgium.Does this matter ?",
-      answer:
-        "Where your business is located doesn’t matter when comes to the work that we do. In fact, we work with clients across the whole world.",
-      id: 5,
-    },
-    {
-      question: "What’s Appideas’s new client onboarding process ?",
-      answer:
-        " Step 1: We arrange a call to scope out your requirements. <br />Step 2: One of our Business developer will arrange a face-to-face meeting, video conference or call (depending on location) to further discuss working together. <br /> Step 3: We deliver a proposal, examples of past work, a       project plan and deliverables, including costs. <br />Step 4: You decide if you want to go ahead. <br />       Step 5: Project kick-off meeting.",
-      id: 6,
-    },
-    {
-      question: "How often will results be reported ?",
-      answer:
-        "We provide bespoke monthly performance dashboards and reports that include all the metrics that are important to you. Your Account Manager will spend time taking you through these reports.",
-      id: 7,
-    },
-  ];
+  const { loading, faqs } = useSelector((state) => state.content);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getFaqs());
+  }, []);
+
   return (
     <>
       <Helmet title="Faq's" />
@@ -68,25 +33,37 @@ const Faqs = () => {
             {/* Column */}
             <div className="column col-lg-6 col-md-12 col-sm-12">
               <ul className="accordion-box">
-                {faqs.slice(0, faqs.length - 3).map((faq) => (
-                  <Faq
-                    question={faq.question}
-                    answer={faq.answer}
-                    key={faq.id}
-                  />
-                ))}
+                {loading ? (
+                  <p className="loading">Loading...</p>
+                ) : (
+                  faqs
+                    .slice(0, faqs.length - 3)
+                    .map((faq, index) => (
+                      <Faq
+                        question={faq.question}
+                        answer={faq.answer}
+                        key={index}
+                      />
+                    ))
+                )}
               </ul>
             </div>
             {/* Column */}
             <div className="column col-lg-6 col-md-12 col-sm-12">
               <ul className="accordion-box">
-                {faqs.slice(faqs.length - 4, faqs.length - 1).map((faq) => (
-                  <Faq
-                    question={faq.question}
-                    answer={faq.answer}
-                    key={faq.id}
-                  />
-                ))}
+                {loading ? (
+                  <p className="loading">Loading...</p>
+                ) : (
+                  faqs
+                    .slice(faqs.length - 4, faqs.length - 1)
+                    .map((faq, index) => (
+                      <Faq
+                        question={faq.question}
+                        answer={faq.answer}
+                        key={index}
+                      />
+                    ))
+                )}
               </ul>
             </div>
           </div>
@@ -130,11 +107,7 @@ const Faqs = () => {
                       />
                     </div>
                     <div className="form-group">
-                      <textarea
-                        name="message"
-                        placeholder="Message"
-                        defaultValue={""}
-                      />
+                      <textarea name="message" placeholder="Message" />
                     </div>
                     <div className="form-group">
                       <button

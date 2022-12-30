@@ -15710,3 +15710,12 @@ a:link,
 li {
   text-decoration: none;
 }
+
+.loading{
+  width: 100%;
+  font-weight: 600;
+  color: black;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-align: center;
+}

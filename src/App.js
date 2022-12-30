@@ -33,7 +33,7 @@ const PackageDigitalMarketing = lazy(() =>
 );
 const PackageHosting = lazy(() => import("./pages/PackageHosting"));
 const PackageVideoEditing = lazy(() => import("./pages/PackageVideoEditing"));
-const Shop = lazy(() => import("./pages/Shop"));
+// const Shop = lazy(() => import("./pages/Shop"));
 const SingleProduct = lazy(() => import("./pages/SingleProduct"));
 const Error404 = lazy(() => import("./pages/Error404"));
 
@@ -87,7 +87,7 @@ function App() {
               element={<PackageDigitalMarketing />}
             />
             <Route path="/package-hosting" element={<PackageHosting />} />
-            <Route path="/shop" element={<Shop />} />
+            {/* <Route path="/shop" element={<Shop />} /> */}
             <Route path="/single-product" element={<SingleProduct />} />
             <Route
               path="/package-video-editing"

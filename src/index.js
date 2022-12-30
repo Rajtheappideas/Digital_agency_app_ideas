@@ -17,6 +17,12 @@ import "./assets/css/jquery.bootstrap-touchspin.css";
 import "./assets/css/jquery.mCustomScrollbar.min.css";
 import "./assets/css/jquery.fancybox.min.css";
 import "./assets/css/hover.css";
+import { Provider } from "react-redux";
+import store from "./redux/Store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);

@@ -69,7 +69,9 @@ const OurBlogs = () => {
                   </h5>
                   {/* Social Boxed */}
                   <div className="social-boxed">
-                    <div className="social-inner">
+                    <div
+                      className="social-inner"
+                    >
                       <span className="share-now fa fa-share-alt" />
                       <a href="#">
                         <span className="fab fa-facebook-f" />
@@ -115,13 +117,19 @@ const OurBlogs = () => {
                 <div className="lower-content">
                   <ul className="post-meta">
                     <li>
-                      <a href="/comming-soon">
+                      <a
+                        href="/comming-soon"
+                        style={{ display: "flex", alignItems: "center" }}
+                      >
                         <span className="icon fa fa-user" />
                         Adam Pando
                       </a>
                     </li>
                     <li>
-                      <a href="/comming-soon">
+                      <a
+                        href="/comming-soon"
+                        style={{ display: "flex", alignItems: "center" }}
+                      >
                         <span className="icon fa fa-calendar" />
                         November 21, 2021
                       </a>

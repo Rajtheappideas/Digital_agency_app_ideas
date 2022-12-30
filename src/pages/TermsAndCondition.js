@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TitleSection from "../components/TitleSection";
 import { Helmet } from "react-helmet";
+import { useDispatch, useSelector } from "react-redux";
+import { getTerms } from "../redux/ContentSlice";
 
 const TermsAndCondition = () => {
+  const { loading } = useSelector((state) => state.content);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getTerms());
+  }, []);
   return (
     <>
       <Helmet title="Terms" />

@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TitleSection from "../components/TitleSection";
 import { Helmet } from "react-helmet";
 import bgbrochures from "../assets/images/background/pattern-19.jpg";
 import brochures from "../assets/document/Appideas-Brochure.pdf";
 import SidebarLeft from "../components/SidebarLeft";
+import { useDispatch, useSelector } from "react-redux";
+import { getBlogs, getBlogsById } from "../redux/ContentSlice";
 
 const Blogs = () => {
+  const { blogs, loading } = useSelector((state) => state.content);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBlogs());
+    dispatch(getBlogsById());
+  }, []);
+
   return (
     <>
       <Helmet title="Blogs" />

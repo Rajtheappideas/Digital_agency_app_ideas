@@ -159,9 +159,6 @@ const Header = () => {
                         <a href="/projects">OnSortCeSoir</a>
                       </li>
                       <li>
-                        <a href="/projects">See all</a>
-                      </li>
-                      <li>
                         <a href="/projects">See All</a>
                       </li>
                     </ul>
@@ -174,26 +171,7 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
-                  <li className="dropdown">
-                    <a>Shop</a>
-                    <ul>
-                      <li>
-                        <a href="/shop">Presentation</a>
-                      </li>
-                      <li>
-                        <a href="/shop">Business Card</a>
-                      </li>
-                      <li>
-                        <a href="/shop">Web Design</a>
-                      </li>
-                      <li>
-                        <a href="/shop">Graphic Templates</a>
-                      </li>
-                      <li>
-                        <a href="/shop">See All</a>
-                      </li>
-                    </ul>
-                  </li>
+
                   <li className="dropdown has-mega-menu">
                     <a>More</a>
                     <div className="mega-menu">
@@ -453,26 +431,6 @@ const Header = () => {
                     <ul>
                       <li>
                         <a href="/events">Our Events</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="dropdown">
-                    <a>Shop</a>
-                    <ul>
-                      <li>
-                        <a href="/shop">Presentation</a>
-                      </li>
-                      <li>
-                        <a href="/shop">Business Card</a>
-                      </li>
-                      <li>
-                        <a href="/shop">Web Design</a>
-                      </li>
-                      <li>
-                        <a href="/shop">Graphic Templates</a>
-                      </li>
-                      <li>
-                        <a href="/shop">See All</a>
                       </li>
                     </ul>
                   </li>
@@ -809,32 +767,6 @@ const Header = () => {
                     {" "}
                     <li>
                       <a href="/events">Our Events</a>
-                    </li>
-                  </ul>
-                  <div className="dropdown-btn">
-                    <span className="fa fa-angle-down" />
-                  </div>
-                </li>
-                <li
-                  className="dropdown"
-                  onClick={() =>
-                    setActiveTagForMobileMenu({
-                      ...activeTagForMobileMenu,
-                      showShop: !activeTagForMobileMenu.showShop,
-                    })
-                  }
-                >
-                  <a>Shop</a>
-                  <ul
-                    style={{
-                      display: activeTagForMobileMenu.showShop
-                        ? "block"
-                        : "none",
-                    }}
-                  >
-                    {" "}
-                    <li>
-                      <a href="/shop">See all</a>
                     </li>
                   </ul>
                   <div className="dropdown-btn">
