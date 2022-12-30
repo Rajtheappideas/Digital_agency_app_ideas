@@ -1,19 +1,73 @@
-import React, { useEffect } from "react";
+import { ErrorMessage, Form, FormikProvider, useFormik } from "formik";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import Faq from "../components/Faq";
 import TitleSection from "../components/TitleSection";
 import { getFaqs } from "../redux/ContentSlice";
+import * as yup from "yup";
+import styled from "styled-components";
+import { toast } from "react-hot-toast";
+import { handleContactUsSubmit } from "../redux/BasicFeaturesSlice";
 
 const Faqs = () => {
+  const [formLoading, setFormLoading] = useState(false);
+
   const { loading, faqs } = useSelector((state) => state.content);
 
   const dispatch = useDispatch();
 
+  const contactUsSchema = yup.object().shape({
+    name: yup
+      .string()
+      .required("Name is required")
+      .trim()
+      .matches(/^[aA-zZ\s]+$/, "Only alphabets are allowed for this field ")
+      .min(2, "too short")
+      .max(30, "too long"),
+    email: yup.string().email().required("Email is required").trim(),
+    message: yup
+      .string()
+      .required("Message is required")
+      .trim()
+      .matches(/^[aA-zZ\s]+$/, "Only alphabets are allowed for this field ")
+      .min(3, "too short")
+      .max(150, "too long"),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    validationSchema: contactUsSchema,
+    onSubmit: (values) => {
+      setFormLoading(true);
+      const response = dispatch(
+        handleContactUsSubmit({
+          name: values.name,
+          email: values.email,
+          message: values.message,
+        })
+      );
+      if (response) {
+        response.then((res) => {
+          if (res.payload.status === "success") {
+            toast.success("Question sent successfully.");
+            setFormLoading(false);
+            resetForm();
+          }
+        });
+      }
+    },
+  });
+
+  const { getFieldProps, handleSubmit, resetForm } = formik;
+
   useEffect(() => {
     dispatch(getFaqs());
   }, []);
-
   return (
     <>
       <Helmet title="Faq's" />
@@ -87,37 +141,52 @@ const Faqs = () => {
                 </div>
                 {/* Faq's Form */}
                 <div className="faq-form">
-                  <form method="POST" action="https://formspree.io/f/xrgdpjze">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        name="username"
-                        defaultValue=""
-                        placeholder="Name"
-                        required=""
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="email"
-                        name="email"
-                        defaultValue=""
-                        placeholder="Email"
-                        required=""
-                      />
-                    </div>
-                    <div className="form-group">
-                      <textarea name="message" placeholder="Message" />
-                    </div>
-                    <div className="form-group">
-                      <button
-                        type="submit"
-                        className="theme-btn btn-style-three"
-                      >
-                        <span className="txt">Send Question</span>
-                      </button>
-                    </div>
-                  </form>
+                  <FormikProvider value={formik}>
+                    <Form autoComplete="off" onSubmit={handleSubmit}>
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Your Name"
+                          id="name"
+                          autoComplete="off"
+                          {...getFieldProps("name")}
+                        />
+                        <ErrorMessage name="name" component={TextError} />
+                      </div>
+                      <div className="form-group">
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Email"
+                          id="email"
+                          autoComplete="off"
+                          {...getFieldProps("email")}
+                        />
+                        <ErrorMessage name="email" component={TextError} />
+                      </div>
+                      <div className="form-group">
+                        <textarea
+                          name="message"
+                          placeholder="Message"
+                          id="message"
+                          {...getFieldProps("message")}
+                        />
+                        <ErrorMessage name="message" component={TextError} />
+                      </div>
+                      <div className="form-group">
+                        <button
+                          type="submit"
+                          className="theme-btn btn-style-three"
+                          disabled={formLoading}
+                        >
+                          <span className="txt">
+                            {formLoading ? "Sending..." : "Send Question"}
+                          </span>
+                        </button>
+                      </div>
+                    </Form>
+                  </FormikProvider>
                 </div>
               </div>
             </div>
@@ -140,3 +209,10 @@ const Faqs = () => {
 };
 
 export default Faqs;
+
+const TextError = styled.span`
+  color: red !important;
+  font-weight: 600;
+  padding-top: 10px;
+  font-size: 1rem;
+`;
