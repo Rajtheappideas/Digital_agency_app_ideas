@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import TitleSection from "../components/TitleSection";
 import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,8 +9,8 @@ import styled from "styled-components";
 import { toast } from "react-hot-toast";
 
 const Contact = () => {
-  const { success } = useSelector((state) => state.basicFeatures);
-  
+  const [loading, setLoading] = useState(false);
+
   const dispatch = useDispatch();
 
   const contactUsSchema = yup.object().shape({
@@ -53,7 +53,8 @@ const Contact = () => {
     },
     validationSchema: contactUsSchema,
     onSubmit: (values) => {
-      dispatch(
+      setLoading(true);
+      const response = dispatch(
         handleContactUsSubmit({
           name: values.name,
           phone: values.phone,
@@ -62,16 +63,19 @@ const Contact = () => {
           message: values.message,
         })
       );
-      setTimeout(() => {
-        if (success) {
-          toast.success("Message sent successfully.");
-          resetForm();
-        }
-      }, 1000);
+      if (response) {
+        response.then((res) => {
+          if (res.payload.status === "success") {
+            toast.success("Message sent successfully.");
+            setLoading(false);
+            resetForm();
+          }
+        });
+      }
     },
   });
 
-  const { getFieldProps, handleSubmit, resetForm, isSubmitting } = formik;
+  const { getFieldProps, handleSubmit, resetForm } = formik;
   return (
     <>
       <Helmet title="Contactus" />
@@ -260,10 +264,10 @@ const Contact = () => {
                         <button
                           className="theme-btn btn-style-three"
                           type="submit"
-                          disabled={isSubmitting}
+                          disabled={loading}
                         >
                           <span className="txt">
-                            {isSubmitting ? "Submitting..." : "Submit Now"}
+                            {loading ? "Submitting..." : "Submit Now"}
                           </span>
                         </button>
                       </div>

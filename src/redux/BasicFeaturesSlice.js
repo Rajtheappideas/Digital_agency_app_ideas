@@ -6,11 +6,11 @@ export const handleContactUsSubmit = createAsyncThunk(
   async ({ name, message, subject, phone, email }) => {
     const response = await postbaseurl("contact", {
       data: {
-        name,
-        email,
-        subject,
-        phone,
-        message,
+        name: name,
+        email: email,
+        subject: subject,
+        phone: phone,
+        message: message,
       },
     })
       .then((res) => {
@@ -36,6 +36,7 @@ const BasicFeaturesSlice = createSlice({
     // handle contact us form
     [handleContactUsSubmit.pending]: (state, { payload }) => {
       state.loading = true;
+      state.error = null;
     },
     [handleContactUsSubmit.fulfilled]: (state, { payload }) => {
       state.loading = false;
