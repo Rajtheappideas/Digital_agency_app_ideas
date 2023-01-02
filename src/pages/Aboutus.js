@@ -14,7 +14,7 @@ const Aboutus = () => {
   return (
     <>
       <Helmet title="Aboutus" />
-      <ColorPalate />
+      {/* <ColorPalate /> */}
       <TitleSection title="About us" />
       <SidebarSection />
       <Services />

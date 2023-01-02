@@ -176,7 +176,7 @@ const Header = () => {
                     <a>More</a>
                     <div className="mega-menu">
                       <div className="mega-menu-bar row clearfix">
-                        <div className="column col-lg-3 col-md-4 col-sm-12">
+                        <div className="column col-lg-4 col-md-4 col-sm-12">
                           <h3>About</h3>
                           <ul>
                             <li>
@@ -193,7 +193,7 @@ const Header = () => {
                             </li>
                           </ul>
                         </div>
-                        <div className="column col-lg-3 col-md-4 col-sm-12">
+                        <div className="column col-lg-4 col-md-4 col-sm-12">
                           <h3>Services</h3>
                           <ul>
                             <li>
@@ -216,7 +216,7 @@ const Header = () => {
                             </li>
                           </ul>
                         </div>
-                        <div className="column col-lg-3 col-md-4 col-sm-12">
+                        <div className="column col-lg-4 col-md-4 col-sm-12">
                           <h3>Projects</h3>
                           <ul>
                             <li>
@@ -236,38 +236,6 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="/projects">See all</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="column col-lg-3 col-md-4 col-sm-12">
-                          <h3>Shop</h3>
-                          <ul>
-                            <li>
-                              <a href="/shop">Web design</a>
-                            </li>
-                            <li>
-                              <a href="/shop">Presentation</a>
-                            </li>
-                            <li>
-                              <a href="/shop">Business</a>
-                            </li>
-                            <li>
-                              <a href="/shop">Card</a>
-                            </li>
-                            <li>
-                              <a href="/shop">Adds-ons</a>
-                            </li>
-                            <li>
-                              <a href="/shop">Photos</a>
-                            </li>
-                            <li>
-                              <a href="/shop">Videos</a>
-                            </li>
-                            <li>
-                              <a href="/shop">Graphic Templates</a>
-                            </li>
-                            <li>
-                              <a href="/shop">See all</a>
                             </li>
                           </ul>
                         </div>
@@ -449,7 +417,7 @@ const Header = () => {
                     <a>More</a>
                     <div className="mega-menu">
                       <div className="mega-menu-bar row clearfix">
-                        <div className="column col-lg-3 col-md-4 col-sm-12">
+                        <div className="column col-lg-4 col-md-4 col-sm-12">
                           <h3>About</h3>
                           <ul>
                             <li>
@@ -466,7 +434,7 @@ const Header = () => {
                             </li>
                           </ul>
                         </div>
-                        <div className="column col-lg-3 col-md-4 col-sm-12">
+                        <div className="column col-lg-4 col-md-4 col-sm-12">
                           <h3>Services</h3>
                           <ul>
                             <li>
@@ -489,7 +457,7 @@ const Header = () => {
                             </li>
                           </ul>
                         </div>
-                        <div className="column col-lg-3 col-md-4 col-sm-12">
+                        <div className="column col-lg-4 col-md-4 col-sm-12">
                           <h3>Projects</h3>
                           <ul>
                             <li>
@@ -509,35 +477,6 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="/projects">See all</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="column col-lg-3 col-md-4 col-sm-12">
-                          <h3>Shop</h3>
-                          <ul>
-                            <li>
-                              <a href="/shop">Web design</a>
-                            </li>
-                            <li>
-                              <a href="/shop">Presentation</a>
-                            </li>
-                            <li>
-                              <a href="/shop">Business Card</a>
-                            </li>
-                            <li>
-                              <a href="/shop">Adds-ons</a>
-                            </li>
-                            <li>
-                              <a href="/shop">Photos</a>
-                            </li>
-                            <li>
-                              <a href="/shop">Videos</a>
-                            </li>
-                            <li>
-                              <a href="/shop">Graphic Templates</a>
-                            </li>
-                            <li>
-                              <a href="/shop">See all</a>
                             </li>
                           </ul>
                         </div>
@@ -736,9 +675,7 @@ const Header = () => {
                     <li>
                       <a href="/projects">OnSortCeSoir</a>
                     </li>
-                    <li>
-                      <a href="/projects">See all</a>
-                    </li>
+
                     <li>
                       <a href="/projects">See all</a>
                     </li>
@@ -813,11 +750,6 @@ const Header = () => {
       {/* End Mobile Menu */}
       <SearchPopup setActiveSearchbar={setActiveSearchbar} />
       {/* sidebar for packages */}
-      {/* sidebar */}
-      {/* <SidebarOfPackages
-        showSidebarForPackages={showSidebarForPackages}
-        setShowSidebarForPackages={setShowSidebarForPackages}
-      /> */}
     </header>
   );
 };

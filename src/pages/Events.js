@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TitleSection from "../components/TitleSection";
 import { Helmet } from "react-helmet";
-import bgbrochures from "../assets/images/background/pattern-19.jpg";
-import brochures from "../assets/document/Appideas-Brochure.pdf";
 import admin from "../assets/images/resource/admin.png";
 import SidebarLeft from "../components/SidebarLeft";
+import { useDispatch, useSelector } from "react-redux";
+import { getEvents, getEventsById } from "../redux/ContentSlice";
 
 const Events = () => {
+  const { loading } = useSelector((state) => state.content);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getEvents());
+    dispatch(getEventsById());
+  }, []);
   return (
     <>
       <Helmet title="Events" />
@@ -44,7 +52,7 @@ const Events = () => {
                       </li>
                     </ul>
                     <h3>
-                      <a href="projects.html">
+                      <a href="#">
                         How to increase your ROI through scientific SEM?
                       </a>
                     </h3>
@@ -77,7 +85,7 @@ const Events = () => {
                       </li>
                     </ul>
                     <h3>
-                      <a href="projects.html">
+                      <a href="#">
                         How to increase your ROI through scientific SEM?
                       </a>
                     </h3>
@@ -110,7 +118,7 @@ const Events = () => {
                       </li>
                     </ul>
                     <h3>
-                      <a href="projects.html">
+                      <a href="#">
                         How to increase your ROI through scientific SEM?
                       </a>
                     </h3>
@@ -142,7 +150,7 @@ const Events = () => {
                       </li>
                     </ul>
                     <h3>
-                      <a href="projects.html">
+                      <a href="#">
                         How to increase your ROI through scientific SEM?
                       </a>
                     </h3>
@@ -175,7 +183,7 @@ const Events = () => {
                       </li>
                     </ul>
                     <h3>
-                      <a href="projects.html">
+                      <a href="#">
                         How to increase your ROI through scientific SEM?
                       </a>
                     </h3>

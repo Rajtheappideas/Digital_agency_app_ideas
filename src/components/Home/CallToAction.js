@@ -23,7 +23,7 @@ const CallToAction = () => {
                 <div className="text">
                   Make the Right Choice for Your Future. Choose Moto!
                 </div>
-                <a href="services.html" className="theme-btn btn-style-eight">
+                <a href="/services" className="theme-btn btn-style-eight">
                   <span className="txt">Lets Start</span>
                 </a>
               </div>

@@ -1,5 +1,5 @@
 // thigns to do
-// 1.change static id to dynamic id in project,blog & service
+// 1.change static id to dynamic id in project,blog,events & service
 
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getbaseurl } from "../BaseUrl";
@@ -80,6 +80,31 @@ export const getServicesById = createAsyncThunk(
   }
 );
 
+export const getEvents = createAsyncThunk("content/getEvents", async () => {
+  const response = await getbaseurl("event")
+    .then((res) => {
+      return res.data.events;
+    })
+    .catch((err) => {
+      console.log(err.response.data);
+    });
+  return response;
+});
+
+export const getEventsById = createAsyncThunk(
+  "content/getEventsById",
+  async () => {
+    const response = await getbaseurl(`event/63b26e0033fa7bc13f8894ee`)
+      .then((res) => {
+        return res.data.event;
+      })
+      .catch((err) => {
+        console.log(err.response.data);
+      });
+    return response;
+  }
+);
+
 export const getFaqs = createAsyncThunk("content/getFaqs", async () => {
   const response = await getbaseurl(`faqs`)
     .then((res) => {
@@ -120,9 +145,11 @@ const initialState = {
   blogs: [],
   projects: [],
   services: [],
+  evetns: [],
   blog: {},
   project: {},
   service: {},
+  event: {},
   privacy: {},
   faqs: [],
   terms: {},
@@ -213,6 +240,34 @@ const ContentSlice = createSlice({
       state.service = payload;
     },
     [getServicesById.rejected]: (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
+      state.success = false;
+    },
+    // get events
+    [getEvents.pending]: (state, { payload }) => {
+      state.loading = true;
+    },
+    [getEvents.fulfilled]: (state, { payload }) => {
+      state.loading = false;
+      state.success = true;
+      state.evetns = payload;
+    },
+    [getEvents.rejected]: (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
+      state.success = false;
+    },
+    // get event by id
+    [getEventsById.pending]: (state, { payload }) => {
+      state.loading = true;
+    },
+    [getEventsById.fulfilled]: (state, { payload }) => {
+      state.loading = false;
+      state.success = true;
+      state.event = payload;
+    },
+    [getEventsById.rejected]: (state, { payload }) => {
       state.loading = false;
       state.error = payload;
       state.success = false;
