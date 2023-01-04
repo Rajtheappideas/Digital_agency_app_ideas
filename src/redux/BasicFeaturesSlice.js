@@ -3,7 +3,7 @@ import { postbaseurl } from "../BaseUrl";
 
 export const handleContactUsSubmit = createAsyncThunk(
   "basicFeatures/handleContactUsSubmit",
-  async ({ name, message, subject, phone, email, service }) => {
+  async ({ name, message, subject, phone, email, service, pacakge }) => {
     const response = await postbaseurl("contact", {
       data: {
         name: name,
@@ -12,6 +12,7 @@ export const handleContactUsSubmit = createAsyncThunk(
         phone: phone ?? "",
         message: message,
         service: service ?? "",
+        package: pacakge ?? "",
       },
     })
       .then((res) => {

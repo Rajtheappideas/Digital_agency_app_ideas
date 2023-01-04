@@ -52,7 +52,7 @@ const Projects = () => {
                     <div className="lower-content">
                       <div className="title">System Project</div>
                       <h5>
-                        <a href="projects-detail.html">Movie Recommendation</a>
+                        <a href="/projects-details">Movie Recommendation</a>
                       </h5>
                     </div>
                   </div>
@@ -82,7 +82,7 @@ const Projects = () => {
                     <div className="lower-content">
                       <div className="title">Machine Learning</div>
                       <h5>
-                        <a href="projects-detail.html">Customer Segmentation</a>
+                        <a href="/projects-details">Customer Segmentation</a>
                       </h5>
                     </div>
                   </div>
@@ -112,7 +112,7 @@ const Projects = () => {
                     <div className="lower-content">
                       <div className="title">Web Project</div>
                       <h5>
-                        <a href="projects-detail.html">Data Analysis</a>
+                        <a href="/projects-details">Data Analysis</a>
                       </h5>
                     </div>
                   </div>
@@ -142,7 +142,7 @@ const Projects = () => {
                     <div className="lower-content">
                       <div className="title">Programming</div>
                       <h5>
-                        <a href="projects-detail.html">Detection Project</a>
+                        <a href="/projects-details">Detection Project</a>
                       </h5>
                     </div>
                   </div>
@@ -172,7 +172,7 @@ const Projects = () => {
                     <div className="lower-content">
                       <div className="title">Data Science</div>
                       <h5>
-                        <a href="projects-detail.html">Data Scientist</a>
+                        <a href="/projects-details">Data Scientist</a>
                       </h5>
                     </div>
                   </div>
@@ -202,7 +202,7 @@ const Projects = () => {
                     <div className="lower-content">
                       <div className="title">Science Projects</div>
                       <h5>
-                        <a href="projects-detail.html">Benefits Research</a>
+                        <a href="/projects-details">Benefits Research</a>
                       </h5>
                     </div>
                   </div>

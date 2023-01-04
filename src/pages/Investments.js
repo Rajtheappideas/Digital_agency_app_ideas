@@ -7,7 +7,7 @@ import SidebarLeft from "../components/SidebarLeft";
 import { useDispatch, useSelector } from "react-redux";
 import { getBlogs, getBlogsById } from "../redux/ContentSlice";
 
-const Blogs = () => {
+const Investments = () => {
   const { blogs, loading } = useSelector((state) => state.content);
 
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const Blogs = () => {
   return (
     <>
       <Helmet title="Blogs" />
-      <TitleSection title="Blogs" />
+      <TitleSection title="Investments" />
       <>
         <div className="sidebar-page-container">
           <div className="auto-container">
@@ -433,4 +433,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default Investments;

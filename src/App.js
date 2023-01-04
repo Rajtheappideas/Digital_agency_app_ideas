@@ -9,10 +9,11 @@ import ColorPalate from "./components/ColorPalate";
 
 const Home = lazy(() => import("./pages/Home"));
 const Aboutus = lazy(() => import("./pages/Aboutus"));
-const Blogs = lazy(() => import("./pages/Blogs"));
+const Investments = lazy(() => import("./pages/Investments"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Packages = lazy(() => import("./pages/Packages"));
 const Projects = lazy(() => import("./pages/Projects"));
+const ProjectDetails = lazy(() => import("./pages/ProjectDetails"));
 const Services = lazy(() => import("./pages/Services"));
 const Signin = lazy(() => import("./pages/Signin"));
 const Signup = lazy(() => import("./pages/Register"));
@@ -33,6 +34,7 @@ const PackageDigitalMarketing = lazy(() =>
 );
 const PackageHosting = lazy(() => import("./pages/PackageHosting"));
 const PackageVideoEditing = lazy(() => import("./pages/PackageVideoEditing"));
+const PackageMantainance = lazy(() => import("./pages/PackageMantainance"));
 const Error404 = lazy(() => import("./pages/Error404"));
 
 function App() {
@@ -52,18 +54,18 @@ function App() {
             </div>
           }
         >
-          {/* <Header /> */}
-          <Header />
+          {window.location.pathname !== "/comming-soon" && <Header />}
           {/* color palate */}
           {/* {!window.location.pathname == "/" && <ColorPalate />} */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/aboutus" element={<Aboutus />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects-details" element={<ProjectDetails />} />
             <Route path="/packages" element={<Packages />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contactus" element={<Contact />} />
-            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/investments" element={<Investments />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/faq" element={<Faq />} />
@@ -83,6 +85,7 @@ function App() {
               element={<PackageDigitalMarketing />}
             />
             <Route path="/package-hosting" element={<PackageHosting />} />
+            <Route path="/package-maintenance" element={<PackageMantainance />} />
             <Route
               path="/package-video-editing"
               element={<PackageVideoEditing />}
@@ -96,7 +99,7 @@ function App() {
           >
             TOP
           </div>
-          <Footer />
+          {window.location.pathname !== "/comming-soon" && <Footer />}
         </Suspense>
       </ErrorBoundary>
     </BrowserRouter>

@@ -1,21 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
-import WhyChooseus from "../components/Aboutus/WhyChooseus";
-import Pakcages from "../components/Home/Packages";
-import Testomonial from "../components/Home/Testomonial";
 import img1 from "../assets/images/icons/icon-16.png";
 import img2 from "../assets/images/icons/icon-17.png";
 import img3 from "../assets/images/background/pattern-12.png";
 import Pricing from "../components/Pricing";
 import WhatWeOffer from "../components/WhatWeOffer";
+import Testomonial from "../components/Home/Testomonial";
 import ContactUs from "../components/ContactUs";
-import SidebarOfPackages from "../components/SidebarOfPackages";
+import Pakcages from "../components/Home/Packages";
 
-const PackageDigitalMarketing = () => {
+const PackageMantainance = () => {
   return (
     <>
-      <Helmet title="Package Digital Marketing" />
-
+      <Helmet title="Package-Mantainance" />
       {/* banner */}
       <section className="banner-section-three">
         <div
@@ -29,7 +26,7 @@ const PackageDigitalMarketing = () => {
         <div
           className="icon-layer-three"
           style={{ backgroundImage: `url(${img3})` }}
-        ></div>
+        />
         {/* Social Box */}
         <ul className="social-box">
           <li>
@@ -51,13 +48,12 @@ const PackageDigitalMarketing = () => {
             <div className="content-column col-lg-6 col-md-12 col-sm-12">
               <div className="inner-column">
                 <h1>
-                  Package <br /> Digital Marketing
+                  Package <br /> Maintainenace &amp; Support
                 </h1>
                 <p className="text">
-                  Digital marketing helps brands reach their target audience and
-                  promote their product or service. While that's the goal of a
-                  traditional marketing campaign too, digital marketing allows
-                  brands to target a more specific or niche audience
+                  We included all kinds of website maintenance and support
+                  services you require in order to ensure both the short and
+                  long-term success of your online Business.
                 </p>
               </div>
             </div>
@@ -66,7 +62,7 @@ const PackageDigitalMarketing = () => {
               <div className="inner-column">
                 <div className="image">
                   <img
-                    src={require("../assets/images/resource/marketing-banner.png")}
+                    src={require("../assets/images/resource/banner-2.png")}
                     alt=""
                   />
                 </div>
@@ -115,7 +111,55 @@ const PackageDigitalMarketing = () => {
         </div>
         {/*Waves end*/}
       </section>
-      <WhyChooseus />
+      {/* End Banner Section Three */}
+      {/* Analysis Section */}
+      <section className="analysis-section">
+        <div className="pattern-layer" />
+        <div className="auto-container">
+          <div className="row clearfix">
+            {/* Title Column */}
+            <div className="title-column col-lg-6 col-md-12 col-sm-12">
+              <div className="inner-column">
+                <div className="sec-title">
+                  <div className="title">Package Maintenance</div>
+                  <h2>
+                    Website, Application
+                    <br /> Maintenance and Support
+                  </h2>
+                </div>
+                <p className="text">
+                  Our website maintenance services ensure that your website is
+                  always updated and secured. We’ve organized Website
+                  Maintenance Program to keep your website Secure, Fast Loading,
+                  and High Performing:
+                </p>
+                <a href="/contactus" className="theme-btn btn-style-eleven">
+                  <span className="txt">Lets Start</span>
+                </a>
+              </div>
+            </div>
+            {/* Image Column */}
+            <div className="image-column col-lg-6 col-md-12 col-sm-12">
+              <div className="inner-column">
+                <div
+                  className="image titlt"
+                  data-tilt=""
+                  data-tilt-max={3}
+                  style={{
+                    willChange: "transform",
+                    transform: "perspective(300px) rotateX(0deg) rotateY(0deg)",
+                  }}
+                >
+                  <img
+                    src={require("../assets/images/resource/skill.png")}
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <Pricing />
       <WhatWeOffer />
       <Testomonial />
@@ -126,4 +170,4 @@ const PackageDigitalMarketing = () => {
   );
 };
 
-export default PackageDigitalMarketing;
+export default PackageMantainance;

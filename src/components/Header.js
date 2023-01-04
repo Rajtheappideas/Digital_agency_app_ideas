@@ -139,7 +139,6 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
-
                   <li className="dropdown">
                     <a>Projects</a>
                     <ul>
@@ -171,7 +170,6 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
-
                   <li className="dropdown has-mega-menu">
                     <a>More</a>
                     <div className="mega-menu">
@@ -245,13 +243,8 @@ const Header = () => {
                       <span className="fa fa-angle-down" />
                     </div>
                   </li>
-                  <li className="dropdown">
-                    <a>Blogs</a>
-                    <ul>
-                      <li>
-                        <a href="/blogs">Our Blogs</a>
-                      </li>
-                    </ul>
+                  <li>
+                    <a href="/investments">Investments</a>
                   </li>
                   <li>
                     <a href="/contactus">Contact us</a>

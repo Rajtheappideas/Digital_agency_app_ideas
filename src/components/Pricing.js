@@ -1,5 +1,8 @@
 import React from "react";
 import img from "../assets/images/background/pattern-11.jpg";
+import img1 from "../assets/images/background/price-pattern-1.png";
+import img2 from "../assets/images/background/price-pattern-2.png";
+import img3 from "../assets/images/background/price-pattern-3.png";
 
 const Pricing = () => {
   return (
@@ -55,16 +58,16 @@ const Pricing = () => {
                           <li>Update Header, Footer &amp; Legal Policies</li>
                         </ul>
                         <a
-                          href="contact.html"
+                          href="#"
                           className="theme-btn btn-style-three"
                         >
                           <span className="txt">Contact us</span>
                         </a>
                         <div
-                          className="price-attern-layer"
+                          className="price-pattern-layer"
                           style={{
                             backgroundImage:
-                              "url(images/background/price-pattern-1.png)",
+                              `url(${img1})`,
                           }}
                         ></div>
                       </div>
@@ -96,7 +99,7 @@ const Pricing = () => {
                           <li>PDF and PPT Submission</li>
                         </ul>
                         <a
-                          href="contact.html"
+                          href="#"
                           className="theme-btn btn-style-three"
                         >
                           <span className="txt">Contact us</span>
@@ -105,7 +108,7 @@ const Pricing = () => {
                           className="price-pattern-layer style-two"
                           style={{
                             backgroundImage:
-                              "url(images/background/price-pattern-3.png)",
+                            `url(${img3})`,
                           }}
                         ></div>
                       </div>
@@ -138,7 +141,7 @@ const Pricing = () => {
                           <li />
                         </ul>
                         <a
-                          href="contact.html"
+                          href="#"
                           className="theme-btn btn-style-three"
                         >
                           <span className="txt">Contact us</span>
@@ -147,7 +150,7 @@ const Pricing = () => {
                           className="price-pattern-layer"
                           style={{
                             backgroundImage:
-                              "url(images/background/price-pattern-2.png)",
+                              `url(${img2})`,
                           }}
                         ></div>
                       </div>

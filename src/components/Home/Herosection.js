@@ -1,30 +1,52 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import sliderimg from "../../assets/images/main-slider/image-2.jpg";
 import img from "../../assets/images/main-slider/dotted-layer-1.png";
-import { Navigation, Pagination } from "swiper";
+import { Navigation } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 const Herosection = () => {
+  const [index, setIndex] = useState(null);
+
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   return (
     <>
       {/* Banner Section Four */}
       <section className="banner-section-four">
         <Swiper
-          modules={[Navigation, Pagination]}
-          spaceBetween={50}
+          modules={[Navigation]}
+          spaceBetween={0}
           slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          // loop={true}
+          navigation={{
+            prevEl: prevRef?.current,
+            nextEl: nextRef?.current,
+          }}
+          loop={true}
+          autoplay
+          onSlideChange={(e) => {
+            setIndex(e.realIndex);
+          }}
+          onSwiper={(swiper) => {
+            // Delay execution for the refs to be defined
+            setTimeout(() => {
+              // Override prevEl & nextEl now that refs are defined
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+
+              // Re-init navigation
+              swiper.navigation.destroy();
+              swiper.navigation.init();
+              swiper.navigation.update();
+            });
+          }}
         >
           <SwiperSlide
-            className="slide"
+            className={`slide ${index == 0 && "active"}`}
             style={{
               backgroundImage: `url(${sliderimg})`,
             }}
@@ -76,7 +98,7 @@ const Herosection = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div
-              className="slide"
+              className={`slide ${index == 1 && "active"}`}
               style={{
                 backgroundImage: `url(${sliderimg})`,
               }}
@@ -130,7 +152,7 @@ const Herosection = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div
-              className="slide"
+              className={`slide ${index == 2 && "active"}`}
               style={{
                 backgroundImage: `url(${sliderimg})`,
               }}
@@ -182,7 +204,7 @@ const Herosection = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div
-              className="slide"
+              className={`slide ${index == 3 && "active"}`}
               style={{
                 backgroundImage: `url(${sliderimg})`,
               }}
@@ -233,7 +255,7 @@ const Herosection = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div
-              className="slide"
+              className={`slide ${index == 4 && "active"}`}
               style={{
                 backgroundImage: `url(${sliderimg})`,
               }}
@@ -287,7 +309,7 @@ const Herosection = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div
-              className="slide"
+              className={`slide ${index == 5 && "active"}`}
               style={{
                 backgroundImage: `url(${sliderimg})`,
               }}
@@ -339,7 +361,7 @@ const Herosection = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div
-              className="slide"
+              className={`slide ${index == 6 && "active"}`}
               style={{
                 backgroundImage: `url(${sliderimg})`,
               }}
@@ -389,27 +411,23 @@ const Herosection = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-        {/* <div className="main-slider-carousel owl-carousel owl-theme owl-loaded owl-drag">
-          <div className="owl-nav">
-            <div className="owl-prev">
-              <span className="flaticon-back" />
-            </div>
-            <div className="owl-next">
-              <span className="flaticon-arrow-pointing-to-right" />
-            </div>
+        {/* arrows */}
+        <div className="owl-nav">
+          <div className="owl-prev">
+            <span
+              className="flaticon-back prev"
+              style={{ cursor: "pointer" }}
+              ref={prevRef}
+            />
           </div>
-          <div className="owl-dots">
-            <div className="owl-dot">
-              <span />
-            </div>
-            <div className="owl-dot">
-              <span />
-            </div>
-            <div className="owl-dot active">
-              <span />
-            </div>
+          <div className="owl-next">
+            <span
+              className="flaticon-arrow-pointing-to-right next "
+              ref={nextRef}
+              style={{ cursor: "pointer" }}
+            />
           </div>
-        </div> */}
+        </div>
         {/* Waves Container */}
         <div>
           <svg
