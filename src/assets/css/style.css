@@ -6442,6 +6442,7 @@ img {
   position: relative;
   width: 100%;
   display: block;
+  height: 300px;
 }
 
 .gallery-block .inner-box .image-box .overlay-box {

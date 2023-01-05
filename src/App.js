@@ -16,7 +16,7 @@ const Projects = lazy(() => import("./pages/Projects"));
 const ProjectDetails = lazy(() => import("./pages/ProjectDetails"));
 const Services = lazy(() => import("./pages/Services"));
 const Signin = lazy(() => import("./pages/Signin"));
-const Signup = lazy(() => import("./pages/Register"));
+const Signup = lazy(() => import("./pages/Signup"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Faq = lazy(() => import("./pages/Faqs"));
 const TermsAndCondition = lazy(() => import("./pages/TermsAndCondition"));
@@ -61,7 +61,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/aboutus" element={<Aboutus />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/projects-details" element={<ProjectDetails />} />
+            <Route path="/project-details/:id" element={<ProjectDetails />} />
             <Route path="/packages" element={<Packages />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contactus" element={<Contact />} />

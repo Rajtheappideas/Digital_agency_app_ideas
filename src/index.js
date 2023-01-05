@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 
+// css file import
 import "./assets/css/style.css";
 import "./assets/css/responsive.css";
 import "./assets/css/animate.css";
@@ -17,6 +18,8 @@ import "./assets/css/jquery.bootstrap-touchspin.css";
 import "./assets/css/jquery.mCustomScrollbar.min.css";
 import "./assets/css/jquery.fancybox.min.css";
 import "./assets/css/hover.css";
+
+// redux import
 import { Provider } from "react-redux";
 import store from "./redux/Store";
 

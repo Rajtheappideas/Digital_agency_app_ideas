@@ -1,5 +1,5 @@
 // thigns to do
-// 1.change static id to dynamic id in project,blog,events & service
+// 1.change static id to dynamic id in blog,events & service
 
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getbaseurl } from "../BaseUrl";
@@ -43,8 +43,8 @@ export const getProjects = createAsyncThunk("content/getProjects", async () => {
 
 export const getProjectsById = createAsyncThunk(
   "content/getProjectsById",
-  async () => {
-    const response = await getbaseurl(`project/63a14457df783f1291fd4a61`)
+  async ({ id }) => {
+    const response = await getbaseurl(`project/${id}`)
       .then((res) => {
         return res.data.project;
       })

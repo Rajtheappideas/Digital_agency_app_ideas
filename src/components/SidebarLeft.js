@@ -2,8 +2,11 @@ import React from "react";
 import bgbrochures from "../assets/images/background/pattern-19.jpg";
 import brochures from "../assets/document/Appideas-Brochure.pdf";
 import { BsArrowRightShort } from "react-icons/bs";
+import { useSelector } from "react-redux";
 
-const SidebarLeft = () => {
+const SidebarLeft = ({ title }) => {
+  const { projects, loading, services } = useSelector((state) => state.content);
+
   return (
     <div className="sidebar-side left-sidebar col-lg-4 col-md-12 col-sm-12">
       <aside className="sidebar sticky-top">
@@ -13,17 +16,21 @@ const SidebarLeft = () => {
             <li>
               <a href="/services">
                 <span className="color-layer" />
-                All Services
+                All {title}
                 <BsArrowRightShort style={{ float: "right" }} size={25} />
               </a>
             </li>
-            <li>
-              <a href="/content-marketing">
-                <span className="color-layer" />
-                Content Marketing
-                <BsArrowRightShort style={{ float: "right" }} size={25} />
-              </a>
-            </li>
+            {title === "Projects" &&
+              projects.length > 0 &&
+              projects.map((project) => (
+                <li key={project?._id}>
+                  <a href="/content-marketing">
+                    <span className="color-layer" />
+                    {project?.category}
+                    <BsArrowRightShort style={{ float: "right" }} size={25} />
+                  </a>
+                </li>
+              ))}
             <li>
               <a href="/social-marketing">
                 <span className="color-layer" />

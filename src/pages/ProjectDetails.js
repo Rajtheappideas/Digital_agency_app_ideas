@@ -1,9 +1,87 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import TitleSection from "../components/TitleSection";
-import img from '../assets/images/background/pattern-19.jpg'
+import img from "../assets/images/background/pattern-19.jpg";
+import { useDispatch, useSelector } from "react-redux";
+import * as yup from "yup";
+import styled from "styled-components";
+import { toast } from "react-hot-toast";
+import { ErrorMessage, Form, FormikProvider, useFormik } from "formik";
+import { handlePostProjectReview } from "../redux/FeatureSlice";
+import { getProjectsById } from "../redux/ContentSlice";
+import { useParams } from "react-router-dom";
 
 const ProjectDetails = () => {
+  const [formLoading, setFormLoading] = useState(false);
+  const [rating, setRating] = useState(0);
+
+  const { project, loading } = useSelector((state) => state.content);
+
+  const dispatch = useDispatch();
+  const { id } = useParams();
+
+  const contactUsSchema = yup.object().shape({
+    fname: yup
+      .string()
+      .required("First Name is required")
+      .trim()
+      .matches(/^[aA-zZ\s]+$/, "Only alphabets are allowed for this field ")
+      .min(2, "too short")
+      .max(30, "too long"),
+    lname: yup
+      .string()
+      .required("Last Name is required")
+      .trim()
+      .matches(/^[aA-zZ\s]+$/, "Only alphabets are allowed for this field ")
+      .min(2, "too short")
+      .max(30, "too long"),
+    email: yup.string().email().required("Email is required").trim(),
+    comment: yup.string().required("Comment is required").trim(),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      fname: "",
+      lname: "",
+      email: "",
+      comment: "",
+    },
+    validationSchema: contactUsSchema,
+    onSubmit: (values) => {
+      toast.dismiss();
+      if (rating === 0) {
+        toast.error("Choose the rating!!!");
+        return false;
+      }
+      setFormLoading(true);
+      const response = dispatch(
+        handlePostProjectReview({
+          fname: values.fname,
+          lname: values.lname,
+          email: values.email,
+          comment: values.comment,
+          rating: rating,
+          projectId: id,
+        })
+      );
+      if (response) {
+        response.then((res) => {
+          if (res.payload.status === "success") {
+            toast.success("Review add successfully.");
+            setFormLoading(false);
+            resetForm();
+            setRating(0)
+          }
+        });
+      }
+    },
+  });
+
+  const { getFieldProps, handleSubmit, resetForm } = formik;
+
+  useEffect(() => {
+    dispatch(getProjectsById({ id }));
+  }, []);
   return (
     <>
       <Helmet title="Project Details" />
@@ -236,7 +314,10 @@ const ProjectDetails = () => {
                   <div className="comment-box reply-comment">
                     <div className="comment">
                       <div className="author-thumb">
-                        <img src={require("../assets/images/resource/author-2.png")} alt="" />
+                        <img
+                          src={require("../assets/images/resource/author-2.png")}
+                          alt=""
+                        />
                       </div>
                       <div className="comment-inner">
                         <div className="comment-info clearfix">
@@ -263,112 +344,207 @@ const ProjectDetails = () => {
                   <div className="group-title">
                     <h4>Add Your Reviews</h4>
                   </div>
-                  <div className="rating-box">
-                    <div className="text"> Your Rating:</div>
-                    <div className="rating">
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                    </div>
-                    <div className="rating">
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                    </div>
-                    <div className="rating">
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                    </div>
-                    <div className="rating">
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                    </div>
-                    <div className="rating">
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                      <a href="#">
-                        <span className="fa fa-star" />
-                      </a>
-                    </div>
-                  </div>
-                  <form method="post" action="/contactus">
-                    <div className="row clearfix">
-                      <div className="col-md-6 col-sm-6 col-xs-12 form-group">
-                        <label>Your Name*</label>
-                        <input
-                          type="text"
-                          name="username"
-                          placeholder=""
-                          required=""
-                        />
+                  <FormikProvider value={formik}>
+                    <Form autoComplete="off" onSubmit={handleSubmit}>
+                      <div className="rating-box">
+                        <div className="text"> Your Rating:</div>
+                        <div className="rating" onClick={() => setRating(1)}>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 1 && "#fa9928",
+                            }}
+                          >
+                            {" "}
+                            <span className="fa fa-star" />
+                          </a>
+                        </div>
+                        <div className="rating" onClick={() => setRating(2)}>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 2 && "#fa9928",
+                            }}
+                          >
+                            {" "}
+                            <span className="fa fa-star" />
+                          </a>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 2 && "#fa9928",
+                            }}
+                          >
+                            {" "}
+                            <span className="fa fa-star" />
+                          </a>
+                        </div>
+                        <div className="rating" onClick={() => setRating(3)}>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 3 && "#fa9928",
+                            }}
+                          >
+                            {" "}
+                            <span className="fa fa-star" />
+                          </a>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 3 && "#fa9928",
+                            }}
+                          >
+                            {" "}
+                            <span className="fa fa-star" />
+                          </a>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 3 && "#fa9928",
+                            }}
+                          >
+                            {" "}
+                            <span className="fa fa-star" />
+                          </a>
+                        </div>
+                        <div className="rating" onClick={() => setRating(4)}>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 4 && "#fa9928",
+                            }}
+                          >
+                            {" "}
+                            <span className="fa fa-star" />
+                          </a>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 4 && "#fa9928",
+                            }}
+                          >
+                            {" "}
+                            <span className="fa fa-star" />
+                          </a>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 4 && "#fa9928",
+                            }}
+                          >
+                            {" "}
+                            <span className="fa fa-star" />
+                          </a>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 4 && "#fa9928",
+                            }}
+                          >
+                            {" "}
+                            <span className="fa fa-star" />
+                          </a>
+                        </div>
+                        <div className="rating" onClick={() => setRating(5)}>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 5 && "#fa9928",
+                            }}
+                          >
+                            <span className="fa fa-star" />
+                          </a>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 5 && "#fa9928",
+                            }}
+                          >
+                            {" "}
+                            <span className="fa fa-star" />
+                          </a>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 5 && "#fa9928",
+                            }}
+                          >
+                            {" "}
+                            <span className="fa fa-star" />
+                          </a>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 5 && "#fa9928",
+                            }}
+                          >
+                            {" "}
+                            <span className="fa fa-star" />
+                          </a>
+                          <a
+                            style={{
+                              cursor: "pointer",
+                              color: rating === 5 && "#fa9928",
+                            }}
+                          >
+                            {" "}
+                            <span className="fa fa-star" />
+                          </a>
+                        </div>
                       </div>
-                      <div className="col-md-6 col-sm-6 col-xs-12 form-group">
-                        <label>Last Name*</label>
-                        <input
-                          type="text"
-                          name="username"
-                          placeholder=""
-                          required=""
-                        />
+
+                      <div className="row clearfix">
+                        <div className="col-md-6 col-sm-6 col-xs-12 form-group">
+                          <label>Your Name*</label>
+                          <input
+                            type="text"
+                            name="fname"
+                            {...getFieldProps("fname")}
+                          />
+                          <ErrorMessage name="fname" component={TextError} />
+                        </div>
+                        <div className="col-md-6 col-sm-6 col-xs-12 form-group">
+                          <label>Last Name*</label>
+                          <input
+                            type="text"
+                            name="lname"
+                            {...getFieldProps("lname")}
+                          />
+                          <ErrorMessage name="lname" component={TextError} />
+                        </div>
+                        <div className="col-md-12 col-sm-12 col-xs-12 form-group">
+                          <label>Email*</label>
+                          <input
+                            type="email"
+                            name="email"
+                            {...getFieldProps("email")}
+                          />
+                          <ErrorMessage name="email" component={TextError} />
+                        </div>
+                        <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+                          <label>Your Comments*</label>
+                          <textarea
+                            name="comment"
+                            {...getFieldProps("comment")}
+                          />
+                          <ErrorMessage name="comment" component={TextError} />
+                        </div>
+                        <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+                          <button
+                            className="theme-btn btn-style-two"
+                            type="submit"
+                            name="submit-form"
+                            disabled={formLoading}
+                          >
+                            <span className="txt">
+                              {formLoading ? "Submitting..." : "Submit Now"}
+                            </span>
+                          </button>
+                        </div>
                       </div>
-                      <div className="col-md-12 col-sm-12 col-xs-12 form-group">
-                        <label>Email*</label>
-                        <input
-                          type="email"
-                          name="email"
-                          placeholder=""
-                          required=""
-                        />
-                      </div>
-                      <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
-                        <label>Your Comments*</label>
-                        <textarea
-                          name="message"
-                          placeholder=""
-                          defaultValue={""}
-                        />
-                      </div>
-                      <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
-                        <button
-                          className="theme-btn btn-style-two"
-                          type="submit"
-                          name="submit-form"
-                        >
-                          <span className="txt">Submit Now</span>
-                        </button>
-                      </div>
-                    </div>
-                  </form>
+                    </Form>
+                  </FormikProvider>
                 </div>
               </div>
             </div>
@@ -377,7 +553,7 @@ const ProjectDetails = () => {
               <aside className="sidebar sticky-top">
                 {/* Search */}
                 <div className="sidebar-widget search-box">
-                  <form method="post" action="/contactus">
+                  <form>
                     <div className="form-group">
                       <input
                         type="search"
@@ -386,7 +562,7 @@ const ProjectDetails = () => {
                         placeholder="Search Here"
                         required=""
                       />
-                      <button type="submit">
+                      <button type="button">
                         <span className="icon fa fa-search" />
                       </button>
                     </div>
@@ -560,3 +736,9 @@ const ProjectDetails = () => {
 };
 
 export default ProjectDetails;
+const TextError = styled.span`
+  color: red !important;
+  font-weight: 600;
+  padding-top: 10px;
+  font-size: 1rem;
+`;

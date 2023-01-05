@@ -72,7 +72,7 @@ const AppDevelopment = () => {
         <div className="auto-container">
           <div className="row clearfix">
             {/* Sidebar Side */}
-            <SidebarLeft />
+            <SidebarLeft title="Services" />
             {/* Content Side */}
             <div className="content-side right-sidebar col-lg-8 col-md-12 col-sm-12">
               <div className="service-detail">
