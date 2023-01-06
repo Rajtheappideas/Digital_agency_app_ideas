@@ -16,7 +16,7 @@
     "axios": "^1.2.0",
     "bootstrap": "^5.2.3",
     "formik": "^2.2.9",
-    "jquery": "^3.6.1",
+    "jquery": "^3.6.3",
     "moment": "^2.29.4",
     "node-sass": "^8.0.0",
     "postcss-comment": "^2.0.0",

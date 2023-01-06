@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import logo from "../assets/images/logo.png";
+import { handleLogout } from "../redux/AuthSlice";
 import SearchPopup from "./SearchPopup";
 import SidebarOfPackages from "./SidebarOfPackages";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 
 const Header = () => {
   const [activeSearchbar, setActiveSearchbar] = useState(false);
@@ -14,8 +17,10 @@ const Header = () => {
     showProjects: false,
     showEvents: false,
     showShop: false,
-    showBlogs: false,
   });
+
+  const { user, loading } = useSelector((State) => State.user);
+  const dispatch = useDispatch();
 
   // for sticky header
   useEffect(() => {
@@ -44,6 +49,7 @@ const Header = () => {
       window.removeEventListener("resize", () => {});
     };
   }, [window.innerWidth]);
+
   return (
     <header
       className={`main-header header-style-one ${
@@ -68,7 +74,8 @@ const Header = () => {
               onClick={() => setShowMobileNav(true)}
               className="mobile-nav-toggler"
             >
-              <span className="icon flaticon-menu" />
+              {/* <span className="icon flaticon-menu" /> */}
+              <Bars3Icon width={40} height={40} />
             </div>
             {/* Main Menu */}
             <nav className="main-menu navbar-expand-md">
@@ -166,9 +173,24 @@ const Header = () => {
                     <a>Events</a>
                     <ul>
                       <li>
-                        <a href="/events">Our Events</a>
+                        <a href="/events">Events</a>
+                      </li>
+                      <li>
+                        <a href="/events-details">Events Details</a>
+                      </li>
+                      <li>
+                        <a href="/events-speaker">Events Speaker</a>
+                      </li>
+                      <li>
+                        <a href="/events-ticket">Events Ticket</a>
+                      </li>
+                      <li>
+                        <a href="/events-checkout">Events Checkout</a>
                       </li>
                     </ul>
+                  </li>
+                  <li>
+                    <a href="/investments">Investments</a>
                   </li>
                   <li className="dropdown has-mega-menu">
                     <a>More</a>
@@ -244,9 +266,6 @@ const Header = () => {
                     </div>
                   </li>
                   <li>
-                    <a href="/investments">Investments</a>
-                  </li>
-                  <li>
                     <a href="/contactus">Contact us</a>
                   </li>
                 </ul>
@@ -256,9 +275,33 @@ const Header = () => {
             <div className="outer-box clearfix">
               {/* Quote Btn */}
               <div className="btn-box">
-                <a href="/signup" className="theme-btn btn-style-one">
-                  <span className="txt">Sign up</span>
-                </a>
+                {loading === true ? (
+                  <a
+                    style={{
+                      cursor: "pointer",
+                      pointerEvents: loading && "none",
+                    }}
+                    className="theme-btn btn-style-one"
+                  >
+                    <span className="txt">...</span>
+                  </a>
+                ) : user === null ? (
+                  <a href="/signup" className="theme-btn btn-style-one">
+                    <span className="txt">Sign up</span>
+                  </a>
+                ) : (
+                  <a
+                    style={{
+                      cursor: "pointer",
+                      textDecoration: "none",
+                      color: "black",
+                    }}
+                    onClick={() => dispatch(handleLogout())}
+                    className="theme-btn btn-style-one"
+                  >
+                    <span className="txt">Log out</span>
+                  </a>
+                )}
               </div>
               {/* Search Btn */}
               <div
@@ -391,20 +434,24 @@ const Header = () => {
                     <a>Events</a>
                     <ul>
                       <li>
-                        <a href="/events">Our Events</a>
+                        <a href="/events">Events</a>
+                      </li>
+                      <li>
+                        <a href="/events-details">Events Details</a>
+                      </li>
+                      <li>
+                        <a href="/events-speaker">Events Speaker</a>
+                      </li>
+                      <li>
+                        <a href="/events-ticket">Events Ticket</a>
+                      </li>
+                      <li>
+                        <a href="/events-checkout">Events Checkout</a>
                       </li>
                     </ul>
                   </li>
-                  <li className="dropdown">
-                    <a>Blogs</a>
-                    <ul>
-                      <li>
-                        <a href="/blogs">Our Blogs</a>
-                      </li>
-                    </ul>
-                    <div className="dropdown-btn">
-                      <span className="fa fa-angle-down" />
-                    </div>
+                  <li>
+                    <a href="/investments">Investments</a>
                   </li>
                   <li className="dropdown has-mega-menu">
                     <a>More</a>
@@ -491,9 +538,33 @@ const Header = () => {
             <div className="outer-box clearfix">
               {/* Quote Btn */}
               <div className="btn-box">
-                <a href="/signup" className="theme-btn btn-style-two">
-                  <span className="txt">Sign up</span>
-                </a>
+                {loading === true ? (
+                  <a
+                    style={{
+                      cursor: "pointer",
+                      pointerEvents: loading && "none",
+                    }}
+                    className="theme-btn btn-style-one"
+                  >
+                    <span className="txt">...</span>
+                  </a>
+                ) : user === null ? (
+                  <a href="/signup" className="theme-btn btn-style-two">
+                    <span className="txt">Sign up</span>
+                  </a>
+                ) : (
+                  <a
+                    style={{
+                      cursor: "pointer",
+                      textDecoration: "none",
+                      color: "white",
+                    }}
+                    onClick={() => dispatch(handleLogout())}
+                    className="theme-btn btn-style-two"
+                  >
+                    <span className="txt">Log out</span>
+                  </a>
+                )}
               </div>
               {/* Search Btn */}
               <div
@@ -698,39 +769,48 @@ const Header = () => {
                     <li>
                       <a href="/events">Our Events</a>
                     </li>
-                  </ul>
-                  <div className="dropdown-btn">
-                    <span className="fa fa-angle-down" />
-                  </div>
-                </li>
-                <li
-                  className="dropdown"
-                  onClick={() =>
-                    setActiveTagForMobileMenu({
-                      ...activeTagForMobileMenu,
-                      showBlogs: !activeTagForMobileMenu.showBlogs,
-                    })
-                  }
-                >
-                  <a>Blogs</a>
-                  <ul
-                    style={{
-                      display: activeTagForMobileMenu.showBlogs
-                        ? "block"
-                        : "none",
-                    }}
-                  >
-                    {" "}
                     <li>
-                      <a href="/blogs">Our Blogs</a>
+                      <a href="/events-details">Events Details</a>
+                    </li>
+                    <li>
+                      <a href="/events-speaker">Events Speaker</a>
+                    </li>
+                    <li>
+                      <a href="/events-ticket">Events Ticket</a>
+                    </li>
+                    <li>
+                      <a href="/events-checkout">Events Checkout</a>
                     </li>
                   </ul>
                   <div className="dropdown-btn">
                     <span className="fa fa-angle-down" />
                   </div>
                 </li>
+                <li className="dropdown">
+                  <a href="/investments">Investments</a>
+                </li>
+               
                 <li>
-                  <a href="/signup">Sign up</a>
+                  {loading === true ? (
+                    <a
+                      style={{
+                        cursor: "pointer",
+                        pointerEvents: loading && "none",
+                      }}
+                      className="theme-btn btn-style-one"
+                    >
+                      <span className="txt">...</span>
+                    </a>
+                  ) : user === null ? (
+                    <a href="/signup">Sign up</a>
+                  ) : (
+                    <a
+                      style={{ cursor: "pointer", textDecoration: "none" }}
+                      onClick={() => dispatch(handleLogout())}
+                    >
+                      Log out
+                    </a>
+                  )}
                 </li>
                 <li>
                   <a href="/contactus">Contact us</a>

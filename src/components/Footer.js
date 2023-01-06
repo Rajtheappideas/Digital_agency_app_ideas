@@ -39,7 +39,7 @@ const Footer = () => {
                 {/* Footer Column */}
                 <div className="footer-column col-lg-6 col-md-6 col-sm-12">
                   <div className="footer-widget links-widget">
-                    <h4>Quicky links</h4>
+                    <h4 style={{ color: "Blue" }}>Quicky links</h4>
                     <div className="row clearfix">
                       <div className="column col-lg-6 col-md-6 col-sm-12">
                         <ul className="list-link-two">
@@ -108,7 +108,7 @@ const Footer = () => {
                 {/*Footer Column*/}
                 <div className="footer-column col-lg-6 col-md-6 col-sm-12">
                   <div className="footer-widget contact-info-widget">
-                    <h4>Contact us</h4>
+                    <h4 style={{ color: "Blue" }}>Contact us</h4>
                     <div className="widget-content">
                       <ul>
                         <li>Mon – Fri 09am - 05pm</li>
@@ -125,7 +125,7 @@ const Footer = () => {
                 {/* Footer Column */}
                 <div className="footer-column col-lg-5 col-md-6 col-sm-12">
                   <div className="footer-widget app-widget">
-                    <h4>Appideas</h4>
+                    <h4 style={{ color: "Blue" }}>Appideas</h4>
                     <a href="/">
                       <img
                         src={require("../assets/images/resource/video-bg.png")}
@@ -133,13 +133,13 @@ const Footer = () => {
                       />
                     </a>
                     {/* Social Box */}
-                    {/* <ul class="social-box">
-											<li class="facebook"><a href="comming-soon.html" class="fab fa-facebook-f"></a></li>
-											<li class="twitter"><a href="comming-soon.html" class="fab fa-twitter"></a></li>
-											<li class="linkedin"><a href="comming-soon.html" class="fab fa-linkedin-in"></a></li>
-											<li class="instagram"><a href="comming-soon.html" class="fab fa-instagram"></a></li>
-											<li class="youtube"><a href="comming-soon.html" class="fab fa-youtube"></a></li>
-										</ul> */}
+                    <ul class="social-box">
+											<li class="facebook"><a href="/comming-soon" class="fab fa-facebook-f"></a></li>
+											<li class="twitter"><a href="/comming-soon" class="fab fa-twitter"></a></li>
+											<li class="linkedin"><a href="/comming-soon" class="fab fa-linkedin-in"></a></li>
+											<li class="instagram"><a href="/comming-soon" class="fab fa-instagram"></a></li>
+											<li class="youtube"><a href="/comming-soon" class="fab fa-youtube"></a></li>
+										</ul>
                   </div>
                 </div>
               </div>

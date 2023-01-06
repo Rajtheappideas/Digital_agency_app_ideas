@@ -15,8 +15,10 @@ const Packages = lazy(() => import("./pages/Packages"));
 const Projects = lazy(() => import("./pages/Projects"));
 const ProjectDetails = lazy(() => import("./pages/ProjectDetails"));
 const Services = lazy(() => import("./pages/Services"));
-const Signin = lazy(() => import("./pages/Signin"));
-const Signup = lazy(() => import("./pages/Signup"));
+const Signin = lazy(() => import("./pages/Auth/Signin"));
+const Signup = lazy(() => import("./pages/Auth/Signup"));
+const ForgotPassword = lazy(() => import("./pages/Auth/ForgotPassword"));
+const ResetPassword = lazy(() => import("./pages/Auth/ResetPassword"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Faq = lazy(() => import("./pages/Faqs"));
 const TermsAndCondition = lazy(() => import("./pages/TermsAndCondition"));
@@ -27,8 +29,14 @@ const AppDevelopment = lazy(() => import("./pages/AppDevelopment"));
 const WebDevelopment = lazy(() => import("./pages/WebDevelopment"));
 const Advertising = lazy(() => import("./pages/Advertising"));
 const CommingSoon = lazy(() => import("./pages/CommingSoon"));
-const Events = lazy(() => import("./pages/Events"));
+const Events = lazy(() => import("./pages/Events/Events"));
+const EventsDetails = lazy(() => import("./pages/Events/EventsDetails"));
+const EventsSpeaker = lazy(() => import("./pages/Events/EventsSpeaker"));
+const EventsTicket = lazy(() => import("./pages/Events/EventsTicket"));
+const EventsCheckout = lazy(() => import("./pages/Events/EventsCheckout"));
 const NewsDetails = lazy(() => import("./pages/NewsDetails"));
+const Blogs = lazy(() => import("./pages/Blogs"));
+const BlogsDetails = lazy(() => import("./pages/BlogsDetails"));
 const PackageDigitalMarketing = lazy(() =>
   import("./pages/PackageDigitalMarketing")
 );
@@ -68,8 +76,12 @@ function App() {
             <Route path="/investments" element={<Investments />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/resetpassword" element={<ResetPassword />} />
+            <Route path="/forgotpassword" element={<ForgotPassword />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blog-details" element={<BlogsDetails />} />
             <Route path="/terms" element={<TermsAndCondition />} />
             <Route path="/seo" element={<Seo />} />
             <Route path="/content-marketing" element={<ContentMarketing />} />
@@ -79,13 +91,20 @@ function App() {
             <Route path="/advertising" element={<Advertising />} />
             <Route path="/comming-soon" element={<CommingSoon />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/events-details" element={<EventsDetails />} />
+            <Route path="/events-speaker" element={<EventsSpeaker />} />
+            <Route path="/events-ticket" element={<EventsTicket />} />
+            <Route path="/events-checkout" element={<EventsCheckout />} />
             <Route path="/news-detail" element={<NewsDetails />} />
             <Route
               path="/package-digital-marketing"
               element={<PackageDigitalMarketing />}
             />
             <Route path="/package-hosting" element={<PackageHosting />} />
-            <Route path="/package-maintenance" element={<PackageMantainance />} />
+            <Route
+              path="/package-maintenance"
+              element={<PackageMantainance />}
+            />
             <Route
               path="/package-video-editing"
               element={<PackageVideoEditing />}
